@@ -1,0 +1,42 @@
+html {
+/*
+    background-color: grey;
+    color:white    
+*/
+}
+
+h1 {
+    color: darkgreen;
+}
+
+h1, h3 {
+    font-family: Georgia;
+    text-align: center
+}
+
+p {
+    line-height: 25px;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+}
+
+.caps {
+  text-transform: uppercase;
+}
+
+img {
+    float: left;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:visited {
+    color: purple
+}

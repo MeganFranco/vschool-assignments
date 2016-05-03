@@ -1,0 +1,15 @@
+html {
+    background-color: lightgray;
+}
+
+h1 {
+    font-family: "Georgia";
+    font-weight: 200;
+    color: #4d4d4d;
+}
+
+p {
+    font-style: italic;
+    font-size: 15px;
+    color: green;
+}

@@ -1,0 +1,36 @@
+html {
+    background-color: lightgray;
+    color: black;
+     font-family: "Georgia", serif;
+}
+
+h1{}
+
+h3 {
+    font-family: "Georgia", serif;
+    text-decoration: underline;
+}
+
+
+span {
+    font-style: italic;
+}
+
+.withImage{
+    text-align-last: left;
+   
+}
+
+img {
+    align-content: flex-start;
+    float: left;
+    display: inline-block;
+    width: 100%;  
+}
+
+p {
+    
+    display: inline-block;
+    vertical-align: top;
+    width: 30%
+}
