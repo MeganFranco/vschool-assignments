@@ -1,0 +1,23 @@
+html {
+    background: grey;
+    text-align: justify;
+    
+   
+}
+
+h2{
+    color: #E2E80F;
+}
+
+.credits {
+    color: blue;
+    text-decoration: underline;
+}
+
+
+
+#film-description {
+    display: ;
+    font-style: italic;
+    font-size: 70%;
+}
