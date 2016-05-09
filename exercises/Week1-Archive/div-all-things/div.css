@@ -1,0 +1,50 @@
+span {
+    border: 1px solid blue;
+    padding: 10px;
+    margin: 50px;
+}
+
+img {
+    max-height: 100px;
+    max-width: 150px;
+}
+
+
+
+
+
+html {
+    background-color: grey;
+    color: navy
+}
+
+p
+
+aside {
+    float: left;
+    top: 50px;
+    margin-bottom: 100%;
+    left: 0px;
+    border: 1px solid navy;
+    margin-right: 20px;
+    text-decoration: underline;
+}
+
+section{
+    top: 0px;
+}
+main {
+    margin-bottom: 100px;
+    margin-left: 0px;
+}
+
+footer {
+    bottom: 0;
+    position: fixed;
+    font-size: 70%;
+}
+
+strong {
+    font-size: 115%;
+    text-decoration: underline
+}

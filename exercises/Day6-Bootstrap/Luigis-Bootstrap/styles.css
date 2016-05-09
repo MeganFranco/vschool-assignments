@@ -1,0 +1,41 @@
+@font-face {
+    font-family: "Mario";
+    src: url('SuperMario256.ttf');
+}
+
+.top {
+    height: 90px;
+ 
+    font-size: 35px;
+    background-color: gold;
+    color: red;
+}
+
+h {
+       font-family: "Mario";
+}
+
+.col-sm-4 {
+    height: 90px;
+    align-content: center;
+    padding-top: 15px;
+    font-family: "Mario";
+}
+
+.logo {
+    height: 350px;
+    background-color: red
+}
+
+.blurb {
+    color: red;
+    text-align: center;
+    font-size: large;
+    height: 200px
+}
+
+.foot {
+    background-color: gold
+}
+
+.img {}

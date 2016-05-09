@@ -1,0 +1,14 @@
+html{
+    font-size: 25px;
+}
+
+table {
+    padding: 1em;
+}
+
+/*
+table, th {
+    font-size: 1e,;
+    border: 1 px solid black;
+    content: 150%;      
+}*/

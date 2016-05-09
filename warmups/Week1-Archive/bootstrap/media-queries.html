@@ -1,0 +1,136 @@
+<html>
+    <head>
+        <style>
+/*
+            h1{
+                color: red;
+            }
+            
+            @media (max-width: 900px){
+                h1{
+                color: blue;
+                }
+            }
+            
+             @media (max-width: 500px){
+                h1{
+                color: yellow;
+                }
+            }
+            
+*/
+
+/*make columns line up*/
+/*
+        .column {
+                width: 25%;
+                border: 1px solid #000;
+                background-color: blue;
+                color: yellowgreen;
+                float: left;
+                box-sizing: border-box;
+            }
+            
+            @media (max-width 900px {
+                .column {
+                    width: 50%;
+                    
+                }
+            })
+            
+             @media (max-width 500px {
+                .column {
+                    width: 50%;
+                    
+                }
+            })
+            
+*/
+/*the order in which they appear matters, so make sure that you keep them in order to size correctly
+you can also make them more complex such as using min-width
+be careful -- you end up with CSS on top of CSS on top of CSS          another theory is you write your default mobile first and then make your exceptions for when it gets larger. Also the CSS you use for the phone is going to be simpler than when it gets bigger  
+            
+            */
+            
+            
+/*mobile first*/
+/*
+            .column {
+               background-color: yellow;
+                font-size: 32px;
+                box-sizing: border-box;
+                border: 1px solid #000;
+                
+            } 
+            
+            @media screen and (min-width: 501px) {
+                width: 50%; 
+                background-color: yellow;
+                font-size: 32px;
+                box-sizing: border-box;
+                border: 1px solid #000;
+            }
+            
+              @media (min-width: 901px) {
+                width: 35%; 
+                background-color: blue;
+                font-size: 32px;
+                box-sizing: border-box;
+                border: 1px solid #000;
+            }
+*/
+/*remove content for differnt media*/  
+/*
+            .phone-only, .tablet-only {
+                display: none;
+            }
+            
+            .desktop-only {
+                display: block;
+            }
+*/
+            
+/* 'em's are confusing but super useful, percentages are generally good for widths, but if you want to do margins and padding -- so when the margins get wider the padding gets bigger, but it does look strange so whay you can do is also use vw (viewport width) which makes the size of the text response. but if we want to keep the font size at set pixels, you can use padding: 1em and it will be, 1 times what ever the font size is. Then as you get smaller, you can make the font smaller. That way when you adjust for media queries, you can just adjust the font size and keep the font-to-padding ratio. note that 'em's only make sense relative to font-size. The 'em' goes off of the closest parent's font px. It's a good idea to put your responsive stuff in a different sheet to make sure that it's layered on top of the defaults (so include them after the main one)*/   
+      .column {
+               background-color: yellow;
+                font-size: 3vw;
+                box-sizing: border-box;
+                border: 1px solid #000;
+                padding: 2em;
+                
+            }   
+            
+     .column {
+               background-color: yellow;
+                font-size: 32px;
+                box-sizing: border-box;
+                border: 1px solid #000;
+                
+            } 
+    @media screen and (min-width: 501px) {
+                width: 50%; 
+                background-color: yellow;
+                font-size: 24px;
+                padding: 2em;
+            }    
+            
+        </style>
+    </head>
+    
+    <body>
+        <h1>Insert title here</h1>
+        <div class="column>">
+            <p>One</p>
+        </div>
+         <div class="column>">
+            <p>two</p>
+        </div>
+         <div class="column>">
+            <p>three</p>
+        </div>
+         <div class="column>">
+            <p>four</p>
+        </div>
+        
+    </body>
+</html>

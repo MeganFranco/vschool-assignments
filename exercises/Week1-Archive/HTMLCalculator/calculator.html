@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+    <head> 
+        <title> </title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="calculator.css"/>
+        <meta charset="=utf-8">
+    </head>
+    <body>
+         <script src="calculator.js"> </script> 
+        <div class="main">
+        
+        <div id="add">
+            <input type="text" id="add1"></input>
+            <input type="text" id="add2"></input>
+            <button class="btn btn-success" onclick="addMe()" id="addMeButton">add</button>
+            <p id="addResult"></p>
+        </div>
+        <div id="subtract">
+            <input type="text" id="sub1"></input>
+            <input type="text" id="sub2"></input>
+            <button class="btn btn-success" onclick="subtractMe()">subtract</button>
+            <p id="subtractResult"></p>
+        </div>
+        <div id="multiply">
+            <input type="text" id="times1"></input>
+            <input type="text" id="times2"></input>
+            <button class="btn btn-success" onclick="timesMe()">multiply</button>
+            <p id="timesResult"></p>
+        </div>
+            <button class="btn btn-success" onclick="reload()">Redo</button>
+        </div>
+
+    <script src="calculator.js"> </script> 
+    </body>
+</html>

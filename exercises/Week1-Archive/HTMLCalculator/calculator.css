@@ -1,0 +1,26 @@
+html{
+    background-color: gray;
+}
+
+div {
+    background-color: gray;
+/*    display: inline-block;*/
+}
+
+input {
+    font-size: 20px;
+    font-weight: 400;
+    color: navy;
+    background-color: gray;
+}
+
+p{
+    font-weight:400;
+    font-size: 20px;
+    color: darkorange;
+/*    border: 1px solid black;*/
+}
+button {
+    border: 0;
+    background-color: gray;
+}
