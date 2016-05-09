@@ -1,0 +1,8 @@
+#mySquare {
+    border: 1px solid black;
+    margin: 0 auto; /*make centered*/
+    width: 250px;
+    height: 250px;
+    margin-top: 70px;
+    background-color: gray;
+}
