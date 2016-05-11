@@ -1,0 +1,12 @@
+body{
+    margin: 10px;
+}
+
+fieldset{
+    width: 50%;
+}
+
+#age {
+    width: 30%;
+}
+

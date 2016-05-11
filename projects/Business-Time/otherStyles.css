@@ -1,0 +1,29 @@
+html {
+    font-size: large;
+    color: #34104c;
+    background-color: #F2F4F5;
+}
+
+body {
+    background-color: inherit;
+    color: #34104c;
+}
+
+.row {
+    background-color: #F2F4F5;
+    height: 200px;
+    text-align: center;
+    max-width:100%;
+white-space:nowrap;
+  
+}
+
+.title {
+    font-size: xx-large;
+    height: 70px;
+}
+
+img {
+    height: 200px;
+    width: 200px;
+}

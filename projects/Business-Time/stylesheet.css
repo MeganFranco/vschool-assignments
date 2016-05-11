@@ -1,0 +1,84 @@
+/*color theme https://color.adobe.com/Friends-and-foes-color-theme-8021357/*/
+
+html {
+    background-image: url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/swirl_pattern.png); 
+    color: #2F2933;
+    border: 0px;
+}
+
+body {
+    background-color: inherit;
+    color: #34104c;
+    font-size: medium;
+}
+
+a:active {
+  color: red;
+}
+
+.row{
+    height: 90px;
+    width: 100%;
+}
+
+.nav-link{
+    color: #2F2933;
+    size: medium;
+    font-weight: 600;
+}
+
+.nav-item:hover {
+    background-color: #01A2A6;
+}
+
+
+h1 {
+    font-size: 40px;
+    width: 100%;
+    margin: 0px;
+    height: 90px;
+    padding: 0px;
+    color: #34104c;
+    border-right: 15px solid #01A2A6;
+    background-color: #01A2A6;
+    text-align: center;
+
+
+}
+
+.content {
+    border: 1px solid black;
+    margin-top: 20px;
+    font-size: large;
+    color: #34104c;
+    background-color: #F2F4F5;
+/*    opacity: 0.6;*/
+}
+
+span {
+    font-size: medium;
+}
+
+img {
+    float: left;
+}
+
+h3 {
+    color: #34104c;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
