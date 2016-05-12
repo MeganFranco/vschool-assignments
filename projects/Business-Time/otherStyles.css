@@ -38,7 +38,8 @@ img {
     
     .row {
         height: 20%;
-        width: 30%
+        width: 30%;
+        margin-left: 200px;
     }
     
 }
@@ -51,7 +52,8 @@ img {
     
     .row {
         height: 20%;
-        width: 30%
+        width: 30%;
+        margin-left: 100px;
     }
     
 }

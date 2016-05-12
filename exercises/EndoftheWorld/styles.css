@@ -1,6 +1,11 @@
 #countdown {
-    border: 1px solid black;
+    
     margin: 0 auto; /*make centered*/
-    margin-top: 70px;
+    margin: 100px;
  
+ 
+}
+
+span {
+    border: 1px solid black;
 }

@@ -1,0 +1,75 @@
+/* http://coursework.vschool.io/jsons-deli/ */
+
+{
+    "appetizers": [
+            {
+                "name": "Jalepeno Poppers",
+                "ingredients": ["Jalepeno", "breadcrumbs", "egg", "cooking oil"],
+                "desctiption": "Fresh from the fryer, out Jalepeno poppers are known all over town as the best around",
+            }
+            {
+                "name": "Moe-zerilla Sticks",
+                "ingredients": ["motzerlla", "Secret Ingredients"],
+                "desctiption": "Named after the owners best friend, Moe, you won't regret ordering our take on the mozzarella sticks.",
+            }
+        ],
+    "Cold Sandwiches": [
+        {
+         "name": "The Jerry",
+         "ingredients": ["rye bread", "turkey", "swiss", "mustard", "lettuce", "tomato"],
+         "description": "This traditional turkey sandwitch hits the sweet spot in between 'delicious' and 'simple'. We like to call it 'simplicious'!",
+        
+        }
+        {
+         "name": "The Elane",
+         "ingredients": ["Kaiser roll", "American cheese", "roast beef", "Mayo"],
+         "description": "This collection of indulgent ingredients make for a wonderful melt-in-your-mouth meal.",
+        
+        }
+    ],
+    "Hot Sandwitches": [
+        {
+         "name": "The George",
+         "ingredients": ["toast", "bacon", "lettuce", "tomato"],
+         "description": "The classic BLT, a favorite of our regulars.",
+        
+        }
+        {
+         "name": "The Kramer",
+         "ingredients": ["Sourdough", "mozzerella", "lobster", "arugula"],
+         "description": "A crazy take on the grilled-cheese classic",
+        
+        }
+    ],
+    "Desserts": [
+        {
+         "name": "Brownie Sundae",
+         "ingredients": ["brownie", "walnuts", "vanilla ice cream", "fudge"],
+         "description": "This traditional dessert is just what you were looking for",
+        
+        }
+        {
+         "name": "Confetti Cake",
+         "ingredients": ["cake", "vanilla icing", "various kinds of sprinkles"],
+         "description": "For those celebrating any occasion",
+        
+        }
+    ],
+    "Beverages": [
+        {
+         "name": "root-beer float",
+         "ingredients": ["root-beer", "vanilla ice cream", "magic"],
+         "description": "Go ahead. You know you want to",
+        
+        }
+        {
+         "name": "water",
+         "ingredients": ["hydrogen", "oxygen"],
+         "description": "It tastes good. Kind of like the source of all life",
+        
+        }
+    ],
+    
+    
+}
+  
