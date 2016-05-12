@@ -68,6 +68,23 @@ h3 {
 
 }
 
+@media(max-width: 1005px){
+    .content{
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    
+    html {
+    background-image: url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/swirl_pattern.png); 
+    color: #2F2933;
+    border: 0px;
+}
+    .row {
+        height: 20%;
+    }
+    
+}
+
 
 
 

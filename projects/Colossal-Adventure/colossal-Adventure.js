@@ -4,14 +4,18 @@ var readline = require("readline-sync");
 
 var inventory = ["slingshot ", " bag of blue marbles"];
 var HP = 0;
-var enemies = ["Funshine Bear", "Goodluck Bear", "Friend Bear"];
-var magicItems = ["glowing sword", "bejewled chalice", "baby dragon",];
+var enemies = [" Funshine Bear", "Goodluck Bear", "Friend Bear"];
+var magicItems = [" glowing sword", " bejewled chalice", " baby dragon",];
 var userAlive = true;
 var userName;
 
 //////////////////FUNCTIONS/////////////////
 var userDead = function () {
-    console.log("The End");
+    console.log("THE END");
+    userAlive = false;
+}
+var youWin = function(){
+    console.log("Congrats, you win!")
     userAlive = false;
 }
 var userContinue = function () {
@@ -109,7 +113,12 @@ var moveForward = function () {
         walking();
 
     readlineResponse = readline.question(" ");
-    moveForward();
+        
+        if(HP >= 50){ 
+            youWin();
+        }else{
+            moveForward();
+            }
     }
 }
 
@@ -138,9 +147,6 @@ function theGame() {
             HP = 7;
             moveForward();
            }
-
-
-
     }
 }
 

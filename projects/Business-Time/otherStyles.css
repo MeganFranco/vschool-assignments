@@ -11,7 +11,7 @@ body {
 
 .row {
     background-color: #F2F4F5;
-    height: 200px;
+    height: 20px;
     text-align: center;
     max-width:100%;
 white-space:nowrap;
@@ -26,4 +26,32 @@ white-space:nowrap;
 img {
     height: 200px;
     width: 200px;
+}
+
+@media(max-width: 1005px){
+/*
+    .content{
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+*/
+    
+    .row {
+        height: 20%;
+        width: 30%
+    }
+    
+}
+
+@media(max-width: 600px){
+    .content{
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    
+    .row {
+        height: 20%;
+        width: 30%
+    }
+    
 }

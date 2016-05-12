@@ -14,6 +14,11 @@ var userDead = function () {
     console.log("The End");
     userAlive = false;
 }
+var youWin = function(){
+    console.log("Congrats, you win!")
+    userAlive = false;
+}
+
 var userContinue = function () {
     var userResponse = readline.question("Would you like to continue? Enter 'Yes' or 'No' ")
     if (userResponse === 'Yes') {
@@ -54,7 +59,7 @@ function enemyAppears() {
 
         console.log("You attack " + randomEnemy + " and they lose " + userAttackPoints + " hit points")
 
-        if (userAttackPoints < 8) {
+        if (userAttackPoints < 7) {
             console.log("It looks like your attack wasn't strong enough " + randomEnemy + " continues with their assault of unconditional love");
             enemyAttacksBack();
         } else {
@@ -95,22 +100,29 @@ var moveForwardFirst = function () {
     }
 }
 var moveForward = function () {
-    if(userAlive === true){
-            var readline = require("readline-sync");
-    var readlineResponse = readline.question(" ");
-    if (readlineResponse == 'Print') {
+
+        if(userAlive === true){
+        var readline = require("readline-sync");
+        var readlineResponse = readline.question(" ");
+        if (readlineResponse == 'Print') {
 
         console.log("Name: " + userName + " HP: " + HP + " Inventory: " + inventory);
         readlineResponse = readline.question(" ");
         moveForward();
 
-    } else if (readlineResponse == 'w')
+        } else if (readlineResponse == 'w')
 
         walking();
 
-    readlineResponse = readline.question(" ");
-    moveForward();
+        readlineResponse = readline.question(" ");
+        
+            if(HP >= 50){ 
+                youWin();
+            }else{
+                moveForward();
+                }
     }
+   
 }
 
 
