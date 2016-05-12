@@ -7,27 +7,35 @@
 //figure out minutes and hours, ?
 
 
-var time = document.getElementById("countdown")
+var time = parseInt(document.getElementById("countdown").innerHTML);
 
 function showTime() {
-    setInterval(function(time){
-    time = time - 1;
+    var handler = setInterval(function () {
+        if(time > 0){
+            time = time - 1;
+            if (time < 10 ){time = "0" + time};
+            document.getElementById("countdown").innerHTML = time;
+        } else{
+                time = 0;                
+              }
+        
     }, 1000)
 }
 
-document.getElementById("countdown").innerHTML.value = showTime();
-
+//clearInterval(handler);
+//document.getElementById("countdown").innerHTML = showTime();
+showTime();
 
 /////////////////// ATTEMPT 1 //////////////////////////
-//var toDisplay = setInterval(countdown(document.getElementById("countdown").innerHTML), 1000)
-//var myCountdown = function {
+//var toDisplay = setInterval(countdown, 1000)
+//var myCountdown = function() {
 //    var startAt = Number(document.getElementById("countdown"));
-//        while(startAt > 0) {
+////        while(startAt > 0) {
 //        //redefine startAt
 //        startAt = startAt - 1;
 //        
 //        myCountdown()    
-//        } else {/*popup*/}
+//         /*else ->  popup*/
 //}
 //
-//document.getElementById("countdown").innerHTML = toDisplay
+//document.getElementById("countdown").innerHTML.value = toDisplay

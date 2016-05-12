@@ -1,4 +1,4 @@
-#countdown {
+div{
     
     margin: 0 auto; /*make centered*/
     margin: 100px;
@@ -6,6 +6,3 @@
  
 }
 
-span {
-    border: 1px solid black;
-}
