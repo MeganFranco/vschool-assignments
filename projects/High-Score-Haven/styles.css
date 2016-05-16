@@ -1,0 +1,87 @@
+font-family: 'Press Start 2P', cursive;
+
+html{
+     background-color: black;
+    color: #00cc00;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: "Courier New", Courier, monospace;
+    font-size: medium;
+    background-color: black;
+    color: #00cc00;
+   
+    
+}
+
+input {
+    background-color: black;
+    color: inherit;
+}
+
+#commentBox {
+
+    background-color: black;
+    color: inherit;
+
+}
+
+header{
+    font-family: "Arcade";
+    font-size: 30px;
+    margin: 0 auto;
+    align-content: center;
+    width: 50%;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    margin-bottom: 30px;
+    background-color: black;
+    color: #00cc00;
+    
+
+}
+
+table{
+    border: 1px, solid, black;
+    margin: 0 auto;
+    align-content: center;
+    text-align: center;
+    width: 50%;
+    font-family: "Courier New", Courier, monospace;
+     background-color: black;
+    color: #00cc00;
+    
+}
+tr {
+    margin: 0 auto;
+    border: 1px, solid, black;
+    margin: 0 auto;
+    align-content: center;
+    text-align: center;
+    width: 100%;
+    font-family: "Courier New", Courier, monospace;
+     background-color: black;
+    color: #00cc00;
+    
+}
+
+td {
+    align-content: center;
+    text-align: center;
+    font-family: "Courier New", Courier, monospace;
+     background-color: black;
+    color: #00cc00;
+}
+
+form {
+    border: 1px, solid, black;
+    margin: 0 auto;
+    align-content: center;
+    text-align: center;
+    margin-top: 25px;
+    font-family: "Courier New", Courier, monospace;
+     background-color: black;
+    color: #00cc00;
+}
+

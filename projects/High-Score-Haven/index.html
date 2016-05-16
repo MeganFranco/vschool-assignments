@@ -1,0 +1,91 @@
+<!--http://coursework.vschool.io/high-score-haven/-->
+
+
+
+<!DOCTYPE html>
+
+<html>
+    <head> 
+        <title> </title>
+        
+
+        <link href='https://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="styles.css"/>
+        <meta charset="=utf-8">
+    </head>
+    <body> 
+       <script src="main.js"></script> 
+        <div class="content">
+             <header>High Score Haven</header>
+        
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Game</th>
+                <th>Date</th>
+                <th>High Score</th>
+                <th>Message</th>
+            </tr>
+            
+            <tr>
+                <td>Lou</td>
+                <td>PacMan</td>
+                <td>10 May 2016</td>
+                <td>80</td>
+                <td>lolololol</td>
+            </tr>
+              <tr>
+                <td>Kay</td>
+                <td>PacMan</td>
+                <td>15 May 2016</td>
+                <td>600</td>
+                <td> </td>
+            </tr>
+              <tr>
+                <td>Joe</td>
+                <td>Donkey Kong</td>
+                <td>12 May 2016</td>
+                <td>67</td>
+                <td>You're all n00bz rofl</td>
+            </tr>
+            
+               <tr id="blankRow">
+                <td id="newName"></td>
+                <td id="newGame"></td>
+                <td id="newDate"></td>
+                <td id="newScore"></td>
+                <td></td>
+            </tr>
+            
+        </table>
+        </div>
+        
+        <div class="form">
+            <form id="form">
+                <label for="name">Name: </label>
+                <input type="text" name="name" id="userName" class="text">
+                
+                <label for="game">Game:</label>
+                <input type='text' name="game" id="userGame" class="text"><br>
+                
+                <label for="date" class="text">Date:</label>
+                <input type="date" name="date" id="userDate"<br>
+                
+                <label for="score" class="text">High-Score:</label>
+                <input type="number" name="score" id="userScore"> <br>
+                
+                <lable>Would you like to add a message?</lable>
+                <input type="checkbox" name="message" id="messageOption"><br>
+                <div id="messageBox">
+                    <textarea cols="50" rows="4" name="comment" id="commentBox"></textarea>
+                </div>
+                
+                <button type="submit" id="formSubmit" onsubmit="addRow()"> submit </button>
+                <button type="button" id="formSubmitTwo">submit2</button>
+            </form>
+        </div>
+        
+    <p><span id="errorMessage"> </span></p> 
+    <script src="main.js"></script> 
+    </body>
+</html>
