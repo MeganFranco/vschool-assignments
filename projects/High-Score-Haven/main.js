@@ -33,15 +33,14 @@ window.onload = function () {
     console.log("I'm hereeee")
 }
 
-
-
-
-
-///OPTION 1///////////
-
-            // why doesn't statement (from Lynda tutorial) below work?!?!
-//document.getElementById("formSubmit").addEventListener('submit', addRow);
-console.log(document.getElementById("formSubmit"))
+ 
+ 
+ 
+ 
+ ///OPTION 1///////////
+ 
+// why doesn't statement (from Lynda tutorial) below work?!?!
+document.getElementById("formSubmit").addEventListener('click', addRow);
 
 //stack overflow response http:stackoverflow.com/questions/26107125/cannot-read-property-addeventlistener-of-null (still not working)
 
@@ -50,20 +49,19 @@ console.log(document.getElementById("formSubmit"))
 //        grabForm.addEventListener('submit', addRow)
 //    }
 //
-//function addRow(event) {
-//    //only run JS
-//    event.preventDefault();
-//    
-//    //add a table row? 
-//    
-////    document.getElementById("newName").innerHTML = document.getElementById("userName").value;
-//    
-//    var name = document.getElementById("userName").value;
-//    document.getElementById("newName").innerHTML = name;
-//    
-//    console.log("hey, I'm working");   
-//}
-//
+function addRow(event) {
+    //only run JS
+    event.preventDefault();
+    
+    //add a table row? 
+    
+//    document.getElementById("newName").innerHTML = document.getElementById("userName").value;
+    
+    var name = document.getElementById("userName").value;
+    document.getElementById("newName").innerHTML = name;
+    
+    console.log("hey, I'm working");   
+}
 
 
 ///////////Option 2///////////////////
