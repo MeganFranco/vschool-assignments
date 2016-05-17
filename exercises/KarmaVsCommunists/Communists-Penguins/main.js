@@ -23,26 +23,9 @@ while(communists.population > 0 && penguins.population > 0){
 
 //    setTimeout(startWar, 500)
     
-    startWar();
+startWar();
     
-    if (communists.population <= 0){
-        console.log("Looks like the penguins won!")
-    }else {
-        console.log("Looks like the communists won!")
-    }
-
 }
-console.log(",---.                   ,---.                ")
-console.log("|  _.,---.,-.-.,---.    |   |.   ,  ,---.,---.")
-console.log("|   |,---|| | ||---'    |   | \\ / |---'|    ")
-console.log("`---'`---^` ' '`---'    `---'  `'  `---'`    ")
-
-
-
-
-
-
-                                                                                             
 
 function startWar(){
 	   var thisParty = new party();

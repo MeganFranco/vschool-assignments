@@ -1,0 +1,6 @@
+.pokemon-badge {
+    border: .5px solid #ddd;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+}

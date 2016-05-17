@@ -1,0 +1,88 @@
+<!--http://coursework.vschool.io/goomba-pest-control/ -->
+
+
+
+<html>
+
+<head>
+    <title> </title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Signika:700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="mario-styles.css" />
+    <meta charset="=utf-8">
+</head>
+
+<body>
+    <audio id="my_audio" src="http://themushroomkingdom.net/sounds/wav/smb/smb_pipe.wav"></audio>
+    <header>
+        Super Mario's Super Pest Control
+        <button type="button" class="btn btn-warning" id="nightView" onclick"nightMode()">Night View</button>
+    </header>
+    
+    <div class="blurb">
+        <p>For all of your pest problems, choose <strong>"Super Mario's Super Pest Control"</strong> you won't regret it! Read on to see an example of what we can do for you to rid you of all sorts of annoyances that tend to pop up in fictional landscapes. Below is a list of pests and the cost of collecting them.</p>
+    </div>
+
+    <ul class="nav nav-pills">
+        <li>
+                <div class="col-md-4">
+                    <a href="#" class="thumbnail">
+                        <img src="http://vignette2.wikia.nocookie.net/deathbattlefanon/images/9/9c/1000px-Goomba_look_NSMBU.png/revision/latest?cb=20150412100601" alt="Angry Goomba">
+                    </a>
+                    <div class="content" id="Goomba">
+                        <strong>Goomba</strong>
+                        <br> Cost per Goomba:<span id="goombaCoins">5</span> coins
+                        <br> Goombas Caught: <span id="goombaCaught">12</span>
+                        <br> Cost:
+                        <br>
+                        <span class="result" id="goombaResult"></span>
+                    </div>
+                </div>
+        </li>
+        <li>
+                <div class="col-md-4">
+                    <a href="#" class="thumbnail">
+                        <img src="http://vignette2.wikia.nocookie.net/fantendo/images/0/06/Bob-omb_Fall.png/revision/latest?cb=20120815222758" alt="Bob-omb">
+                    </a>
+                    <div class="content" id="Bob-omb">
+                        <strong>Bob-omb</strong>
+                        Cost per Bob-omb: <span id="bobCoins">7</span> coins
+                        <br> Bob-ombs caught: <span id="bobCaught">8</span>
+                        <br> Cost:
+                        <br>
+                        <span id="bob-bombResult"></span>
+                    </div>
+                </div>
+        </li>
+        <li>
+                <div class="col-md-4">
+                    <a href="#" class="thumbnail">
+                        <img src="http://www.mariowiki.com/images/thumb/3/38/DeepCheepNSLU.png/200px-DeepCheepNSLU.png" alt="Angry Goomba">
+                    </a>
+                    <div class="content" id="Cheep-cheep">
+                        <strong>Cheep-cheep</strong>
+                        Cost per Cheep-cheep: <span id="cheepCoins">11</span> coins
+                        <br> Cheep-cheeps caught: <span id="cheepCaught">5</span>
+                        <br> Cost:
+                        <br>
+                        <span id="cheep-cheepResult"></span>
+                        
+                    </div>
+                </div>
+        </li>
+
+    </ul>
+
+
+    <footer>
+        <span>mario@mypestcontrol.com<br></span>
+        <span>superbrotherspestcontrol.com<br></span> #1 Main Lane, Mushroom Kingdom
+        <br>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="pest-control.js"></script>
+</body>
+
+</html>

@@ -38,4 +38,23 @@ h {
     background-color: gold
 }
 
-.img {}
+.name{
+    -webkit-transition: color 500ms ease-out .25s;
+    -moz-transition: color 500ms ease-out .25s;
+    -o-transition: color 500ms ease-out .25s;
+    transition: color 500ms ease-out .25s;
+/*    transition: left 2s ease-out; */
+    transition: color, .5s ease-out .25s;
+}
+        
+
+.name:hover {
+  color: green;
+  cursor: pointer;
+  margin-left: 100%;
+}
+
+
+.image{
+    
+}

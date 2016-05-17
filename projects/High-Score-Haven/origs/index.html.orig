@@ -45,15 +45,15 @@
                 <td>Donkey Kong</td>
                 <td>12 May 2016</td>
                 <td>67</td>
-                <td>You're all n00bz rofl-copter</td>
+                <td>You're all n00bz rofl</td>
             </tr>
             
-            <tr id="blankRow">
+               <tr id="blankRow">
                 <td id="newName"></td>
                 <td id="newGame"></td>
                 <td id="newDate"></td>
                 <td id="newScore"></td>
-                <td id="newMessage"></td>
+                <td></td>
             </tr>
             
         </table>
@@ -61,54 +61,34 @@
         
         <div class="form">
             <form id="form">
-                <div class="inputDiv">
-                    <label for="name">Name: </label>
-                    <input type="text" name="name" id="userName" class="text">
-                </div>
+                <label for="name">Name: </label>
+                <input type="text" name="name" id="userName" class="text">
                 
-               <div class="inputDiv">
-                    <label for="game">Game:</label>
-                    <input type='text' name="game" id="userGame" class="text" required><br>
-               </div>
+                <label for="game">Game:</label>
+                <input type='text' name="game" id="userGame" class="text"><br>
                 
-                <div class="inputDiv">
-                    <label for="date" class="text">Date:</label>
-                    <input type="date" name="date" id="userDate"<br>
-                </div>
+                <label for="date" class="text">Date:</label>
+                <input type="date" name="date" id="userDate"<br>
                 
-                <div clas="inputDiv">
-                    <label for="score" class="text">High-Score:</label>
-                    <input type="number" name="score" id="userScore"> <br>
-                </div>
+                <label for="score" class="text">High-Score:</label>
+                <input type="number" name="score" id="userScore"> <br>
                 
-                <div class="inputDiv">
-                    <lable>Would you like to add a message?</lable>
-                    <input type="checkbox" name="message" id="messageOption" required><br>
-                </div>
-                
+                <lable>Would you like to add a message?</lable>
+                <input type="checkbox" name="message" id="messageOption"><br>
                 <div id="messageBox">
                     <textarea cols="50" rows="4" name="comment" id="commentBox"></textarea>
                 </div>
                 
+<<<<<<< HEAD
+                <button type="submit" id="formSubmit" onsubmit="addRow()"> submit </button>
+=======
                 <button id="formSubmit"> submit </button>
-
+>>>>>>> high-score
+<!--                <button type="button" id="formSubmitTwo">submit2</button>-->
             </form>
         </div>
         
-    <p>
-    <span id="errorMessage"> </span>
-    <button id="reloadButton" onclick="refresh()">try again</button>
-    </p> 
+    <p><span id="errorMessage"> </span></p> 
     <script src="main.js"></script> 
     </body>
 </html>
-
-
-
-
-
-
-
-
-
-

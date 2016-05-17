@@ -1,0 +1,21 @@
+{
+  "name": "KarmaVsCommunists",
+  "version": "1.0.0",
+  "description": "",
+  "main": "comVsKarma.js",
+  "dependencies": {
+    "jasmine-core": "^2.4.1",
+    "karma-chrome-launcher": "^1.0.1",
+    "karma": "^0.13.22",
+    "karma-jasmine": "^1.0.2",
+    "phantomjs-prebuilt": "^2.1.7",
+    "karma-phantomjs-launcher": "^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "./node_modules/karma/bin/karma start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

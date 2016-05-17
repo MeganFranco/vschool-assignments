@@ -43,7 +43,7 @@ header{
 }
 
 table{
-    border: 1px, solid, black;
+    border: 1px, solid, #00cc00;
     margin: 0 auto;
     align-content: center;
     text-align: center;
@@ -51,6 +51,7 @@ table{
     font-family: "Courier New", Courier, monospace;
      background-color: black;
     color: #00cc00;
+    
     
 }
 tr {
@@ -61,8 +62,9 @@ tr {
     text-align: center;
     width: 100%;
     font-family: "Courier New", Courier, monospace;
-     background-color: black;
+    background-color: black;
     color: #00cc00;
+    
     
 }
 
@@ -72,8 +74,10 @@ td {
     font-family: "Courier New", Courier, monospace;
      background-color: black;
     color: #00cc00;
+    border: 1px, solid, #00cc00;
 }
 
+p,
 form {
     border: 1px, solid, black;
     margin: 0 auto;
@@ -83,5 +87,14 @@ form {
     font-family: "Courier New", Courier, monospace;
      background-color: black;
     color: #00cc00;
+}
+
+@media (max-width: 500px){
+    label {
+        white-space: pre-line;
+    }
+    input {
+        white-space: pre-line;
+    }
 }
 

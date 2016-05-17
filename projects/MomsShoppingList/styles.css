@@ -1,0 +1,39 @@
+body {
+    box-sizing: border-box;
+    background-color: #63B2CC;
+}
+
+header{
+    margin: 0 auto;
+    align-content: center;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.startList {
+    margin: 0 auto;
+    align-content: center;
+    text-align: center;
+}
+
+input{
+    border-radius: 4px;
+    background-color: #FFF9AA
+}
+
+button {
+    border-radius: 5px;
+    background-color: #0388b2;
+    padding-left: 10px;
+    padding-right: 10px;        
+    
+}
+
+ul {
+    border: /*?*/;
+}
+
+li{
+    border-bottom:/*add me!*/ ;
+}

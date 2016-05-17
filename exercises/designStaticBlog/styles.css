@@ -17,6 +17,16 @@ header {
     height: 90px;
     position: fixed;
     z-index: 1;
+    
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: color 1s ease-in-out;  
+}
+
+header:hover {
+    color: green;
+    cursor: pointer;
 }
 
 .main {
