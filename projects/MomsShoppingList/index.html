@@ -4,7 +4,8 @@
 
 <head>
     <title>Shopping List</title>
-
+    
+    <link href='https://fonts.googleapis.com/css?family=Sunshiney|Rouge+Script' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
     <link rel="stylesheet" href="styles.css" />
     <meta charset="=utf-8">
@@ -15,16 +16,14 @@
         <header>Mom's Shopping List</header>
 
         <div class="startList">
-           <form>
-            <input type="text">
+           <form id="myForm">
+            <input type="text" id="newItem">
                 
             </input>
-            <button>Add</button>
+            <button id="addButton" onclick="addItem()">Add</button>
            </form>
             
-            <ul>
-
-            </ul>
+            <ul id="theList"></ul>
         </div>
 
 

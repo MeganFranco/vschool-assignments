@@ -4,11 +4,15 @@ body {
 }
 
 header{
+    font-family: 'Sunshiney', cursive;
     margin: 0 auto;
     align-content: center;
     text-align: center;
     margin-bottom: 30px;
     margin-top: 30px;
+    font-size: 60px;
+    color: #8D0A4A
+    
 }
 
 .startList {
@@ -19,21 +23,108 @@ header{
 
 input{
     border-radius: 4px;
-    background-color: #FFF9AA
+    background-color: #FFF9AA;
+    font-family: 'Rouge Script', cursive;
+    font-size: x-large;
+    width: auto;
+        
 }
 
 button {
     border-radius: 5px;
-    background-color: #0388b2;
+    background-color: #93d99d;
     padding-left: 10px;
-    padding-right: 10px;        
+    padding-right: 10px; 
+    box-shadow: #69B573;
+    font-family: monospace;
+    
+ -webkit-transition:  ease-out .25s;
+    -moz-transition:  ease-out .25s;
+    -o-transition:  ease-out .25s;
+    transition:  ease-out .25s;
+    transition:   ease-out .25s;
     
 }
 
+button:hover {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.deleteButton{
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 2px;
+    margin-right: 5px;
+    margin-top: 10px;
+    width: auto;
+}
+
 ul {
-    border: /*?*/;
+    margin-top: 10px;
+    box-sizing: border-box;
+    border-top: 3px solid #FFD148;
+    border-left: 3px solid #FFD148;
+    list-style-type: none;
+    align-content: 0 auto;
+    margin-left: 35%;
+    padding: 0px;
+    width: 30%;
+    background-color: #FFF9AA
 }
 
 li{
-    border-bottom:/*add me!*/ ;
+    font-family: 'Rouge Script', cursive;
+    font-size: x-large;
+    width: 100%;
+    border-bottom: 1px solid black;
+    text-align: left;
+    padding-left: 5%;
+}
+
+
+.name{
+   
+}
+        
+.name:hover {
+  color: green;
+  cursor: pointer;
+  margin-left: 100%;
+}
+
+@media(max-width: 750px){
+    input {
+    border-radius: 4px;
+    background-color: #FFF9AA;
+    font-family: 'Rouge Script', cursive;
+    font-size: medium;
+    width: 20%; 
+    }
+    
+    
+}
+
+
+@media(max-width: 480px){
+    header {
+        font-size: 45px;
+    }
+    
+    input {
+    border-radius: 4px;
+    background-color: #FFF9AA;
+    font-family: 'Rouge Script', cursive;
+    font-size: medium;
+    width: 20%; 
+    }
+    
+    #addButton {
+        width: 10%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
 }
