@@ -1,41 +1,42 @@
 //http://coursework.vschool.io/call-me-maybe/
- ar names = ["Anna", "Bill", "Charlay", "Dexter", "Emily", "Frank", "George", "Hal", "Isaac", "Jill"]; 
+var names = ["Anna", "Bill", "Charlay", "Dexter", "Emily", "Frank", "George", "Hal", "Isaac", "Jill"];
 
-function attemptCall(name, dontCall, call, sendText){
-    var letterA = 0;
-    for(var i= 0;){
-        if(name[i].toLocaleLowerCase() === "a"){
-            a++
+function attemptCall(name, dontCall, call, sendText) {
+    for (var i = 0; i < names.length; i++) {
+        var name = names[i].toLowerCase();
+        var numberAIs = 0;
+        
+        for (var j = 0; j < name.length; j++) {
+            if (name[j] === "a") {
+                numberAIs++;
+            }
         }
-    }
-    
-    if(letterA > 1) {
-        sendText(name);
-    }else if(name.length % 2 === 0){
-        call(name);
-    } else {
-        dontCall(name);
-    }
 
+        if (numberAIs > 1) {
+            sendText(name);
+        } else if (name.length % 2 === 0) {
+            call(name);
+        } else {
+            dontCall(name);
+        }
+
+    }
+}
 
 
 function call(name) {
-    console.log("Called " name + ".")
+    console.log("Called " + name + ".")
 }
 
-function dontCall(name){
-    console.log("You didn't call " name + ".")
+function dontCall(name) {
+    console.log("You didn't call " + name + ".")
 }
 
 function sendText(name) {
-   console.log("Sent a text to" name + ".") 
+    console.log("Sent a text to " + name + ".")
 }
 
-for(var i = 0; i < name.length; i++){
-    attemptCall(name[i], dontCall, call, sendText)
-}
-
-
+attemptCall(names, dontCall, call, sendText);
 
 
 //var firstNames = ["Emily", "Hannah", "Madison", "Ashley", "Sarah", "Jacob", "Michael", "Matthey", "Joshua", "Christopher"];

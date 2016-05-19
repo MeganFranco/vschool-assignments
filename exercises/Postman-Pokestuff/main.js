@@ -7,11 +7,11 @@ function parsePokemon(urlPath) {
     xhr.onreadystatechange = function () {
         if (xhr.readyState === 4 && xhr.status === 200) {
 
-            var object = JSON.parse(xhr.responseText);
-            //            pokemon.innterHTML = object.name;
-            console.log(object);
+            var data = JSON.parse(xhr.responseText);
+            //            pokemon.innterHTML = data.name;
+            console.log(data);
 
-            var pokeArray = object.objects[0].pokemon;
+            var pokeArray = data.objects[0].pokemon;
             console.log(pokeArray);
 
             for (var i = 0; i < pokeArray.length; i++) {
