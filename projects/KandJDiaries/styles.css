@@ -212,6 +212,10 @@ div.col-md-2.post-date{
     padding-right: 0px;
 }
 
+/*-------------------------ADS------------------------------*/
+
+
+
 
 /* ICONS http://fontawesome.io/icons/?utm_source=www.qipaotu.com */
 .comments {
@@ -231,6 +235,8 @@ div.col-md-2.post-date{
     margin-left: 15px;
     margin-right: 15px;
 }
+
+
 
 /*-------INSTABANNER--------*/
 
@@ -271,7 +277,10 @@ footer {
 }
 
 .copyright {
-    margin-left: 35%;
+    margin-left: 45%;
+    margin-right: 0px;
+    padding-right: 0px;
+    
     
 }
 
