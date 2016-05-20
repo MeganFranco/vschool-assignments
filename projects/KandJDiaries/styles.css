@@ -213,7 +213,21 @@ div.col-md-2.post-date{
 }
 
 /*-------------------------ADS------------------------------*/
+.ads {
+    margin-top: 7%;
+}
 
+.follow-section{
+   align-content: center;
+    text-align: center;
+    font-family: "Helvetica Neue";
+    font-size: large;
+    border: 1px solid #9B9B9B; 
+}
+
+.margin-up {
+    margin-top: -15;
+}
 
 
 
