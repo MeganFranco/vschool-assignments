@@ -11,7 +11,7 @@ function deleteMe(myButton){
 function addItem(){
     event.preventDefault();
     
-    if(myList == ""){
+    if(myList === ""){
         myList.style.display = "none";
     }
 

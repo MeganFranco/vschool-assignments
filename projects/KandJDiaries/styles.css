@@ -1,40 +1,92 @@
 html {
     width: 100%
-} 
+}
 
 body {
     width: inherit;
-     padding-top: 70px; 
+    padding-top: 0px;
 }
-
-nav{
+/*--------------------------NAV------------------------------------------*/
+nav {
     background-color: #FFFFFF;
     box-sizing: border-box;
     width: inherit;
-    margin-left: 0;
+    margin-top: 0px;
+    margin-left: 0px;
+    height: 10%;
+    
+    
+}
+
+.navbar-brand {
+    
+}
+
+
+.dropdown,
+a {
+    display: inline-block;
+/*    margin-left: 15px;*/
+    color: black;
+    padding-top: 0px;
+    margin-top: 0px;
+    background-color: 
 }
 
 .brand-image {
     margin: 0;
 }
 
-.nav-links {
-    color: black;
-    align-content: center;
+li.nav-bar-link {
+    margin-left: 10px;
 }
 
-.dropdown, a{
-    margin-left: 15px;
-    color: black;
-    color
+
+.nav>li>a {
+    display:inline-block;
+    color:black;
+    margin-right: 10px;
 }
 
-.dropdown:hover {
-    color: black;
-    text-decoration: underline;
-    display: block;
+.nav>li>a:hover, .nav>li>a:focus {
+    background-color: transparent;
+    
 }
 
+
+
+a.dropdowntoggle {
+    
+    
+}
+
+}
+.nav .open>a, .nav .open>a:focus, .nav .open>a:hover  {
+    background-color: white;
+}
+
+.navbar-nav>li>.dropdown-menu {
+/*    position: relative;*/
+    margin-top: 0;
+    margin-left: inherit;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+ul.dropdown-menu {
+    
+}
+
+ul.dropdown-menu: {
+    
+}
+
+.search-bar {
+    margin-left: 80px;
+    
+}
+
+/*-----------------------SLIDESHOW BANNER------------------------------*/
 .slideshow {
     width: 100%;
     height: 10px;
@@ -49,15 +101,178 @@ div > img {
     background-color: #fee8dd;
 }
 
-#subscribe-field{
+#subscribe-field {
     align-content: center;
     padding: 3px;
-} 
+}
 
-#subscribe-field .form-control{
+#subscribe-field .form-control {
     width: 300px;
     margin-left: 40%;
     border-radius: 0;
+}
+
+/*----------------POSTS---------------------------------------*/
+.post {
+        margin-top: 10%;
+        margin-bottom: 10%;
+        font-family: "Helvetica Neue"
+        
+}
+
+.content {
+ 
+    align-content: center;
+    text-align: center;
+    
+}
+.post-date {
+    font-size: smallß;
+    color: #9B9B9B;
+
+}
+
+.post-title {
+    font-size: x-Large;
+    text-decoration: underline
+}
+
+.post-title:hover {
+    color:#F3C3AC;
+}
+
+p.post-tags{
+    font-family: "Helvetica Neue";
+    font-size: small;
+    font-style: italic;
+    
+}
+
+div > img {
+    height: 650px;
+    width: 100%;
+}
+
+.postBlurb{
+    font-family: 'Lato', sans-serif;
+    margin-top: 3%;
+    width: 100%;
+    text-align: left;
+}
+
+.read-more-button {
+    margin-top: 4px;
+    font-family: "Helvetica Neue";
+    font-size: medium;
+    padding: 2%;
+    color: #9B9B9B;
+    border: 1px solid #9B9B9B;
+    background-color: white;
+    margin-bottom: 20px; 
+    
+}
+
+.read-more-button:hover {
+    color: white;
+    background-color: #9B9B9B;
+
+}
+
+/*related banner*/
+
+
+hr { 
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+    color: #9B9B9B;
+}
+
+div.col-md-2.post-date{
+   padding-bottom: 10px;
+}
+
+
+.related-bar {
+    margin-top: 10px;
+    width: 100%;
+}
+
+
+.thumbnail a>img, .thumbnail>img {
+    height: 100px;
+    width: 120px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+
+/* ICONS http://fontawesome.io/icons/?utm_source=www.qipaotu.com */
+.comments {
+    font-family: "Helvetica Neue";
+    font-size: small;
+}
+
+.social-icons {
+    display:inline-block;
+    color: #f3c3ac;
+    font-size: xx-large;
+
+ 
+}
+
+.sm-icons {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+/*-------INSTABANNER--------*/
+
+
+
+
+/*-------FOOTER--------*/
+
+footer {
+    font-size: x-small;
+    width:100%;
+    background-color: black;
+    height: 40px;
+    color: white;
+    text-align: left;
+}
+
+.footer-link {
+    color: white;
+    text-decoration: underline;
+    
+}
+
+.footer-link:hover {
+     color: white;
+    text-decoration: underline;  
+}
+
+.footer-container{
+    width: inherit;
+    margin-left: 0px;
+    margin-right: 0px;
+
+}
+
+.footer-text {
+    margin-top: 10px;
+}
+
+.copyright {
+    margin-left: 35%;
+    
 }
 
 
