@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html lang="en" ng-app="ng-repeat">
+    <head> 
+        <title> </title>
+        
+        <meta charset="=utf-8">
+    </head>
+    <body ng-controller="MainController">
+    
+<div>
+    <p>Player has killed:</p>
+    <div ng-repeat="killed in player.kills">
+       <p> {{ killed.handle }}</p>
+       <p>whose clan members are</p>
+       <ul>
+           <li ng-repeat="member in killed.clan">
+               {{member1}}
+           </li>
+       </ul>
+    </div>
+</div> 
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+    <script src="main.js"></script> 
+    </body>
+</html>

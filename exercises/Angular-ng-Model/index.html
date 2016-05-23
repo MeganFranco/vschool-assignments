@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html lang="en" ng-app="theNgModel">
+    <head> 
+        <title> </title>
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="styles.css"/>
+        <meta charset="=utf-8">
+    </head>
+    <body ng-controller="MainController"> 
+    
+    <div class="well">
+       <label>First</label> <br> 
+    <input type="text" ng-model="first">
+    <br>
+    <p>{{ first }}</p>
+        
+    </div>
+    
+     <div class="well">
+         <label>Second</label> <br>
+        <input type="text" ng-model="second"> <br>
+        <p>{{ second }}</p>
+     </div>
+     
+     <div class="well"> 
+         <label>Third</label> <br>
+        <input type="text" ng-model="third"><br>
+        <p>{{ third }}</p>
+        
+     </div>
+      
+       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+    <script src="main.js"></script> 
+    </body>
+    
+</html>

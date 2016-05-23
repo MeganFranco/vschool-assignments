@@ -1,0 +1,40 @@
+body{
+    background-color: gray;
+}
+
+div.well {
+    margin: 10px auto;
+    width: 30%;
+    background-color: #511849;
+    border: 1px solid #EDDD53;
+    font-size: medium;
+    color:#006e66;
+    font-weight: 700;
+}
+
+input {
+    margin-left: 5em;
+    background-color: #651e5b;
+    border: none;
+    color: 
+}
+
+@media (max-width: 1000px){
+    input{
+        margin-left: 2.5em;
+        width: 75%;
+    }
+    
+}
+
+@media (max-width:600px){
+    
+    input{
+        margin-left: 0px;
+    }
+    
+    div.well {
+        width: 50%
+    }
+    
+}

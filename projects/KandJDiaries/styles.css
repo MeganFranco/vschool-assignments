@@ -1,4 +1,5 @@
 html {
+    font-family: Avenir;
     width: 100%
 }
 
@@ -6,7 +7,10 @@ body {
     width: inherit;
     padding-top: 0px;
 }
+
+
 /*--------------------------NAV------------------------------------------*/
+
 nav {
     background-color: #FFFFFF;
     box-sizing: border-box;
@@ -14,23 +18,25 @@ nav {
     margin-top: 0px;
     margin-left: 0px;
     height: 10%;
-    
-    
 }
 
-.navbar-brand {
-    
+.navbar-link {
+    list-style-type: none;
 }
 
+.navbar-nav {
+    font-family: Avenir;
+    font-size: medium;
+}
 
 .dropdown,
 a {
     display: inline-block;
-/*    margin-left: 15px;*/
+    /*    margin-left: 15px;*/
     color: black;
     padding-top: 0px;
     margin-top: 0px;
-    background-color: 
+    background-color:
 }
 
 .brand-image {
@@ -41,52 +47,54 @@ li.nav-bar-link {
     margin-left: 10px;
 }
 
-
 .nav>li>a {
-    display:inline-block;
-    color:black;
+    display: inline-block;
+    color: black;
     margin-right: 10px;
 }
 
-.nav>li>a:hover, .nav>li>a:focus {
-    background-color: transparent;
-    
+.nav>li>a:hover,
+.nav>li>a:focus {
+    background-color: #fee8dd;
+    text-decoration: underline;
 }
 
-
-
-a.dropdowntoggle {
-    
-    
+.dropdown-menu>li>a:focus,
+.dropdown-menu>li>a:hover {
+    background-color: #fee8dd;
+    display: block;
 }
 
+.nav .open>a,
+.nav .open>a:focus,
+.nav .open>a:hover {
+    background-color: #fee8dd;
 }
-.nav .open>a, .nav .open>a:focus, .nav .open>a:hover  {
+
+.nav .open>a,
+.nav .open>a:focus,
+.nav .open>a:hover {
     background-color: white;
 }
 
 .navbar-nav>li>.dropdown-menu {
-/*    position: relative;*/
+    /*    position: relative;*/
     margin-top: 0;
     margin-left: inherit;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
 }
 
-ul.dropdown-menu {
-    
-}
-
-ul.dropdown-menu: {
-    
-}
+ul.dropdown-menu: {}
 
 .search-bar {
     margin-left: 80px;
-    
+    border-radius: 0px;
 }
 
+
 /*-----------------------SLIDESHOW BANNER------------------------------*/
+
 .slideshow {
     width: 100%;
     height: 10px;
@@ -112,24 +120,23 @@ div > img {
     border-radius: 0;
 }
 
+
 /*----------------POSTS---------------------------------------*/
+
 .post {
-        margin-top: 10%;
-        margin-bottom: 10%;
-        font-family: "Helvetica Neue"
-        
+    margin-top: 10%;
+    margin-bottom: 10%;
+    font-family: Avenir;
 }
 
 .content {
- 
     align-content: center;
     text-align: center;
-    
 }
+
 .post-date {
     font-size: smallß;
     color: #9B9B9B;
-
 }
 
 .post-title {
@@ -138,14 +145,13 @@ div > img {
 }
 
 .post-title:hover {
-    color:#F3C3AC;
+    color: #F3C3AC;
 }
 
-p.post-tags{
-    font-family: "Helvetica Neue";
+p.post-tags {
+    font-family: Avenir;
     font-size: small;
     font-style: italic;
-    
 }
 
 div > img {
@@ -153,8 +159,8 @@ div > img {
     width: 100%;
 }
 
-.postBlurb{
-    font-family: 'Lato', sans-serif;
+.postBlurb {
+    font-family: Avenir;
     margin-top: 3%;
     width: 100%;
     text-align: left;
@@ -162,26 +168,24 @@ div > img {
 
 .read-more-button {
     margin-top: 4px;
-    font-family: "Helvetica Neue";
+    font-family: Avenir;
     font-size: medium;
     padding: 2%;
     color: #9B9B9B;
     border: 1px solid #9B9B9B;
     background-color: white;
-    margin-bottom: 20px; 
-    
+    margin-bottom: 20px;
 }
 
 .read-more-button:hover {
     color: white;
     background-color: #9B9B9B;
-
 }
+
 
 /*related banner*/
 
-
-hr { 
+hr {
     display: block;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
@@ -192,57 +196,22 @@ hr {
     color: #9B9B9B;
 }
 
-div.col-md-2.post-date{
-   padding-bottom: 10px;
+div.col-md-2.post-date {
+    padding-bottom: 10px;
 }
-
-
-.related-bar {
-    margin-top: 10px;
-    width: 100%;
-}
-
-
-.thumbnail a>img, .thumbnail>img {
-    height: 100px;
-    width: 120px;
-    margin-left: 0px;
-    margin-right: 0px;
-    padding-left: 0px;
-    padding-right: 0px;
-}
-
-/*-------------------------ADS------------------------------*/
-.ads {
-    margin-top: 7%;
-}
-
-.follow-section{
-   align-content: center;
-    text-align: center;
-    font-family: "Helvetica Neue";
-    font-size: large;
-    border: 1px solid #9B9B9B; 
-}
-
-.margin-up {
-    margin-top: -15;
-}
-
 
 
 /* ICONS http://fontawesome.io/icons/?utm_source=www.qipaotu.com */
+
 .comments {
-    font-family: "Helvetica Neue";
+    font-family: Avenir;
     font-size: small;
 }
 
 .social-icons {
-    display:inline-block;
+    display: inline-block;
     color: #f3c3ac;
     font-size: xx-large;
-
- 
 }
 
 .sm-icons {
@@ -250,40 +219,173 @@ div.col-md-2.post-date{
     margin-right: 15px;
 }
 
+.related-bar {
+    margin-top: 10px;
+    width: 100%;
+}
+
+.thumbnail a>img,
+.thumbnail>img {
+    height: 110px;
+    width: 130px;
+    margin-top: -10px;
+    margin-left: 0px;
+    margin-right: 0px;
+    border: none;
+    padding: 0px;
+    /*    display: none;*/
+}
+
+.related-pics {
+    width: 100%;
+    margin: 0px;
+    padding: 0px
+}
+
+
+/*-------------------------ADS------------------------------*/
+
+.ads {
+    margin-top: 7%;
+}
+
+.follow-section {
+    width: 75%;
+    align-content: center;
+    padding-right: 10px;
+    text-align: center;
+    font-size: large;
+    border: 1px solid #9B9B9B;
+    text-align: left;
+    z-index: 1px;
+}
+
+.margin-up {
+    font-family: Avenir;
+    letter-spacing: .2em;
+    font-size: medium;
+    margin-top: -12px;
+    background: white;
+    border: none;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    text-align: center;
+    z-index: -1;
+}
+
+div.follow-section>i {
+    padding-top: 5px;
+    padding-bottom: 15px;
+    margin-right: 10px;
+    padding-right: 0px;
+    font-size: x-large;
+}
+
+.ad-columns {
+    margin-top: 20%;
+    width: 75%;
+    align-content: center;
+    padding-right: 10px;
+    text-align: center;
+    font-size: large;
+    border: 1px solid #9B9B9B;
+    text-align: left;
+    z-index: 1px;
+}
+
+.subscribe-box {
+    font-family: Avenir;
+    font-size: small;
+    font-style: italic;
+    border: none;
+    height: 100%;
+    box-shadow: none;
+}
+
+.wish-list {
+    align-content: center;
+    height: 350px;
+    padding-left: 5%
+}
+
+.wishSlides {
+    height: 300px;
+}
+
+.w3-btn-floating {
+    margin-left: 2%
+}
+
+#carat-left {}
+
+#carat-right {
+    margin-left: 80%;
+}
+
+.favorites-pics {
+    width: 100%;
+    height: 30%;
+}
 
 
 /*-------INSTABANNER--------*/
 
+.insta-feed {
+    text-align: center;
+    font-family: Avenir;
+    letter-spacing: .2em;
+}
 
+.instabanner {
+    margin: 0px;
+    padding: 0px;
+    margin-left: 3%;
+}
+
+.insta-pic {
+    height: 110px;
+    width: 110px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.instarow2 {
+    margin-left: 30px;
+}
+
+.insta-pic:hover {
+    opacity: 0.7;
+}
 
 
 /*-------FOOTER--------*/
 
 footer {
     font-size: x-small;
-    width:100%;
+    width: 100%;
     background-color: black;
     height: 40px;
     color: white;
     text-align: left;
+    margin-top: 10%
 }
 
 .footer-link {
     color: white;
     text-decoration: underline;
-    
 }
 
 .footer-link:hover {
-     color: white;
-    text-decoration: underline;  
+    color: white;
+    text-decoration: underline;
 }
 
-.footer-container{
+.footer-container {
     width: inherit;
     margin-left: 0px;
     margin-right: 0px;
-
 }
 
 .footer-text {
@@ -294,8 +396,195 @@ footer {
     margin-left: 45%;
     margin-right: 0px;
     padding-right: 0px;
+}
+
+
+/*-----------------------------Re-sizing---------------------------*/
+
+@media (max-width: 1100px) {
+    .search-bar {
+        margin-top: 0px;
+        padding-top: 0px;
+        width: 15px;
+        margin-left: 0px;
+        border-radius: 0px;
+}
+    .content-main {
+        margin-left: 10px;
+    }
+
+}
+
+@media (max-width: 1000px) {
     
+
+       div > img {
+    height: 650px;
+    width: 100%;
+}
+    
+    img.related-pics{
+    display: inline-block
+}
+    
+    .post {
+      width: 70%;  
+    }
+    
+    .related-thumbnails {
+        width: 100px;
+        align-content: left;
+        padding: 10%;
+        content:inherit;
+        display: inline-block;
+    }
+    
+    .ads {
+        margin-top: 5%;
+        margin-left: 20%;
+        width: 50%;
+        height: 60%;
+        
+    }
+    
+    follow-section {
+        margin-top: 5%;
+    }
+    
+    .ad-columns{
+        margin-top: 5%;
+        margin-bottom: 5%;
+        }
+        
+    .instabanner {
+        margin-top: 5%;
+    }
+    
+    .copyright {
+    display: none;
+}
+
+
+}
+
+@media (max-width: 900px){
+    img.postImage { 
+        height: 800px;
+        width: 130%;
+    }
+
+
+@media (max-width: 800px) {
+    post{
+        margin-left: 20%;
+    }
+    
+img.postImage { 
+        height: 800px;
+        width: 130%;
+    }
+    
+    .search-items {
+        display: none;   
+    }
+    
+    .content-main {
+        margin-left: 20%;
+    }
+    
+    img.postImage {
+        height: 200px;
+        width: 40%;
+       
+    }
+}
+
+@media (max-width: 800px) {
+        img.postImage { 
+            height: 800px;
+            width: 130%;
+        }
+    
+    .ads {
+        margin-top: 5%;
+        margin-left: 30%;
+        width: 50%;
+        height: 60%;
+      
+    }
+}
+
+
+
+@media (max-width: 600px) {
+    .nav {
+        display: none;
+    }
+    
+       img.postImage {
+        height: 700px;
+        width: 120%;
+    }
+    
+    .search-items {
+        display: none;   
+    }
+    
+    post{
+        margin-left: 50%;
+    }
+    .content-main {
+        margin-left: 20%;
+    }
+    
+     img.postImage {
+        height: 500px;
+        width: 120%;
+    }
+    
+      .ads {
+        margin-top: 5%;
+        margin-left: 30%;
+        width: 50%;
+        height: 60%;
+      
+    }
     
 }
+
+@media (max-width: 500px) {
+     .nav {
+        display: none;
+    }
+    
+    .middle-subscribe {
+     display: none;
+    }
+    
+    .search-items {
+        display: none;   
+    }
+    
+
+    img.postImage {
+        height: 450px;
+        width: 120%;
+    }
+    
+ div.col-md-3.ads {
+        margin-top: 5%;
+        margin-left: 20%;
+        padding-left: 20%;
+        width: 70%;
+        height: 60%;
+      
+    }
+}
+
+@media (max-width: 400px) {
+    
+}
+
+
 
 
