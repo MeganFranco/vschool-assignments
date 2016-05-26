@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html ng-app="PokemonService">
+    <head> 
+        <title> </title>
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href=""/>
+        <meta charset="=utf-8">
+    </head>
+    <body ng-controller="MainController"> 
+    
+    <form name="favoritePokemon">
+        <input name="pokemon" placeholder="Enter favorite pokemon" ng-model="pokemonName" >
+        <button ng-click="addPokemonToPage(pokemonName)">enter</button>
+    </form>
+    
+<!-- ---------------list of pokemon----------------- -->
+    <div ng-repeat="pokemon in pokemonList track by $index">
+        <p>{{ pokemon }} <button class="btn btn-x-small btn-danger glyphicon glyphicon-trash" ng-click=""> </button>   </p>
+        
+    </div>
+    
+    
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+    <script src="app.js"></script> 
+    </body>
+</html>

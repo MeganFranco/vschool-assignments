@@ -1,0 +1,20 @@
+body {
+    box-sizing: border-box;
+    margin: 10px;
+    width: 99%;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.theList {
+    text-align: center;
+    margin-top: 20px;
+}
+
+img {
+    height: 200px;
+    width: 200px;
+}

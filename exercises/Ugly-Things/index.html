@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html ng-app="UglyThings">
+
+<head>
+    <title>Ugly things</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <meta charset="=utf-8">
+</head>
+
+<body ng-controller="MainController">
+    <!-- ------------------ form ---------------------- -->
+    <form>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 col-md-4">
+                    <label>What is it?</label><br>
+                    <input type=text placeholder="Title" ng-model="uglyThing.title">
+                </div>
+                <div class="col-sm-4 col-md-4">
+                    <label>Where'd you find it?</label><br>
+                    <input type=text placeholder="ImgUrl" ng-model="uglyThing.imgUrl">
+                </div>
+                <div class="col-sm-4 col-md-4">
+                    <label>Tell us about it!</label><br>
+                    <input type=text placeholder="Description" ng-model="uglyThing.description">
+                </div>
+            </div>
+            
+            <div>
+                <button class="btn btn-primary form-button" ng-click="addUglyThing()">Submit</button>
+             
+            </div>
+        </div>
+            
+    
+    </form>
+
+    <!-- --------------- ng-repeat section ------------------- -->
+    
+    <div ng-repeat="uglyThing in uglyThings"> 
+        <div class="submission row">     
+            <div class="entry col-sm-6 col-md-12">
+                <h2>{{ uglyThing.title }}</h2>
+                <h4>{{ uglyThing.description }}</h4>
+                <img ng-src="{{ uglyThing.imgUrl }}">
+            </div>
+            
+        </div>        
+    </div>
+    
+    
+    
+<!-- ---------------------------------------------------------- -->
+        <footer class="footer navbar-fixed-bottom">
+            
+        </footer>
+        
+        
+    <!-- SCRIPT TAGS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

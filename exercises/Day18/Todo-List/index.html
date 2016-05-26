@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html ng-app="ToDoList">
+
+<head>
+    <title> </title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <meta charset="=utf-8">
+</head>
+
+<body ng-controller="MainController">
+
+    <!-- obvs w/in a form-->
+    <!--
+    <div ng-model="toDoItem.title"></div>
+    <div ng-model="toDoItem.price"></div>
+-->
+    <!-------------FORM-------------------------->
+    <form>
+        <label>Item</label>
+        <input type="text" ng-model="toDoItem.title">
+        <label>Price</label>
+        <input type="text" ng-model="toDoItem.price ">
+        <label>Description</label>
+        <input type="text" ng-model="toDoItem.description">
+        <label>Image</label>
+        <input type="text" placeholder="enter image url here" ng-model="toDoItem.image">
+        <button ng-click="addItem()">add</button>
+
+        <br><button ng-click="getList()">Get Current List</button>
+
+
+    </form>
+
+    <!---------------LIST------------------------->
+    
+    <div ng-repeat="item in toDos track by $index">
+<!-- track by $index will allow the user to enter multiple items of the same name -->    
+        <div>
+<!-- title -->
+            <h3 ng-hide="item.editing" ng-class="{completed : item.completed}">{{ item.title }}</h3>
+            <input ng-show="item.editing" ng-hide="!item.editing" placeholder="title" ng-model="item.title">
+            
+<!-- price -->
+            <p ng-hide="item.editing">{{ item.price | currency }}</p>
+            <input ng-show="item.editing" ng-hide="!item.editing" placeholder="price" ng-model="item.price">
+            
+<!-- description -->
+            <p ng-hide="item.editing">{{ item.description }}</p>
+            <input ng-show="item.editing" ng-hide="!item.editing" placeholder="description" ng-model="item.description">
+            
+<!-- image -->
+            <img ng-src="{{ item.image }}">
+            
+            
+<!-- -----------  BUTTONS  ---------------- -->
+            
+            <button ng-click="crossOffItem(item)">completed</button>
+            
+            <button ng-click="item.editing = !item.editing" ng-hide="item.editing"> edit</button>  
+<!--   add another button with the function of update item  -->
+           <button ng-show="item.editing" ng-click="editItem(item, $index)">update</button>
+           
+            <button ng-click="removeItem(item)"> Delete </button>
+
+        </div>
+  
+
+    </div>
+
+
+    <!------------SCRIPTS ------------------------->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
+
+
+
+
+<!--
+    todo.title (only required thing)
+    todo.price
+    todo.checked (a boolean?
+    )
+-->

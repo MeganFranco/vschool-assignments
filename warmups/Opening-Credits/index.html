@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html ng-app="OpeningCredits">
+    <head> 
+        <title> </title>
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="styles.css"/>
+        <meta charset="=utf-8">
+    </head>
+    <body ng-controller="MainController"> 
+    
+    <button ng-click="showSWStuff()">Click Me!</button>
+    
+    <div>
+       <div id="titles"><div id="titlecontent">
+            <p class="title">{{starWarsCredits.opening_crawl}}</p>
+            <p>Directed by: {{starWarsCredits.director }}</p>
+            <p>Producers: {{starWarsCredits.producer}}</p>
+            <p movie-title>{{starWarsCredits.title}}</p>
+        </div></div>
+        
+
+    </div>
+    
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+    <script src="main.js"></script> 
+    </body>

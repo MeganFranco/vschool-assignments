@@ -1,0 +1,32 @@
+.newBadge {
+    
+    font-family: Arial;
+    font-size: medium;
+    color: #561A44;
+    margin-left: 20%;
+    margin-top: 20px;
+    width: 60%;
+    align-content: center;
+    text-align: center;
+
+}
+
+.badgeContent {
+    
+    text-align: left;
+}
+
+button {
+    margin-left: 45%;
+    margin-top: 20px;
+}
+
+h5 {
+    height:25px;
+    padding-top: 5px;
+    padding-left: 5px;
+    text-align: left;
+    color: #FEC22D;
+    background-color: #561A44;
+    
+}

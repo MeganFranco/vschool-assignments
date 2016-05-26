@@ -1,0 +1,123 @@
+<!--http://coursework.vschool.io/angular-name-badge/-->
+
+
+<!DOCTYPE html>
+
+<html lang="en" ng-app="NameBadge">
+
+<head>
+    <title> </title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <meta charset="=utf-8">
+</head>
+
+<body ng-controller="MainController">
+    <form name="badgeForm">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <label> First Name </label>
+                    <input type="text" class="form-control" ng-model="user.firstName" required>
+                    <div ng-messages=""></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label>Last Name</label>
+                        <input type="text" class="form-control" ng-model="user.lastName">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <label>Email</label>
+                    <input type="email" class="form-control" ng-model="user.email">
+                </div>
+                <div class="col-md-6">
+                    <label>Phone</label>
+                    <input type="tel" class="form-control" ng-model="user.phone">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label>Place of Birth</label>
+                    <input type="text" class="form-control" ng-model="user.placeOfBirth">
+                </div>
+                <div class="col-md-6">
+                    <label>Favorite Food</label>
+                    <input type="text" class="form-control" ng-model="user.favoriteFood">
+                </div>
+                <div class="col-md-6">
+                    <label>Tell us about yourself</label>
+                    <br>
+                    <textarea class="form-control" ng-model="user.about"></textarea>
+                </div>
+            </div>
+            <button class="btn btn-success" ng-click="addPerson()">click me!</button>
+        </div>
+    </form>
+
+
+    <section ng-repeat="person in users">
+        <div class="newBadge" ng-style="{'background-color': colors[$index % colors.length]}">
+            <header>
+                <h5>Badge</h5></header>
+            <div class="container badgeContent">
+                <div class="row">
+                    <div class="col-md-6">Name: {{person.firstName}} {{person.lastName}}</div>
+                    <div class="col-md-6">Phone: {{person.phone}}</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">Place of Birth: {{ person.placeOfBirth }}</div>
+                    <div class="col-md-6">Favorite Food: {{ person.favoriteFood }} </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">Email: {{person.email}} </div>
+                </div>
+                <div class=row>
+                    <div class="col-md-12">{{ person.about }}</div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+        <!--
+                    <h4> {{ person.firstName }} </h4>
+                    <h4> {{ person.lastName }}</h4>
+                    <h4> {{ person.email }}</h4>
+                    <h4> {{ person.phone }}</h4>
+                    <h4> {{ person.placeOfBirth }}</h4>
+                    <h4> {{ person.favoriteFood }}</h4>
+-->
+    </section>
+    </div>
+
+
+
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-messages.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
+
+
+
+
+<!--
+    instead of making a class, just add to object -> person.firstName 
+    -->
+
+
+<!--/////////////////////////creating the object on the fly /////////////////////////-->
+
+<!--
+                <input type="text" ng-model="person.name"> 
+                <br>
+                <h1> {{ person.name }}</h1>      
+    -->

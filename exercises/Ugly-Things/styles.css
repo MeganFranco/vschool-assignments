@@ -1,0 +1,75 @@
+form {
+    margin: 0 auto;
+    width: 90%;
+    margin-top: 25px;
+    border: 5px solid cornflowerblue; 
+    border-radius: 4px;
+    padding: 15px;
+    margin-bottom: 
+}
+
+button {
+    margin-top: 20px;
+    margin-left: 45%;
+    margin-bottom: 10px;
+    
+}
+
+.submission {
+    margin-left: 30%;
+    width: 45%;
+    margin-top: 25px;
+    margin-bottom: 45px;
+    align-content: center;
+    padding-top: 2%;
+    padding-bottom: 5%;
+    text-align: center;
+    border: 1px solid black;
+    
+}
+
+.entry {
+    
+}
+
+footer {
+    height: 40px;
+    background-color: cornflowerblue;
+}
+
+/*  ///////////////response///////////////////  */
+
+@media (max-width: 990px){
+    .submission {
+        width: 60%;
+        text-align: center;
+        margin-right: 15% 
+    }
+    
+    img {
+        max-width 90px;
+    }
+}
+
+@media (max-width: 960) {
+      .submission {
+        width: 60%;
+        margin: 20% auto;
+    }
+    
+    img {
+        max-width: 45px
+    }
+}
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    

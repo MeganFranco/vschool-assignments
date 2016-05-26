@@ -1,0 +1,68 @@
+<!--http://coursework.vschool.io/angular-name-badge/-->
+
+
+<!DOCTYPE html>
+
+<html lang="en" ng-app="NameBadge">
+    <head> 
+        <title> </title>
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+<!--    <link rel="stylesheet" href="styles.css"/>-->
+        <meta charset="=utf-8">
+    </head>
+    <body ng-controller="MainController"> 
+    
+      <div>
+          <form ng-click="makeBadge()" name="frm">
+<!--            <button ng-click="makeBadge()">click me!</button>-->
+               
+               
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6" name="firstName" >
+                            <label>Name</label>
+                            <input type="text" class="form-control" ng-model="user.name">
+                         </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6" name="firstName" >
+                            <label>Username</label>
+                            <input type="text" class="form-control" ng-model="user.userName">
+                         </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6" name="firstName" >
+                            <label>Email</label>
+                            <input type="email" class="form-control" ng-model="user.email">
+                         </div>
+                    </div>
+                            <button ng-click="addPerson()">click me!</button>
+                </div>
+                          
+            <section ng-repeat="person in users">
+                <h4> {{ person.name }}</h4>
+                <h4> {{ person.userName }}</h4>
+                <h4> {{ person.email }}</h4>
+            </section>
+
+                          
+             
+          </form>
+      </div>  
+      
+      
+      
+      
+       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+        <script src="example.js"></script> 
+    </body>
+    
+</html>
+
+
+
+
+<!--
+instead of making a class, just add to object -> person.firstName 
+-->

@@ -1,26 +1,22 @@
 $( document ).ready(function(){
     
-//var countMe = document.getElementsByTagName("body");
-//
-// countMe = countMe.addEventListener("click", countClicks());
+var countMe = document.getElementsByTagName("html")[0];
 
-//function countClicks() { 
-//    
-//    var currentCount = Number(document.getElementById("currentClickCount").value)
-//    newCount = currentCount + 1;
-//    document.getElementById("currentClickCount").innerHTML = newCount
-//    
-//}
+countMe.addEventListener("click", countClicks);
 
-    $('body').each(function() {
-    $(this).click(function() {
-        var currentCount = Number(document.getElementById("currentClickCount").value)
-    newCount = currentCount + 1;
-    document.getElementById("currentClickCount").innerHTML = newCount
-    }) 
+var currentCount = 0;
 
-})
-//countClicks();
+    var newCount;
+
+function countClicks() { 
+    
+currentCount ++ ;
+    document.getElementById("currentClickCount").innerHTML = currentCount;
+    
+};
+
+  
 });
+
 
 
