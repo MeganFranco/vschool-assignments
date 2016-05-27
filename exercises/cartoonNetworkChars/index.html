@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html ng-app="CartoonNetwork">
+    <head> 
+        <title> </title>
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="styles.css"/>
+        <meta charset="=utf-8">
+    </head>
+    <body ng-controller="MainController"> 
+    
+        
+<!--    /////////FORM////////////-->
+    <form class="form-control container">
+        <div class="row">
+            <div class="col-md-3 col-md-offset-1">
+                <label>Image:</label><input type="text" placeholder="enter url" ng-model="toon.imageUrl">
+            </div>
+            <div class="col-md-3">
+                <label>Title:</label><input type="text" ng-model="toon.title">
+            </div>
+            <div class="col-md-4">
+                <label>Description:</label><input type="text" ng-model="toon.description">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-md-offset-5">
+                <button class="btn btn-md btn-warning" ng-click="addToon(toon)">submit</button>
+            </div>
+        </div>        
+    </form>
+<!--    /////////LIST////////////-->
+    <div class="listOfToons" ng-repeat="toon in cartoonList track by $index">
+         <h3>{{ toon.title }}</h3>
+        <h5>{{ toon.description }}</h5>
+        <img ng-src="{{ toon.imageUrl }}">
+    </div>
+
+    
+<!--    ///////SCRIPTS////////////////-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+    <script src="main.js"></script> 
+    <script src="service.js"></script>
+    
+    </body>
+</html>

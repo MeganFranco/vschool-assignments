@@ -1,0 +1,10 @@
+body {
+    box-sizing: border-box;
+}
+
+.set {
+    margin: auto;
+    width: 80%;
+    padding-top: 20px;
+    height: 500px
+}

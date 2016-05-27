@@ -13,6 +13,11 @@ app.service("PokemonService", [function(){
         this.usersFavoritePokemon.push(pokemon)
     }
     
+    
+    this.removeItem = function(pokemon) {
+        this.usersFavoritePokemon.splice(pokemon, 1);
+    }
+    
 }]);
 
 
@@ -25,9 +30,15 @@ $scope.addPokemonToPage = function(pokemon){
     PokemonService.addPokemon(pokemon);
     $scope.pokemonList = PokemonService.usersFavoritePokemon
     
-    console.log("pokemon");  
+ 
     $scope.pokemonName = "";
-}    
+}   
+
+$scope.removePokemon = function(pokemon) {
+    
+    PokemonService.removeItem(pokemon);
+    console.log($scope.pokemonList)
+}
     
     
     

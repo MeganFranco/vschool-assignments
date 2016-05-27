@@ -1,0 +1,45 @@
+body {
+    background-color: #000066;
+}
+div.row {
+margin-top:5%;    
+color: #FFA232;
+background-color: #000066;  
+}
+
+input {
+    color: #FFA232;
+    background-color: #0388B2
+}
+
+form.form-control.container.ng-pristine.ng-valid{
+    background-color: #000066;
+    border:none
+}
+
+form.form-control.container.ng-dirty{
+    background-color: #000066;
+    border:none
+}
+
+.listOfToons{
+    margin: 0px auto;
+    width: 75%;
+    text-align: center;    
+    margin-top: 15%;
+    color: #FFA232;
+    background-color: #000066;
+}
+
+
+
+img{
+    height: 100px;
+    width: 100px;
+    align-content: center;
+
+}
+
+button{
+    color:#000066;
+}

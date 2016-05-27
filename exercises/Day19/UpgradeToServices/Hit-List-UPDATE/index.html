@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html ng-app="HitList">
+
+<head>
+    <title> </title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <meta charset="=utf-8">
+</head>
+
+<body ng-controller="MainController">
+
+<!--
+    <div>
+        {{myData[0].name}}
+    </div>
+-->
+<h1>
+ The List
+</h1>
+    
+    <div class="theList row" ng-repeat="dat in myData">
+        <h4>
+          {{dat.name}}  
+        </h4>
+        <img ng-src="{{dat.image}}">
+    </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
+
+
+
+
+<!--
+
+
+
+
+
+-->
