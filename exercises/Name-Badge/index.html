@@ -14,6 +14,10 @@
 </head>
 
 <body ng-controller="MainController">
+    <header class="page-title">
+        <h1>MAKE A NAME BADGE</h1>
+    </header>
+       
     <form name="badgeForm">
         <div class="container">
             <div class="row">
@@ -63,7 +67,9 @@
     <section ng-repeat="person in users">
         <div class="newBadge" ng-style="{'background-color': colors[$index % colors.length]}">
             <header>
-                <h5>Badge</h5></header>
+                <h2>HELLO</h2>
+                <p>My Name is:</p>
+            </header>
             <div class="container badgeContent">
                 <div class="row">
                     <div class="col-md-6">Name: {{person.firstName}} {{person.lastName}}</div>

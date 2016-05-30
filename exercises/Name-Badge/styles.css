@@ -1,32 +1,83 @@
+.page-title{
+    color: #5077bd;
+    height: 60px;
+    
+}
+
+
+form {
+    width: 75%;
+    margin: 0px auto;
+    margin-top: 10px;
+    padding-top: 25px;
+    padding-bottom: 20px;
+    padding-right: 15px;
+    background-color: cornflowerblue;
+    border-radius: 10px;
+}
+
+input.form-control {
+    background-color: #F6F6F6;
+}
+
+div.col-md-6{
+    width: 40%;
+}
+
+.page-header {
+   color: #4668A5;
+}
+
+.pageTitle: {
+    color: black; 
+}
+
 .newBadge {
     
     font-family: Arial;
     font-size: medium;
-    color: #561A44;
     margin-left: 20%;
     margin-top: 20px;
     width: 60%;
     align-content: center;
     text-align: center;
+    padding-bottom: 10px;
+    border-radius: 10px;
 
-}
-
-.badgeContent {
-    
-    text-align: left;
 }
 
 button {
-    margin-left: 45%;
+    margin-left: 35%;
     margin-top: 20px;
+    color: darkorange
 }
 
-h5 {
-    height:25px;
-    padding-top: 5px;
+
+header {
+    text-align: center;
+/*    color: whitesmoke*/
+}
+
+
+
+
+h2 {
+
+    padding-top: 10px;
     padding-left: 5px;
-    text-align: left;
-    color: #FEC22D;
-    background-color: #561A44;
+    color: white; 
     
+}
+
+.badgeContent {
+    background-color: white;
+    width: 96%;
+    height: 150px;
+    border-top: 30px solid white;
+    text-align: left;
+    border-radius: 5px;
+}
+
+.newBadge {
+    color: white;
 }
