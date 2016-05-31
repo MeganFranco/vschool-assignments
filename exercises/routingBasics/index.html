@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html ng-app="FavoriteState">
+
+<head>
+    <title> </title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="styles.css"/>
+    <meta charset="=utf-8">
+</head>
+
+<body>
+    <ul>
+        <a href="#/">
+            <li>Home</li>
+        </a>
+        <a href="#/about">
+            <li>About</li>
+        </a>
+        <a href="#/whyilove">
+            <li>Why I love PA</li>
+        </a>
+    </ul>
+    <div ng-view></div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+    <script src=//ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.js></script>
+    <script src="app.js"></script>
+    <script src="home/home.js"></script>
+<!--
+    <script src="about/about.js"></script>
+    <script src="why/whyilove.js"></script>
+-->
+
+
+</body>
+
+</html>
