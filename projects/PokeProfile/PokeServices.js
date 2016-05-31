@@ -1,3 +1,4 @@
+
 var app = angular.module("PokeProfile")
 
 app.service("PokeServices", [function($http){
@@ -16,8 +17,3 @@ app.service("PokeServices", [function($http){
     
     }
 }])
-
-
-
-
-//"http://pokeapi.co/api/v1/pokemon/" + inputNumber + "/"
