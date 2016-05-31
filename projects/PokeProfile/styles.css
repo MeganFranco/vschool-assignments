@@ -1,5 +1,53 @@
 body {
     background-image: url(http://imagesci.com/img/2013/05/sleeping-pikachu-wallpaper-5737-hd-wallpapers.jpg);
+/*
     background-size: 900px 600px;
     background-repeat: no-repeat;
+*/
+    background-position: center; 
+     margin: 0px auto;
+     width: 30%
+}
+
+form {
+    margin-top: 15%;
+    text-align: center;
+}
+
+label, input, button {
+    margin-top: 15px;
+}
+
+button, input{
+    width: 65%;
+}
+
+
+div {
+    margin-top: 25px;
+    text-align: center;
+    
+}
+
+h5, label {
+    font-size: medium;
+    font-weight: 600;
+    font-family: Georgia;
+}
+
+h1{
+    color: white;
+    text-shadow: 2px -2px black;
+    font-family: georgia;
+    font-weight: 800
+}
+
+img {
+    background-color: white;
+}
+
+@media (max-width: 500){
+    button{
+        width: 70px;
+    }
 }
