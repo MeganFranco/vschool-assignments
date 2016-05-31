@@ -53,18 +53,13 @@
                     <label>Favorite Food</label>
                     <input type="text" class="form-control" ng-model="user.favoriteFood">
                 </div>
-                <div class="col-md-6">
-                    <label>Tell us about yourself</label>
-                    <br>
-                    <textarea class="form-control" ng-model="user.about"></textarea>
-                </div>
             </div>
             <button class="btn btn-success" ng-click="addPerson()">click me!</button>
         </div>
     </form>
 
 
-    <section ng-repeat="person in users">
+    <section ng-repeat="person in users track by $index">
         <div class="newBadge" ng-style="{'background-color': colors[$index % colors.length]}">
             <header>
                 <h2>HELLO</h2>
@@ -85,8 +80,9 @@
                 <div class=row>
                     <div class="col-md-12">{{ person.about }}</div>
                 </div>
-
+                    
             </div>
+<!--             <button class="btn btn-small" ng-click="removeBadge">delete</button>-->
         </div>
 
 
@@ -101,12 +97,15 @@
                     <h4> {{ person.favoriteFood }}</h4>
 -->
     </section>
-    </div>
+    
+    <div></div>
+<!--    </div>-->
 
 
 
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-messages.js"></script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular-cookies.js"></script>
     <script src="main.js"></script>
 </body>
 

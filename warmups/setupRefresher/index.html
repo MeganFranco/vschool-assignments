@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html ng-app="Refresher">
+
+<head>
+    <title> </title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="" />
+    <meta charset="=utf-8">
+</head>
+
+<body ng-controller="MainController">
+    <form>
+        <input type="number" ng-model="firstNumber">
+        <input type="number" ng-model="secondNumber">
+        <button class="btn btn-small btn-success" ng-click="addNums()">add</button>
+
+        <label> <p>{{ newSum}}</p> </label>
+    </form>
+    <!--  ------------Second Controller-------------------->
+    <div ng-controller="MultiplyController">
+        <input type="number" ng-model="firstMultiply">
+        <input type="number" ng-model="secondMultiply">
+        <button class="btn btn-small btn-success" ng-click="multiplyNums()">get product</button>
+        
+        <label> <p>{{ newProduct}}</p> </label>
+    </div>
+
+
+    <!-------------------SCRIPTS-------------->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,8 +1,11 @@
-var app = angular.module("NameBadge", []);
+var app = angular.module("NameBadge", ['ngCookies']);
 
 
-app.controller("MainController", ["$scope", function($scope){
-      
+app.controller("MainController", ["$scope", "$cookies", "$cookieStore", function($scope, $cookies, $cookieStore ){
+    $scope.
+    
+    var vm = this;
+    
     $scope.users = [];
    
    $scope.addPerson = function(){
@@ -14,8 +17,17 @@ app.controller("MainController", ["$scope", function($scope){
        
    };
     
-    $scope.colors = ["crimson", "blue", "green", "darkorange", "purple" ]
+    $scope.colors = ["crimson", "blue", "green", "darkorange", "purple" ];
+
+//////////////////STORE/////////////////////
+    //give a key-value pair... but what should I make the value? 
+    $cookieStore.put("keepBadge", vm.users )
     
-//    "purple"
+/////////////////REMOVE////////////////
+
+    //$scope.removeBadge function(person){
+    //    $scope.person.splice(index, 1)
+    //}    
+
     
 }])
