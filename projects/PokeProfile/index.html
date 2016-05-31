@@ -11,13 +11,17 @@
     <body ng-controller="MainController"> 
 <!-- ------------FORM------------ -->
        
-        <label>Enter Pokemon Number</label>
-        <input type="number" ng-model="enteredNumber">
+        <label>Enter Pokemon Number</label><br>
+        <input type="number" ng-model="enteredNumber"><br>
         <button ng-click="getNumber()">Get Pokemon</button>
+        
+        
 <!-- ----------RESULT----------- -->
-    <div ng-repeat="stat in pokemon">
-        <h1>{{ stat.name }}</h1>
-        <h5>{{ stat. }}</h5>
+        <div >
+        <h1>{{ pokemon.name }}</h1>
+        <h5>Attack: {{ pokemon.attack }}</h5>
+        <h5>Ability: {{ pokemon.ability.name }}</h5>
+        <img ng-src="{{ pokemon.sprite }}">
     </div>
     
 <!--    SCRIPTS     -->

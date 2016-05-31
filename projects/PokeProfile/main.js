@@ -9,10 +9,7 @@ app.controller("MainController", ["$scope", "PokeServices", function ($scope, Po
         PokeServices.getPokemon($scope.enteredNumber).then(function (pokemon) {
             $scope.pokemon = pokemon;
             
-            console.log($scope.pokemon.name)
-            console.log($scope.pokemon.attack)
-            console.log($scope.pokemon.ability.name)
-            console.log($scope.pokemon.sprite)
+            console.log(pokemon)
             
         })
 
