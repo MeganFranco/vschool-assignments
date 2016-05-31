@@ -15,9 +15,17 @@ app.service("PokeServices", ["$http", function ($http) {
             .then(function (response) {
                 currentPokemon.attack = response.data.attack;
                 currentPokemon.ability = response.data.abilities[0];
-                return currentPokemon;
+                return $http.get(baseUrl + response.data.sprites[0].resource_uri);
+               
+            
+            })
+            .then(function (response) {
+                currentPokemon.sprite = baseUrl + response.data.image
+                return currentPokemon;        
             })
 
-
     }
+
+
+
 }])

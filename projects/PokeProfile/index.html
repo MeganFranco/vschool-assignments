@@ -15,7 +15,12 @@
         <input type="number" ng-model="enteredNumber">
         <button ng-click="getNumber()">Get Pokemon</button>
 <!-- ----------RESULT----------- -->
+    <div ng-repeat="stat in pokemon">
+        <h1>{{ stat.name }}</h1>
+        <h5>{{ stat. }}</h5>
+    </div>
     
+<!--    SCRIPTS     -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
     <script src="main.js"></script> 
     <script src="PokeServices.js"></script> 
