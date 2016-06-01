@@ -29,3 +29,4 @@ app.service("PokeServices", ["$http", function ($http) {
 
 
 }])
+

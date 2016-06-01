@@ -1,10 +1,8 @@
-var app = angular.module("NameBadge", ['ngCookies']);
+var app = angular.module("NameBadge", ['ngStorage']);
 
 
-app.controller("MainController", ["$scope", "$cookies", "$cookieStore", function($scope, $cookies, $cookieStore ){
-    $scope.
-    
-    var vm = this;
+app.controller("MainController", ["$scope", "$localStorage", function($scope, $localStorage){
+
     
     $scope.users = [];
    
@@ -15,13 +13,28 @@ app.controller("MainController", ["$scope", "$cookies", "$cookieStore", function
        console.log($scope.user)
        $scope.user = {};
        
+//       $localStorage.badge = $scope.badge;
+       
    };
     
     $scope.colors = ["crimson", "blue", "green", "darkorange", "purple" ];
 
 //////////////////STORE/////////////////////
-    //give a key-value pair... but what should I make the value? 
-    $cookieStore.put("keepBadge", vm.users )
+
+
+    
+    
+    
+//$scope.exerciseObj = {};
+//  
+//  /**
+//   * Function that saves scope object to Local Storage
+//   */
+//  $scope.saveToLocalStorage = function(){
+//    $localStorage.exerciseObj = $scope.exerciseObj;
+//  };
+//  
+//   $scope.anotherScopeObj = $localStorage.exerciseObj;
     
 /////////////////REMOVE////////////////
 

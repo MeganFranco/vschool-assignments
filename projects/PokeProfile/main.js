@@ -1,5 +1,12 @@
 var app = angular.module("PokeProfile", [])
 
+app.config(function ($routeProvider) {
+    $routeProvider
+        .when("/", {
+            templateUrl: "home/home.html",
+            controller: "HomeController",
+        })
+
 app.controller("MainController", ["$scope", "PokeServices", function ($scope, PokeServices) {
 
 
