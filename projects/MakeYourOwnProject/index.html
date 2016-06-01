@@ -2,6 +2,8 @@
 get lat&long http://stackoverflow.com/questions/3490622/get-latitude-and-longitude-based-on-location-name-with-google-autocomplete-api
 https://developers.google.com/maps/documentation/javascript/geocoding#Geocoding
 google API key: AIzaSyAAz4sE41qrndUfdqWNarYgGZxbz21veUQ
+get data from google: https://maps.googleapis.com/maps/api/geocode/json?address=Provo+UT&key=AIzaSyAAz4sE41qrndUfdqWNarYgGZxbz21veUQ
+from forcast.io: https://api.forecast.io/forecast/eecbf01a57664fff99bbd3f17275ffcc/40.239065, -111.658899,2016-06-01T12:00:00-0400
 -->
 
 <!DOCTYPE html>
@@ -21,12 +23,14 @@ google API key: AIzaSyAAz4sE41qrndUfdqWNarYgGZxbz21veUQ
         <a href="#/">
             <li>Home</li>
         </a>
-        <a href="#/about">
-            <li>About</li>
+        <a href="#/location">
+            <li>Your Location</li>
         </a>
+<!--
         <a href="#/whyilove">
             <li>Why I love PA</li>
         </a>
+-->
     </ul>
 
     <div ng-view></div>
@@ -35,8 +39,8 @@ google API key: AIzaSyAAz4sE41qrndUfdqWNarYgGZxbz21veUQ
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js"></script>
     <script src="app.js"></script>
-    <script src="home.js"></script>
-    <script src=""></script>
+    <script src="home/home.js"></script>
+    <script src="userinfo/userinfo.js"></script>
 
 </body>
 
