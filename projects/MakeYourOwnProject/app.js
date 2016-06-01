@@ -1,4 +1,5 @@
-//API key: eecbf01a57664fff99bbd3f17275ffcc
+//forecast API key: eecbf01a57664fff99bbd3f17275ffcc
+//google API key: AIzaSyAAz4sE41qrndUfdqWNarYgGZxbz21veUQ
 
 var app = angular.module("GetWeather", ["ngRoute"])
 
@@ -10,6 +11,10 @@ app.config(function ($routeProvider){
     })
     .when ("/location", {
         templateUrl: "userinfo/userinfo.html",
-        controller: "userinfo.js",
+        controller: "UserInfoController",
+    })
+    .when ("/result",{
+        templateUrl: "result/result.html",
+        controller: "ResultController"
     })
 })
