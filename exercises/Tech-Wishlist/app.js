@@ -3,18 +3,12 @@ var app = ("TechWishlist", ['ngRoute'])
 app.config(function($routeProvider){
     $routeProvider
     .when("/computer", {
-        templateUrl: "",
-        controller: "",
+        templateUrl: "templates/computer/computer.html",
+        controller: "ComputerController",
     })
     .when("/other", {
-        templateUrl: "",
-        controller: "",
+        templateUrl: "template/other/other.html",
+        controller: "OtherController",
     })
 })
 
-app.directive("wishList", function(){
-    return{
-        templateUrl: "template/list",
-        
-    }
-})
