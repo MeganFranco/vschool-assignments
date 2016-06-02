@@ -2,13 +2,11 @@ var app = angular.module("GetWeather");
 
 app.service("WeatherService", ["$http", function ($http) {
     var self = this;
-    this.userLocation = {}
-//    this.forecast = {}
+    this.userLocation = {};
+    this.forecast = {};
+    var forecast;
 
     this.getLatAndLon = function (city, state) {
-        //do I need an object or array to store things?
-        //    var locationLatAndLon = {}
-
         return $http.get("https://maps.googleapis.com/maps/api/geocode/json?address=" + city + "+" +
                 state + "&key=AIzaSyAAz4sE41qrndUfdqWNarYgGZxbz21veUQ")
             .then(function (response) {
@@ -16,15 +14,15 @@ app.service("WeatherService", ["$http", function ($http) {
             })
 
     }
+    
+    ///////////////////////GET FORECAST//////////////////////
 
-    this.getForecast = function () {
-        return $http.get("https://api.forecast.io/forecast/eecbf01a57664fff99bbd3f17275ffcc/" + userLocation.lat + "," + userLocation.lng)
+    this.getForecast = function (userLat, userLng) {
+        return $http.get("https://api.forecast.io/forecast/eecbf01a57664fff99bbd3f17275ffcc/" + userLat + "," + userLng)
             .then(function (response) {
-            return response.data                
-            }) .then (function(response){
-            var forecast = response.data
-            console.log(forecast)
-        })
+                forecast = response.data  
+                console.log(forecast)
+            })
     }
 
 

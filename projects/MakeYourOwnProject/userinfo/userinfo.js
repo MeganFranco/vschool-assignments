@@ -6,7 +6,13 @@ app.controller("UserInfoController", ["$scope", "WeatherService", "$location", f
 
         WeatherService.getLatAndLon($scope.city, $scope.state)
             .then(function(){
-            console.log(WeatherService.userLocation)
+//            console.log(WeatherService.userLocation)
+            
+            WeatherService.getForecast(WeatherService.userLocation.lat, WeatherService.userLocation.lng).then(function(){
+                console.log(WeatherService.forecast)
+            })
+            
+            
             $location.path("/result")
             
         })
