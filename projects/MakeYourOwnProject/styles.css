@@ -1,0 +1,121 @@
+ul.navbar {
+    list-style-type: none;
+    margin-top: 45px;
+    
+}
+
+.navigation {
+    height: 20%;
+    background-color: cornflowerblue;
+}
+
+
+li {
+    margin-top: 20px;
+    display: inline;
+    margin-left: 20px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: large;
+    font-family: "Helvetica Neue";
+    font-weight: bolder;
+    color: navy;
+}
+
+li a.navlink{
+    display: block;
+    padding: 20px 25px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding: 14px 16px;
+    color: navy;
+
+}
+
+a.navlink:hover{
+    background-color: #e6e600;
+    margin-top: 40px;
+    margin-bottom: 20px; 
+    padding: 14px 16px;
+    border-radius: 5px;
+/*    color: #8EC2CB;*/
+   
+}
+
+.homePage {
+    margin: 0px auto;
+    width: inherit;
+    margin: none;
+}
+
+/*//////////HOME CONTENT//////////////////*/
+
+
+
+h2 {
+    text-align: center;
+    height: 90px;
+    margin: 0px;
+    padding: 20px;
+    font-family: Futura;
+    background-color: navy;
+    color: cornflowerblue;
+    width: inherit;
+
+}
+
+.homepage-content {
+    margin: 0 auto;
+    width: 85%;
+    font-family: futura;
+    font-size: large;
+    padding-top: 45px;
+}
+
+
+p a:hover {
+    background-color: none;
+}
+
+
+#startLocation {
+    text-align: center;
+}
+
+
+/*-----------------USER INFO PAGE--------------------------------------*/
+
+form {
+    margin: 0 auto;
+    width: 45%;
+    padding: 45px;
+    border: 1px solid black;
+    margin-top: 30px;
+    border-radius: 5px;
+}
+
+input {
+    border-radius: 5px;
+    margin-left: 5%;
+}
+
+button {
+    align-content: center;
+    border-radius: 5px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

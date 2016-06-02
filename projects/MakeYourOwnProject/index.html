@@ -1,4 +1,3 @@
-
 <!--https://api.forecast.io/forecast/eecbf01a57664fff99bbd3f17275ffcc/40.239065, -111.658899,2016-06-06T12:00:00-0400
 get lat&long http://stackoverflow.com/questions/3490622/get-latitude-and-longitude-based-on-location-name-with-google-autocomplete-api
 https://developers.google.com/maps/documentation/javascript/geocoding#Geocoding
@@ -6,7 +5,6 @@ google API key: AIzaSyAAz4sE41qrndUfdqWNarYgGZxbz21veUQ
 get data from google: https://maps.googleapis.com/maps/api/geocode/json?address=Provo+UT&key=AIzaSyAAz4sE41qrndUfdqWNarYgGZxbz21veUQ
 from forcast.io: https://api.forecast.io/forecast/eecbf01a57664fff99bbd3f17275ffcc/40.239065, -111.658899,2016-06-01T12:00:00-0400
 -->
-
 <!DOCTYPE html>
 
 <html ng-app="GetWeather">
@@ -15,30 +13,33 @@ from forcast.io: https://api.forecast.io/forecast/eecbf01a57664fff99bbd3f17275ff
     <title> </title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="" />
+    <link rel="stylesheet" href="styles.css" />
     <meta charset="=utf-8">
 </head>
 
 <body>
-    <ul>
-        <a href="#/">
-            <li>Home</li>
-        </a>
-        <a href="#/location">
-            <li>Your Location</li>
-        </a>
-<!--
+    <div class="navigation">
+        <ul class="navBar">
+            <a class="navlink" href="#/">
+                <li>Home</li>
+            </a>
+            <a class="navlink" href="#/location">
+                <li>Your Location</li>
+            </a>
+            <!--
         <a href="#/result">
             <li>Result</li>
         </a>
 -->
-    </ul>
+        </ul>
+    </div>
 
     <div ng-view></div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.js"></script>
-<!--    <script src="https://maps.googleapis.com/maps/api/js"></script>-->
+    <!--    <script src="https://maps.googleapis.com/maps/api/js"></script>-->   \
+<!--    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>-->
     <script src="app.js"></script>
     <script src="home/home.js"></script>
     <script src="userinfo/userinfo.js"></script>

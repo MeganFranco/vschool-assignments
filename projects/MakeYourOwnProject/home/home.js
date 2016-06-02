@@ -4,3 +4,4 @@ app.controller("HomeController", ["$scope", "WeatherService", function($scope, W
     console.log(WeatherService.forecast)
     
 }]);
+

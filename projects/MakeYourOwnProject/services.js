@@ -1,3 +1,8 @@
+/*  adding a header?
+http://stackoverflow.com/questions/15598917/adding-a-custom-header-to-http-request-using-angular-js
+exactly my problem
+http://stackoverflow.com/questions/30157413/api-call-in-javascript-returns-cors-error
+*/
 var app = angular.module("GetWeather");
 
 app.service("WeatherService", ["$http", function ($http) {
@@ -18,7 +23,14 @@ app.service("WeatherService", ["$http", function ($http) {
     ///////////////////////GET FORECAST//////////////////////
 
     this.getForecast = function (userLat, userLng) {
-        return $http.get("https://api.forecast.io/forecast/eecbf01a57664fff99bbd3f17275ffcc/" + userLat + "," + userLng)
+        var config = {
+            headers: {
+              "Authorization": "eecbf01a57664fff99bbd3f17275ffcc/",
+            }
+        };
+
+        
+        return $http.get("https://api.forecast.io/forecast/" + config  + userLat + "," + userLng)
             .then(function (response) {
                 forecast = response.data  
                 console.log(forecast)
