@@ -23,17 +23,13 @@ app.service("WeatherService", ["$http", function ($http) {
     ///////////////////////GET FORECAST//////////////////////
 
     this.getForecast = function (userLat, userLng) {
-        var config = {
-            headers: {
-              "Authorization": "eecbf01a57664fff99bbd3f17275ffcc/",
-            }
-        };
-
         
-        return $http.get("https://api.forecast.io/forecast/" + config  + userLat + "," + userLng)
+        
+        return $http.jsonp("https://api.forecast.io/forecast/eecbf01a57664fff99bbd3f17275ffcc/"  + userLat + "," + userLng + "?callback=JSON_CALLBACK")
             .then(function (response) {
-                forecast = response.data  
-                console.log(forecast)
+                self.forecast = response.data  
+                console.log(self.forecast)
+                //make it so that self.forecast is exactly what you want
             })
     }
 
