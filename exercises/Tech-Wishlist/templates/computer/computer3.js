@@ -19,4 +19,11 @@ app.controller("ComputerController", ["$scope", function($scope){
         }
         
     ]
+    
+    $scope.getTotal = function(){
+        var total = 0;
+        for(var i- 0; i < $scope.list.length; i++){
+            total += $scope.list[i].price; 
+        }
+    }
 }])

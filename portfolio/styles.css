@@ -1,0 +1,73 @@
+body{
+    
+}
+/*-------------NAV BAR----------------*/
+.navigation {
+    width: 100%;
+    
+}
+
+ul.navbar {
+    list-style-type: none;
+    padding-left: none;
+    border: 1px solid black;
+    /*height: 30px;*/
+}
+
+li {
+    display: inline;
+    
+}
+
+li.navlink {
+    display: block;
+    padding: 10px;
+}
+
+/*------------CONTENT--------------*/
+
+header{
+    height: 75px;
+    text-align: center;
+    padding: 30px;
+    background-color: #EEEFF0;
+    margin-top: 35px;
+    width: 100%;
+}
+
+.test-columns {
+    margin-top: 35px;
+}
+
+
+section.module.parallax {
+    
+/*
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+*/
+}
+
+section.module.parallax-1 {
+  background-image: url("http://www.intrawallpaper.com/static/images/White-Background-BD1.png");
+}
+
+.bottom-banner{
+    height:200px;
+    text-align: center;
+    padding-top:
+}
+
+
+
+
+
+
+/*http://callmenick.com/post/simple-parallax-scrolling-effect --you'll need to media-query for ios
+http://keithclark.co.uk/articles/pure-css-parallax-websites/
+https://davidwalsh.name/parallax
+
+https://www.google.com/search?q=background+images&espv=2&biw=1050&bih=630&tbm=isch&imgil=fqHqWaVVWsxqYM%253A%253Bq_w-hQJxHSaLLM%253Bhttp%25253A%25252F%25252Fstackoverflow.com%25252Fquestions%25252F35511584%25252Fcss-background-image-overlay&source=iu&pf=m&fir=fqHqWaVVWsxqYM%253A%252Cq_w-hQJxHSaLLM%252C_&usg=__qS6vFO-KKxMTNjMbeLJsiskZcFs%3D&dpr=2&ved=0ahUKEwiRqvTnqozNAhVVzWMKHS1cA4MQyjcINQ&ei=8bdRV9HtD9WajwOtuI2YCA#imgrc=1Bzu3_nmkZxTuM%3A
+*/

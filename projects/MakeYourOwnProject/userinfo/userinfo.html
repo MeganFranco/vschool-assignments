@@ -1,13 +1,19 @@
 <!--http://v4-alpha.getbootstrap.com/components/carousel/-->
-<form>
-    <div>
-        <label>enter a city</label>
-        <input type="text" ng-model="city">
-    </div>
-     <div>
-        <label>enter a state</label>
-        <input type="text" ng-model="state" placeholder="ex: UT"><br>
-    </div>    
-        <button ng-click="getLatLonResult()">get result</button>
-    
-</form>
+<div class="input-page">
+    <form>
+        <header>Where do you live?</header>
+        <div>
+            <label>enter a city</label>
+            <br>
+            <input type="text" ng-model="city">
+        </div>
+        <div>
+            <label>enter a state</label>
+            <br>
+            <input type="text" ng-model="state" placeholder="ex: UT">
+            <br>
+        </div>
+        <button ng-click="getLatLonResult()" class="btn btn-primary">get result</button>
+
+    </form>
+</div>

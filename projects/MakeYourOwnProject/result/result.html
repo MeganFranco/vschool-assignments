@@ -1,1 +1,13 @@
-<h1>{{ weatherService.forecast | json }}</h1>
+<div class=final>
+    <div class=results-header>
+        <h2 class="final-header">You should {{weatherService.decision}}!</h2>
+    </div>
+    <div class=results>
+        <h4>Summary:{{ weatherService.forecast.summary}}</h4>
+        <h4>Apparent Temperature: {{ weatherService.forecast.apparentTemperature}}</h4>
+        <h4>Actual Temperature: {{ weatherService.forecast.temperature}}</h4>
+        <h4>Humidity: {{ weatherService.forecast.humidity | percentage:1 }}</h4>
+        <h4>Rain: {{ weatherService.forecast.precipProbability | percentage}}</h4>
+        <h4>Wind Speed:{{ weatherService.forecast.windSpeed}}</h4>
+    </div>
+</div>

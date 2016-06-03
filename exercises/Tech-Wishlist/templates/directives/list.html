@@ -1,9 +1,9 @@
 <div>
     <ul>
-        <li ng-repeat="item in list track by $index">
-           <img ng-src="{{item.image}}">
+        <li ng-repeat="item in wishList track by $index">
+           <img ng-src="{{item.image}}" class="img-responsive">
            <p>{{item.name}}</p>
-           <p>{{item.price}}</p>
+           <p>{{item.price | currency}}</p>
         </li>
     </ul>
 </div>

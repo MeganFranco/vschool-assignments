@@ -1,7 +1,7 @@
 var app = ("TechWishlist")
 app.directive("wishList", function(){
     return{
-        templateUrl: "template/directives/list.html",
+        templateUrl: "templates/directiveslist.html",
         restrict: "E",
         scope: {
             'list': '=';

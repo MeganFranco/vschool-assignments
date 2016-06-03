@@ -9,7 +9,7 @@ app.controller("UserInfoController", ["$scope", "WeatherService", "$location", f
 //            console.log(WeatherService.userLocation)
             
             WeatherService.getForecast(WeatherService.userLocation.lat, WeatherService.userLocation.lng).then(function(){
-                console.log(WeatherService.forecast)
+//                console.log(WeatherService.forecast)
             })
             
             
@@ -17,7 +17,7 @@ app.controller("UserInfoController", ["$scope", "WeatherService", "$location", f
             
         })
         
-        console.log
+//        console.log
         
     }
 

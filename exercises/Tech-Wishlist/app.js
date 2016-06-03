@@ -1,6 +1,6 @@
 var app = ("TechWishlist", ['ngRoute'])
 
-app.config(function($routeProvider){
+app.config(function ($routeProvider) {
     $routeProvider
     .when("/computer", {
         templateUrl: "templates/computer/computer.html",
