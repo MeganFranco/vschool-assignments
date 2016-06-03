@@ -1,8 +1,17 @@
 var app = angular.module("MyLittleBronyApp")
 
-app.service("ManagerService", ["ModelService", function (ModelService) {
+app.service("PonyService" [function () {
 
-
+    this.poniesList = [
+    {
+        name: "Twilight Sparkle",
+        imgUrl: "http://pre02.deviantart.net/8872/th/pre/i/2012/206/7/d/twilight_sparkle_by_hankofficer-d46dfaw.png"
+        },
+    {
+        name: "Applejack",
+        imgUrl: "http://vignette4.wikia.nocookie.net/mlpfanart/images/f/ff/Applejack_3_by_xpesifeindx-d5gsde5.png/revision/latest?cb=20131015231355"
+        },
+    ]
 
     ////////////////add a pony///////////////////////
     this.addPony = function (newPony) {

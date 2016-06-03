@@ -1,6 +1,8 @@
 var app = ("MyLittleBronyApp", ["ngRoute"])
 
-app.controller("MainController", ["$scope", "ManagerService", function($scope, ManagerService){
+app.controller("MainController", ["$scope", "PonyService", function($scope, PonyService){
+    
+    $scope.favoritePonies = PonyService.poniesList
     
     $scope.addPony = function(){
         ManagerService.addPony($pony)

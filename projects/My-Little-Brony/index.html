@@ -27,7 +27,7 @@
 <!--    ------------- Ponies ---------------     -->       
         <h3>Get A Current List of Favorite Ponies <button>Here</button></h3>
         
-        <div class="pony-list">
+        <div class="pony-list" ng-repeat"pony in favoritePonies track by $index">
             <h4>{{ pony.name }}</h4>
             <img ng-src="">    
         </div>
