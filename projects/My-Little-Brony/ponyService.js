@@ -1,6 +1,6 @@
 var app = angular.module("MyLittleBronyApp")
 
-app.service("PonyService" [function () {
+app.service("PonyService", [function() {
 
     this.poniesList = [
     {
@@ -15,6 +15,7 @@ app.service("PonyService" [function () {
 
     ////////////////add a pony///////////////////////
     this.addPony = function (newPony) {
+//        console.log("hello")
         var response = ponyValidator(newPony)
         if (response.success) {
             ModelService.poniesList.push(newPony);

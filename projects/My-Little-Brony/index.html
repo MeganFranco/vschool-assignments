@@ -27,15 +27,16 @@
 <!--    ------------- Ponies ---------------     -->       
         <h3>Get A Current List of Favorite Ponies <button>Here</button></h3>
         
-        <div class="pony-list" ng-repeat"pony in favoritePonies track by $index">
+        <div class="pony-list" ng-repeat="pony in favoritePonies track by $index">
             <h4>{{ pony.name }}</h4>
-            <img ng-src="">    
+            <img ng-src="{{favoritePonies.imgUrl}}">
+            <h6>From {{favoritePonies.username}}</h6>    
         </div>
         
         
 <!--      ------------SCRIPTS--------------        -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.js"></script>
-    <script src=""></script> 
+<!--    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.js"></script>-->
+    <script src="app.js"></script> 
     </body>
 </html>
