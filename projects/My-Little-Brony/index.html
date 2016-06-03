@@ -2,19 +2,40 @@
 
 <!DOCTYPE html>
 
-<html>
+<html ng-app="MyLittleBronyApp">
     <head> 
         <title> </title>
         
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href=""/>
+    <link rel="stylesheet" href="styles.css"/>
         <meta charset="=utf-8">
     </head>
-    <body> 
-    
-    
-    
+    <body ng-controller="MainController"> 
+<!--    -------------FORM---------------     -->
+       <form>
+           <label>Pony Name</label><br> 
+           <input type="text" ng-model="pony.name">
+           
+           <label>Your Username </label><br> 
+           <input type="text" ng-model="pony.username">
+           
+           <label>Image</label><br>
+           <input type="text" ng-model="pony.imgUrl" placeholder="enter a url">
+       </form>
+        <button ng-click="addPony()">Enter Your Favorite Pony </button>
+        
+<!--    ------------- Ponies ---------------     -->       
+        <h3>Get A Current List of Favorite Ponies <button>Here</button></h3>
+        
+        <div class="pony-list">
+            <h4>{{ pony.name }}</h4>
+            <img ng-src="">    
+        </div>
+        
+        
+<!--      ------------SCRIPTS--------------        -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.js"></script>
     <script src=""></script> 
     </body>
 </html>
