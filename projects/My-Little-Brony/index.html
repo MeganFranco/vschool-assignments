@@ -3,43 +3,73 @@
 <!DOCTYPE html>
 
 <html ng-app="MyLittleBronyApp">
-    <head> 
-        <title> </title>
-        
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="styles.css"/>
-        <meta charset="=utf-8">
-    </head>
-    <body ng-controller="MainController"> 
-<!--    -------------FORM---------------     -->
-       <form>
-           <label>Pony Name</label><br> 
-           <input type="text" ng-model="pony.name">
-           
-           <label>Your Username </label><br> 
-           <input type="text" ng-model="pony.username">
-           
-           <label>Image</label><br>
-           <input type="text" ng-model="pony.imgUrl" placeholder="enter a url">
-       </form>
-        <button ng-click="addPony(pony)">Enter Your Favorite Pony </button>
-        
-<!--    ------------- Ponies ---------------     -->       
-        <h3>Get A Current List of Favorite Ponies <button ng-click="showPonies()">Here</button></h3>
-        
-        <div class="pony-list" ng-repeat="pony in favoritePonies track by $index">
-            <h4>{{ pony.name }}</h4>
-            <img ng-src="{{pony.imgUrl}}">
-            <h6>From {{pony.username}}</h6>
-            <button ng-click="deletePony($index)">delete</button>    
+
+<head>
+    <title> </title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link href='https://fonts.googleapis.com/css?family=Indie+Flower|Fredoka+One|Patua+One' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="styles.css" />
+
+    <meta charset="=utf-8">
+</head>
+
+<body ng-controller="MainController">
+
+    <!-- ----------------TOP------------------ -->
+    <header>
+        <h1>Welcome To Brosky's Pony Page</h1></header>
+
+
+    <!--    -------------FORM---------------     -->
+    <form>
+        <h4>Enter A Pony</h4>   
+        <label>Pony Name</label>
+        <br>
+        <input type="text" ng-model="pony.name">
+        <br>
+        <label>Your Username </label>
+        <br>
+        <input type="text" ng-model="pony.username">
+        <br>
+        <label>Image</label>
+        <br>
+        <input type="text" ng-model="pony.imgUrl" placeholder="enter a url">
+          <button class="btn submit-btn" ng-click="addPony(pony)">Enter Your Favorite Pony </button>
+    </form>
+  
+
+    <!--    ------------- Ponies ---------------     -->
+    <h3>Get A Current List of Favorite Ponies <button class="btn" ng-click="showPonies()">Here</button></h3>
+    <div class="container ponies">
+        <div class="pony-list row col-md-6" ng-repeat="pony in favoritePonies track by $index">
+            <div class="row col-md-6">
+                <span class="ponyTitle"><h4>{{ pony.name }}</h4></span>
+                <input ng-show="pony.editing" ng-hide="!pony.editing" placeholder="Name" ng-model="pony.name">
+                <img ng-src="{{pony.imgUrl}}">
+                <h6>From {{pony.username}}</h6>
+<!--                <button class="btn" ng-click="editPony(pony)">edit</button>-->
+                <button class="btn" ng-click="deletePony(pony)">delete</button>
+                <button class = "btn" ng-click="pony.editing = !pony.editing" ng-hide="pony.editing"> edit</button>
+                <button class = "btn" ng-show="pony.editing" ng-click="editItem(pony, $index)">update</button>
+                
+            </div>
         </div>
+    </div>
+    
+    
+<!--bottom-->
+    <footer>
         
-        
-<!--      ------------SCRIPTS--------------        -->
+    </footer>
+   
+   
+    <!--      ------------SCRIPTS--------------        -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
-<!--    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.js"></script>-->
+    <!--    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.js"></script>-->
     <script src="app.js"></script>
     <script src="services.js"></script>
-    
-    </body>
+
+</body>
+
 </html>
