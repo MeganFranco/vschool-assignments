@@ -22,21 +22,24 @@
            <label>Image</label><br>
            <input type="text" ng-model="pony.imgUrl" placeholder="enter a url">
        </form>
-        <button ng-click="addPony()">Enter Your Favorite Pony </button>
+        <button ng-click="addPony(pony)">Enter Your Favorite Pony </button>
         
 <!--    ------------- Ponies ---------------     -->       
-        <h3>Get A Current List of Favorite Ponies <button>Here</button></h3>
+        <h3>Get A Current List of Favorite Ponies <button ng-click="showPonies()">Here</button></h3>
         
         <div class="pony-list" ng-repeat="pony in favoritePonies track by $index">
             <h4>{{ pony.name }}</h4>
-            <img ng-src="{{favoritePonies.imgUrl}}">
-            <h6>From {{favoritePonies.username}}</h6>    
+            <img ng-src="{{pony.imgUrl}}">
+            <h6>From {{pony.username}}</h6>
+            <button ng-click="deletePony($index)">delete</button>    
         </div>
         
         
 <!--      ------------SCRIPTS--------------        -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
 <!--    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.js"></script>-->
-    <script src="app.js"></script> 
+    <script src="app.js"></script>
+    <script src="services.js"></script>
+    
     </body>
 </html>
