@@ -44,14 +44,17 @@
     <div class="container ponies">
         <div class="pony-list row col-md-6" ng-repeat="pony in favoritePonies track by $index">
             <div class="row col-md-6">
+<!--           name     -->
                 <span class="ponyTitle"><h4>{{ pony.name }}</h4></span>
                 <input ng-show="pony.editing" ng-hide="!pony.editing" placeholder="Name" ng-model="pony.name">
+<!--            image    -->
                 <img ng-src="{{pony.imgUrl}}">
+<!--            user      -->
                 <h6>From {{pony.username}}</h6>
-<!--                <button class="btn" ng-click="editPony(pony)">edit</button>-->
+
                 <button class="btn" ng-click="deletePony(pony)">delete</button>
                 <button class = "btn" ng-click="pony.editing = !pony.editing" ng-hide="pony.editing"> edit</button>
-                <button class = "btn" ng-show="pony.editing" ng-click="editItem(pony, $index)">update</button>
+                <button class = "btn" ng-show="pony.editing" ng-click="editPony(pony, $index)">update</button>
                 
             </div>
         </div>

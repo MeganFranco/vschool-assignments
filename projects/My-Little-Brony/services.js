@@ -102,12 +102,14 @@ app.service("PonyService", ["$http", function ($http) {
     
     this.editPonyFn = function (pony, index){
         $http.put("http://mean.codingcamp.us/megan/todo/" + pony._id, pony)
-            .then(function(response){
+//            .then(function(response){
+//            console.log(response.data)
+//        })
+        
+//            self.poniesList[index] = response.data;
             
-            self.poniesList[index] = response.data;
-            
-             pony.editing = !pony.editing
-        });
+////             pony.editing = !pony.editing
+//        });
     }
 
 }]);

@@ -36,10 +36,11 @@ app.controller("MainController", ["$scope", "PonyService", function ($scope, Pon
     
     
 ///////////EDIT/////////////////
-    $scope.editPony = function(pony, index){
-        
-        $scope.favoritePonies = PonyService.editPonyFn(pony, index); 
+    $scope.editPony = function(pony, index){ 
         console.log("hello")
+        pony.editing = !pony.editing;
+        
+        PonyService.editPonyFn(pony, index);
 
         //let them change
         //make new pony
