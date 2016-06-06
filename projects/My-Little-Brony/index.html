@@ -9,6 +9,7 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
     <link href='https://fonts.googleapis.com/css?family=Indie+Flower|Fredoka+One|Patua+One' rel='stylesheet' type='text/css'>
+    <script src="https://use.fontawesome.com/6f4a7d5318.js"></script>
     <link rel="stylesheet" href="styles.css" />
 
     <meta charset="=utf-8">
@@ -20,10 +21,14 @@
     <header>
         <h1>Welcome To Brosky's Pony Page</h1></header>
 
+    
+    <div class="intro">
+        
+    </div>
 
     <!--    -------------FORM---------------     -->
     <form>
-        <h4>Enter A Pony</h4>   
+        <h4>Enter A Pony</h4>
         <label>Pony Name</label>
         <br>
         <input type="text" ng-model="pony.name">
@@ -35,38 +40,50 @@
         <label>Image</label>
         <br>
         <input type="text" ng-model="pony.imgUrl" placeholder="enter a url">
-          <button class="btn submit-btn" ng-click="addPony(pony)">Enter Your Favorite Pony </button>
+        <button class="btn submit-btn" ng-click="addPony(pony)">Enter Your Favorite Pony </button>
     </form>
-  
+
 
     <!--    ------------- Ponies ---------------     -->
     <h3>Get A Current List of Favorite Ponies <button class="btn" ng-click="showPonies()">Here</button></h3>
     <div class="container ponies">
         <div class="pony-list row col-md-6" ng-repeat="pony in favoritePonies track by $index">
             <div class="row col-md-6">
-<!--           name     -->
+                <!--           name     -->
                 <span class="ponyTitle"><h4>{{ pony.name }}</h4></span>
                 <input ng-show="pony.editing" ng-hide="!pony.editing" placeholder="Name" ng-model="pony.name">
-<!--            image    -->
+                <!--            image    -->
                 <img ng-src="{{pony.imgUrl}}">
-<!--            user      -->
+                <input ng-show="pony.editing" ng-hide="!pony.editing" placeholder="Name" ng-model="pony.imgUrl">
+                <!--            user      -->
                 <h6>From {{pony.username}}</h6>
+                <input ng-show="pony.editing" ng-hide="!pony.editing" placeholder="Name" ng-model="pony.username">
 
                 <button class="btn" ng-click="deletePony(pony)">delete</button>
-                <button class = "btn" ng-click="pony.editing = !pony.editing" ng-hide="pony.editing"> edit</button>
-                <button class = "btn" ng-show="pony.editing" ng-click="editPony(pony, $index)">update</button>
-                
+                <button class="btn" ng-click="pony.editing = !pony.editing" ng-hide="pony.editing"> edit</button>
+                <button class="btn" ng-show="pony.editing" ng-click="editPony(pony, $index)">update</button>
+
             </div>
         </div>
     </div>
-    
-    
-<!--bottom-->
-    <footer>
-        
+
+
+    <!--bottom-->
+    <footer class="containter">
+        <div class="row">
+            <div class="col-md-5"> </div>
+            <div class="col-md-5"> </div>
+            <div class="col-md-2">
+                <i class="fa fa-twitter-square" aria-hidden="true"></i>
+                <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+                <i class="fa fa-tumblr-square" aria-hidden="true"></i>
+            </div>
+
+        </div>
     </footer>
-   
-   
+
+
     <!--      ------------SCRIPTS--------------        -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
     <!--    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.js"></script>-->

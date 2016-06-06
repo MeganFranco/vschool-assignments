@@ -13,13 +13,30 @@ html {
     background-color: #1E98D5
 }
 
-header, h3 {
+header {
     height: 85px;
     text-align: center;
     font-family: 'Fredoka One', cursive;
-    padding-top: 5px;
+    padding-top: 10px;
     color: #AD1A6D;
-    background-color: #1E98D5
+    background-color: #1E98D5;
+    margin: 0 auto;
+}
+
+h3 {
+    height: 55px;
+    font-family: 'Fredoka One', cursive;
+    padding-top: 10px;
+    color: #AD1A6D;
+    background-color: #1E98D5;
+    text-align: center;
+    width: 85%;
+    margin-left: 10%;
+    border-radius: 10px;
+}
+
+h6 {
+    color: #AD1A6D;
 }
 
 body {
@@ -44,7 +61,8 @@ form {
     border-radius: 10px;
     text-align: center;
 }
-input{
+
+input {
     border-radius: 5px;
     margin-bottom: 5px;
 }
@@ -80,24 +98,45 @@ h4 {
     color: #FDF6AE;
 }
 
+.btn:hover{
+    color: #AD1A6D;
+}
+
 footer {
     height: 45px;
     background-color: #1E98D5;
     margin-top: 25px;
+    border-bottom: 25px;
+/*    font-size: large;*/
 }
 
 
-@media (max-width: 820px){
-    form{
+footer .fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: x-large;
+    color: #AD1A6D;
+    text-align: right;
+    padding: 2.5px;
+    padding-top: 20px;
+    margin-top: 10px;
+}
+
+footer .fa:hover {
+    color: #662F89
+}
+    
+
+@media (max-width: 820px) {
+    form {
         width: 50%;
     }
 }
 
-@media (max-width: 600px){
+@media (max-width: 600px) {
     form {
         width: 75%;
     }
-    
     header {
         height: 100px;
     }
