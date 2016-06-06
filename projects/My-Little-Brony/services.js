@@ -101,15 +101,13 @@ app.service("PonyService", ["$http", function ($http) {
 //////////////edit item//////////////////
     
     this.editPonyFn = function (pony, index){
-        $http.put("http://mean.codingcamp.us/megan/todo/" + pony._id, pony)
-//            .then(function(response){
-//            console.log(response.data)
-//        })
-        
-//            self.poniesList[index] = response.data;
-            
-////             pony.editing = !pony.editing
-//        });
+        $http.put ("http://mean.codingcamp.us/meganfranco/pony/" + pony._id, pony)
+//        console.log("http://mean.codingcamp.us/meganfranco/pony/" + pony._id)
+            .then(function(response){
+            console.log(response.data)
+           self.poniesList[index] =  pony;
+//            console.log(self.poniesList[index])
+        });
     }
 
 }]);

@@ -62,18 +62,18 @@ app.controller("MainController", ["$scope", "$http", function ($scope, $http) {
     
     
 /////////////////////////EDIT ITEM////////////////////////////
-//    $scope.editItem = function(item, index) {
-//        //update server
-//        $http.put("http://mean.codingcamp.us/megan/todo/" + item._id, item)
-//            .then(function(response){
-//            //update array
-//            
-//            $scope.toDos[index] = response.data;
-//            
-//             item.editing = !item.editing
-//            
-//        });
-//    } 
+    $scope.editItem = function(item, index) {
+        //update server
+        $http.put("http://mean.codingcamp.us/megan/todo/" + item._id, item)
+            .then(function(response){
+            //update array
+            
+            $scope.toDos[index] = response.data;
+            
+             item.editing = !item.editing
+            
+        });
+    } 
     
     
     
