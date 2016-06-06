@@ -1,4 +1,6 @@
-<!--http://coursework.vschool.io/exercise-professional-services/-->
+<!--http://coursework.vschool.io/exercise-professional-services/
+https://scotch.io/tutorials/angularjs-form-validation
+https://scotch.io/tutorials/angularjs-form-validation-with-ngmessages-->
 
 <!DOCTYPE html>
 
@@ -23,9 +25,9 @@
 
     
     <div class="intro">
-        <h3>The collection of ponies on the internet </h3>
-        <p>This is a page where I like to collect all the best ponies. Feel free to add the best new ponies, just make sure you leave your user name! </p>   
-        <p><button class="btn" ng-click="form.editing = !form.editing" ng-hide="form.editing">Click here</button> to add you're favorite pony!</p>
+        <h3>THE collection of ponies on the internet </h3>
+        <p>This is a page where I like to collect all the best ponies. Feel free to add your favorite new ponies, just make sure you leave your user name! </p>   
+        <p><button class="btn" ng-click="form.editing = !form.editing" ng-hide="form.editing">Click here to add you're favorite pony!</button></p>
     </div>
 
     <!--    -------------FORM---------------     -->
@@ -33,21 +35,21 @@
         <h4>Enter A Pony</h4>
         <label>Pony Name</label>
         <br>
-        <input type="text" ng-model="pony.name">
+        <input class="form-control" type="text" ng-model="pony.name" ng-minlength="3">
         <br>
         <label>Your Username </label>
         <br>
-        <input type="text" ng-model="pony.username">
+        <input class="form-control" type="text" ng-model="pony.username">
         <br>
         <label>Image</label>
         <br>
-        <input type="text" ng-model="pony.imgUrl" placeholder="enter a url">
+        <input class="form-control" type="text" ng-model="pony.imgUrl" placeholder="enter a url">
         <button class="btn submit-btn" ng-click="addPony(pony)">Enter Your Favorite Pony </button>
     </form>
 
 
     <!--    ------------- Ponies ---------------     -->
-    <h3 class="show-ponies">Get A Current List of Favorite Ponies <button class="btn" ng-click="showPonies()">Here</button></h3>
+    <h3 class="show-ponies" ng-show="!show.editing" ng-hide="show.editing" >Get A Current List of Favorite Ponies <button class="btn" ng-click="showPonies(); show.editing = !show.editing">Here</button></h3>
     <div class="container ponies">
         <div class="pony-list row col-md-6" ng-repeat="pony in favoritePonies track by $index">
             <div class="row col-md-6">

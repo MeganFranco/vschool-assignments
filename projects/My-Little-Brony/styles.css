@@ -32,6 +32,7 @@ header {
     margin-top: 45px;
     padding: 45px;
     border-radius: 10px;
+    margin-bottom: 45px;
 }
 
 
@@ -96,6 +97,10 @@ img {
 
 /*Pony List*/
 
+.ponies {
+    margin-top: 40px;
+}
+
 h4 {
     color: #FDF6AE;
 }
@@ -120,6 +125,8 @@ footer {
     background-color: #1E98D5;
     margin-top: 25px;
     border-bottom: 25px;
+
+    
 /*    font-size: large;*/
 }
 
@@ -132,7 +139,7 @@ footer .fa {
     text-align: right;
     padding: 2.5px;
     padding-top: 20px;
-    margin-top: 10px;
+    margin: 10% 0%;
 }
 
 footer .fa:hover {
