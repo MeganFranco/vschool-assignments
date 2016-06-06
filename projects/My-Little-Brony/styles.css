@@ -23,6 +23,19 @@ header {
     margin: 0 auto;
 }
 
+.intro {
+    width: 75%;
+    margin: 0 auto;
+    font-family: 'Fredoka One';
+    background-color: #1E98D5;
+/*    font-size: medium;*/
+    margin-top: 45px;
+    padding: 45px;
+    border-radius: 10px;
+}
+
+
+
 h3 {
     height: 55px;
     font-family: 'Fredoka One', cursive;

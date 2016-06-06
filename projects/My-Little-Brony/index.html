@@ -23,11 +23,13 @@
 
     
     <div class="intro">
-        
+        <h3>The collection of ponies on the internet </h3>
+        <p>This is a page where I like to collect all the best ponies. Feel free to add the best new ponies, just make sure you leave your user name! </p>   
+        <p><button class="btn" ng-click="form.editing = !form.editing" ng-hide="form.editing">Click here</button> to add you're favorite pony!</p>
     </div>
 
     <!--    -------------FORM---------------     -->
-    <form>
+    <form ng-show="form.editing" ng-hide="!form.editing" >
         <h4>Enter A Pony</h4>
         <label>Pony Name</label>
         <br>
@@ -45,7 +47,7 @@
 
 
     <!--    ------------- Ponies ---------------     -->
-    <h3>Get A Current List of Favorite Ponies <button class="btn" ng-click="showPonies()">Here</button></h3>
+    <h3 class="show-ponies">Get A Current List of Favorite Ponies <button class="btn" ng-click="showPonies()">Here</button></h3>
     <div class="container ponies">
         <div class="pony-list row col-md-6" ng-repeat="pony in favoritePonies track by $index">
             <div class="row col-md-6">
