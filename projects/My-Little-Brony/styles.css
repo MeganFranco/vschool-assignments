@@ -160,4 +160,9 @@ footer .fa:hover {
     header {
         height: 100px;
     }
+    
+    h3 {
+/*        padding-bottom: 10px;*/
+        font-size: large;
+    }
 }
