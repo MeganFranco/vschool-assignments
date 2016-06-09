@@ -1,10 +1,20 @@
-body{
-    
+/*COLORS
+white: #FFFFFF
+Dark: #252222
+#8A8889
+#C9C9C9
+#E1DFE0
+*/
+
+body {
+    width: 100%;
 }
+
+
 /*-------------NAV BAR----------------*/
+
 .navigation {
     width: 100%;
-    
 }
 
 ul.navbar {
@@ -14,55 +24,185 @@ ul.navbar {
     /*height: 30px;*/
 }
 
-li {
+li,
+h3 {
     display: inline;
-    
 }
 
-li.navlink {
-    display: block;
+h3 {
+    margin-left: 55%;
+    margin-bottom: 15px;
+}
+
+li.navlink,
+h3 {
+    /*    display: block;*/
     padding: 10px;
 }
 
+
 /*------------CONTENT--------------*/
 
-header{
-    height: 75px;
-    text-align: center;
+header {
+    height: 150px;
+    /*    text-align: center;*/
     padding: 30px;
-    background-color: #EEEFF0;
+    background-color: rgba(138, 136, 137, 0.7);
+    /*    opacity: .6;*/
     margin-top: 35px;
     width: 100%;
+    border-radius: 10px;
+    color: #C9C9C9;
+}
+
+.profile-photo {
+    /*    margin-top: px;*/
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    float: left;
+    z-index: -1;
+    opacity: 1;
+}
+
+
+/*--------PROJECTS-----------------*/
+
+h2 {
+    margin-top: 40px;
+    text-align: center;
+    color: #C9C9C9;
+}
+
+.projects {
+    /*    height: 500px;*/
+    background-color: rgba(138, 136, 137, 0.7);
+    margin-top: 20px;
+    /*    opacity: .6;*/
+    color: black;
+    width: 105%;
+    text-align: center;
+    align-content: center;
+    padding-bottom: 20px;
+    color: #E1DFE0;
+    border-radius: 10px;
+    font-size: medium;
+}
+
+.proj-title {
+    padding: 15px 0px;
+    font-size: large;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+
+
+img.project-image {
+    height: 200px;
+    width: 200px;
+}
+
+img.project-image:hover {
+    height: 250px;
+    width: 250px;
+}
+
+
+/*----------BADGES-------------*/
+
+.badge-header {
+    color: #E1DFE0;
+    font-size: xx-large;
+    text-align: center
+}
+
+.badges {
+    margin-top: 25px;
+    background-color: #252222;
+    width: 102%;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.badge-titles {
+    color: #E1DFE0;
+    text-align: left;
+    font-size: x-large;
+    text-decoration: underline;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-bottom: 5px
+}
+
+.badge-icon {
+    text-align: center;
+    height: 50px;
+    width: 50px;
+}
+
+.img-title {
+    font-size: large;
+    color: #E1DFE0;
+}
+
+.blurb {
+    margin-top: 30px;
+    border-radius: 10px;
+    padding: 7px;
+    background-color: rgba(225, 223, 224, .4);
+    color: #252222;
+    font-size: large;
+}
+
+.python-imgs {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+}
+
+
+/*-----------------BOTTOM----------------*/
+
+.bottom-banner,footer {
+/*    height: 200px;*/
+    text-align: center;
+    padding-top: 30px;
+}
+
+footer {
+/*    height: 45px;*/
+    background-color: #E1DFE0;
+    margin-bottom: 25px;
+    border-bottom: 25px;
+    padding-bottom: 40px;
+    border-radius: 10px;
+}
+
+/*----------OTHERS-------------*/
+
+section.container.module.parallax.parallax-1 {
+    margin-left: 15px
 }
 
 .test-columns {
-    margin-top: 35px;
+    margin-top: 30px;
+    width: 95%;
+    padding: 10px;
 }
 
-
 section.module.parallax {
-    
-/*
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-*/
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 section.module.parallax-1 {
-  background-image: url("http://www.intrawallpaper.com/static/images/White-Background-BD1.png");
+    /*  background-image: url("http://www.intrawallpaper.com/static/images/White-Background-BD1.png");*/
+    background-image: url(./images/saltFlats_bw.jpg)
 }
-
-.bottom-banner{
-    height:200px;
-    text-align: center;
-    padding-top:
-}
-
-
-
-
 
 
 /*http://callmenick.com/post/simple-parallax-scrolling-effect --you'll need to media-query for ios

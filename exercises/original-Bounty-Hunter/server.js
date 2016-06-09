@@ -5,41 +5,18 @@ var app = express();
 var bodyParser = require("body-parser");
 var uuid = require("uuid");
 var cors = require("cors");
+var bountyRoutes = require("./routes/bountyRoutes") // create new router object
 app.use(bodyParser.json());
 app.use(cors());
 
-var bounties = [];
 
-app.get("/bounty", function(req, res){
-    res.send(bounties);
-})
-
-app.post("/bounty", function(req, res){
-    req.body.id = uuid.v4();
-    bounties.push(req.body);
-     res.send(bounties);
-})
-
-app.delete("/bounty/:bountyId/", function(req, res){
-    for(var i = 0; i < bounties.length; i++){
-        if(bounties[i].id === req.pparams.bountyId){
-            bounties.splice(i, 1);
-            res.send("Deleted!")
-        }
-    }
-})
-
-app.put("/bounty/:bountyId/", function(req, res){
-    for(var i = 0; i < bounties.length; i++){
-        if(bounties[i].id === req.params.bountyId){
-            bounties[i] = req.body;
-            res.send(bounties[i])
-        }
-    }
-    res.send("no bounty with that id found")
-})
+//any time a request comes to the 'bounty' route use bountyRoutes
+app.use("/bounty", bountyRoutes)
 
 
-app.listen(8000, function(){
+
+
+
+app.listen(8000, function () {
     console.log("App is listening")
 })
