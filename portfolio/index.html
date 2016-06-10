@@ -6,30 +6,32 @@
     <title> </title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <script src="https://use.fontawesome.com/6f4a7d5318.js"></script>
     <link rel="stylesheet" href="styles.css" />
     <meta charset="=utf-8">
 </head>
 
 <body>
-    <div class="Navigation">
-        <ul class="navbar">
-            <li class="navlink">About</li>
-            <li class="navlink">Projects</li>
-            <li class="navlink">Skills</li>
-            <li class="navlink">Contact</li>
-            <li>
-                <h3 class="page-title">Megan Franco</h3></li>
-        </ul>
 
-    </div>
 
     <section class="container module parallax parallax-1">
+        <div class="Navigation">
+            <ul class="navbar">
+                <a href="#about"><li class="navlink">About</li></a>
+                <a href="#projects"><li class="navlink">Projects</li></a>
+                <a href="#badges"><li class="navlink">Skills</li></a>
+                <a href="#contact"><li class="navlink">Contact</li></a>
+                <a href="Megan%20Franco_Resume_July_2015%20(1).pdf"><li class="navlink">Resume</li></a>
+<!--                <li><h3 class="page-title">Megan Franco</h3></li>-->
+            </ul>
+
+        </div>
         <header>
-            <p> <img class="profile-photo" src="images/greatfalls_cropped.jpg"> Hi! I'm Megan, an aspiring web-developer. Two years after graduating from Dickinson with my BA in Middle East Studies, I realized that I wanted to have a career where I was continuously learning and where I had the opportunity to approach problems and tasks in a creative manner. So I decided to switch it all up and head out to Utah for a programming bootcamp: V-School (previously known as Coding Campus.) I'm enrolled in their full-time MEAN-stack program, and looking to return to the DC area to make some beautiful web applications! </p>
+            <p id="about"> <img class="profile-photo" src="images/greatfalls_cropped.jpg"> Hi! I'm Megan, an aspiring web-developer. Two years after graduating from Dickinson with my BA in Middle East Studies, I realized that I wanted to have a career where I was continuously learning and where I had the opportunity to approach problems and tasks in a creative manner. So I decided to switch it all up and head out to Utah for a programming bootcamp: V-School (previously known as Coding Campus.) I'm enrolled in their full-time MEAN-stack program, and looking to return to the DC area to make some beautiful web applications! </p>
         </header>
         <div class="row test-columns module content">
             <div class="projects container">
-                <h2>projects</h2>
+                <h2  id="projects" >projects</h2>
                 <div class="row">
                     <div class="col-md-6 project-peak">
                         <p class="proj-title">My Little Brony</p>
@@ -51,7 +53,7 @@
                 </div>
             </div>
         </div>
-        <div class="container badges">
+        <div id="badges" class="container badges">
             <div class="row">
                 <div class="col-md-12">
                     <div class="row">
@@ -60,7 +62,7 @@
                     <p class="badge-titles">Languages:</p>
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-1 col-md-offset-4">
+                            <div class="col-md-1 col-md-offset-4 ">
                                 <p class="img-title">HTML
                                     <p>
                                         <img src="https://lh3.ggpht.com/N8lDdPBD-ZyHNADNAUyXjyXDCEqO1Q_iBHpNBfxEpd-rHArTXypYC98RQeIJ_58tTWU=w300" class="badge-icon">
@@ -164,13 +166,27 @@
 
         <div class=" blurb">
             <p class="">
-<!--               <img src="https://www.python.org/static/opengraph-icon-200x200.png" class="badge-icon" class="python-imgs">-->
-                When I have some free time, (and now that I know a lot of the basics of web-dev) I hope to begin to build applications with new languages and frameworks. Checking out React and Meteor are high on my list, but I also want to explore developing in other languages. It was after learning more about Python through Codecademy and Coursera that I decided I wanted to dive full-time into web development. I can't wait to learn more Python, and when I do, I really want to dig into Flask and Django. So, if you can suggest and good resources, please send them my way!
+                <!--               <img src="https://www.python.org/static/opengraph-icon-200x200.png" class="badge-icon" class="python-imgs">-->
+                ...But there's a lot more I want to build! When I have some free time, (and now that I know a lot of the basics of web-dev) I hope to begin to build applications with new languages and frameworks. Checking out React and Meteor are high on my list, but I also want to explore developing in other languages. It was after learning more about Python through Codecademy and Coursera that I decided I wanted to dive full-time into web development. I can't wait to learn more Python, and when I do, I really want to dig into Flask and Django. So, if you can suggest any good resources, please send them my way!
             </p>
         </div>
 
-        <div class="bottom-banner">
-            <footer>MOAR CONTENT?</footer>
+        <div class="bottom-banner container" id="contact">
+            <footer>
+                <div class="row">
+                    <div class="col-md-3 contact-info">
+                        <p>contact me at:
+                            <br>
+                            <a href="mailto:francomegan@gmail.com">francomegan@gmail.com</a>
+                         
+                    </div>
+                    <div class="col-md-5"></div>
+                    <div class="col-md-4">
+                        <a href="https://github.com/MeganFranco?tab=repositories"><i class="fa fa-github lg-icon" aria-hidden="true"></i></a>
+                        <a href="https://www.linkedin.com/in/megan-franco-3a915587"><i class="fa fa-linkedin-square lg-icon" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </footer>
         </div>
 
     </section>

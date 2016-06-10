@@ -26,3 +26,4 @@ var bounties = [
 ];
 
 module.exports = bounties;
+

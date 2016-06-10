@@ -18,12 +18,12 @@
         <h1>MAKE A NAME BADGE</h1>
     </header>
        
-    <form name="badgeForm">
+    <form name="badgeForm" novalidate>
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
                     <label> First Name </label>
-                    <input type="text" class="form-control" ng-model="user.firstName" required>
+                    <input type="text" class="form-control" ng-model="user.firstName ng-class={ 'has' }">
                     <div ng-messages=""></div>
                 </div>
                 <div class="row">

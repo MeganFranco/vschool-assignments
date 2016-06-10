@@ -10,17 +10,28 @@ body {
     width: 100%;
 }
 
+section {
+    margin: 0px;
+    padding: 0px;
+    width 100%;
+    align-content: center;
+}
+
 
 /*-------------NAV BAR----------------*/
 
 .navigation {
-    width: 100%;
+    width: inherit;
+    
+    
 }
 
 ul.navbar {
     list-style-type: none;
     padding-left: none;
+    padding-top: 10px;
     border: 1px solid black;
+    background-color: #E1DFE0;
     /*height: 30px;*/
 }
 
@@ -34,23 +45,40 @@ h3 {
     margin-bottom: 15px;
 }
 
-li.navlink,
-h3 {
+li.navlink {
     /*    display: block;*/
-    padding: 10px;
+    padding: 7px;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #252222;
+    
+}
+
+li.navlink:hover{
+    background-color: rgba(138, 136, 137, 0.7);
+    border-radius: 2px;
+/*    text-decoration: none;*/
+    text-decoration: inherit;
+    text-decoration-color: #252222;
+    height:inherit;
+}
+
+li:hover{
+    text-decoration: inherit;
 }
 
 
 /*------------CONTENT--------------*/
 
 header {
-    height: 150px;
+/*    height: 150px;*/
     /*    text-align: center;*/
     padding: 30px;
     background-color: rgba(138, 136, 137, 0.7);
     /*    opacity: .6;*/
     margin-top: 35px;
-    width: 100%;
+    width: 98%;
+    margin: 0 auto;
     border-radius: 10px;
     color: #C9C9C9;
 }
@@ -74,17 +102,23 @@ h2 {
     color: #C9C9C9;
 }
 
+h2#projects:hover {
+    text-decoration: none;
+}
+
 .projects {
     /*    height: 500px;*/
     background-color: rgba(138, 136, 137, 0.7);
     margin-top: 20px;
     /*    opacity: .6;*/
     color: black;
-    width: 105%;
+    width: 95%;
+/*    margin: 0 auto;*/
     text-align: center;
     align-content: center;
     padding-bottom: 20px;
     color: #E1DFE0;
+    width: 100%;
     border-radius: 10px;
     font-size: medium;
 }
@@ -94,22 +128,27 @@ h2 {
     font-size: large;
     font-weight: 600;
     text-decoration: underline;
+    color: #E1DFE0;
 }
 
 
 
 img.project-image {
-    height: 200px;
-    width: 200px;
+    height: 175px;
+    width: 175px;
 }
 
 img.project-image:hover {
-    height: 250px;
-    width: 250px;
+    height: 225px;
+    width: 225px;
 }
 
 
 /*----------BADGES-------------*/
+
+div.col-md-12 {
+    width: inherit;
+}
 
 .badge-header {
     color: #E1DFE0;
@@ -119,8 +158,10 @@ img.project-image:hover {
 
 .badges {
     margin-top: 25px;
-    background-color: #252222;
-    width: 102%;
+    background-color: rgba(37,34,34, 0.8);
+    width: 98%;
+    margin: 0 auto;
+    margin-top: 40px;
     border-radius: 10px;
     padding: 20px;
 }
@@ -148,12 +189,14 @@ img.project-image:hover {
 }
 
 .blurb {
+    width: 98%;
+    margin: 0 auto;
     margin-top: 30px;
     border-radius: 10px;
     padding: 7px;
     background-color: rgba(225, 223, 224, .4);
     color: #252222;
-    font-size: large;
+    font-size: medium;
 }
 
 .python-imgs {
@@ -165,31 +208,58 @@ img.project-image:hover {
 
 /*-----------------BOTTOM----------------*/
 
+div#contact.bottom-banner.container {
+    padding: 0px;
+    width: 100%;
+}
+
 .bottom-banner,footer {
-/*    height: 200px;*/
+    width: 100%;
     text-align: center;
-    padding-top: 30px;
+    margin-right: 5px;
+/*    padding-top: 30px;*/
 }
 
 footer {
-/*    height: 45px;*/
+/*    height: 15px;*/
     background-color: #E1DFE0;
-    margin-bottom: 25px;
-    border-bottom: 25px;
-    padding-bottom: 40px;
-    border-radius: 10px;
+    margin-top: 25px;
+    padding-top: 5px;
+    width: 100%
 }
 
+.contact-info{
+    font-size: small;
+    margin: 0px;
+    padding: 0px;
+    padding-top: 5px;
+}
+
+
+i.fa {
+    font-size: x-large;
+    padding-top: 5px;
+    padding-bottom: 15px;
+    padding-left: 5px;
+    color: rgba(37,34,34, 0.8);
+}
+
+i.fa:hover{
+    font-size: xx-large;
+}
 /*----------OTHERS-------------*/
 
 section.container.module.parallax.parallax-1 {
-    margin-left: 15px
+    margin-left: 10px;
+    padding: 0px;
+    
 }
 
 .test-columns {
-    margin-top: 30px;
-    width: 95%;
-    padding: 10px;
+/*    margin-top: 30px;*/
+    width: 98.5%;
+    margin: 0 auto;
+/*    padding: 10px;*/
 }
 
 section.module.parallax {
