@@ -1,0 +1,3 @@
+##### This class project involved making a "My Little Pony" fansite using AngularJS. The ponies are accessed and pushed to a database using $http requests and a basic user interface. This was the first time where I really had to put all of the different pieces of Angular together to make a fully functioning app. It was a worthwhile strugle, but I had a lot of trouble getting the informaction passed from the server to the view, and vice versa.
+
+Assignment: http://coursework.vschool.io/my-little-brony/

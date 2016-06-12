@@ -1,0 +1,2 @@
+##### Project-Description: http://coursework.vschool.io/high-score-haven/
+##### I had fun with styling this project, I decided to keep it very simple and old school. I also enjoyed organizing my Javascript, but this app was also a reminder that I need to practice on creating apps with quality form validation.
