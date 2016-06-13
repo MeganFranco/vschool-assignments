@@ -1,0 +1,2 @@
+##### Exercise Description: http://coursework.vschool.io/exercise-angular-routing-basics/
+##### This was the first exercise after we learned routing, with the instrution to write three different page-views about your favorite state. One thing I realized would be a challange from now on would be keeping track of all of the files, but I ultimately really enjoyed this exercise.

@@ -21,40 +21,43 @@
     <form name="badgeForm" novalidate>
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6 form-group">
                     <label> First Name </label>
-                    <input type="text" class="form-control" ng-model="user.firstName ng-class={ 'has' }">
-                    <div ng-messages=""></div>
+                    <input type="text" name="firstName" class="form-control" ng-model="user.firstName" required>
+                    <p ng-show="badgeForm.firstName.$invalid && badgeForm.firstName.$touched">This field is required</p>
                 </div>
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-6 form-group">
                         <label>Last Name</label>
-                        <input type="text" class="form-control" ng-model="user.lastName">
+                        <input type="text" name="lastName" class="form-control" ng-model="user.lastName" required>
+                        <p ng-show="badgeForm.lastName.$invalid && badgeForm.lastName.$touched">This field is required</p>
                     </div>
                 </div>
             </div>
 
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6 form-group">
                     <label>Email</label>
-                    <input type="email" class="form-control" ng-model="user.email">
+                    <input type="email" name="email" class="form-control" ng-model="user.email" required>
+                    <p ng-show="badgeForm.email.$invalid && badgeForm.email.$touched">This field is required</p>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 form-group">
                     <label>Phone</label>
-                    <input type="tel" class="form-control" ng-model="user.phone">
+                    <input type="tel" name="phone" class="form-control" ng-model="user.phone" required>
+                    <p ng-show="badgeForm.phone.$invalid && badgeForm.phone.$touched">This field is required</p>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6 form-group">
                     <label>Place of Birth</label>
                     <input type="text" class="form-control" ng-model="user.placeOfBirth">
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 form-group">
                     <label>Favorite Food</label>
                     <input type="text" class="form-control" ng-model="user.favoriteFood">
                 </div>
             </div>
-            <button class="btn btn-success" ng-click="addPerson()">click me!</button>
+            <button class="btn btn-success" ng-click="addPerson()" ng-disabled="badgeForm.$invalid">click me!</button>
         </div>
     </form>
 
@@ -67,15 +70,15 @@
             </header>
             <div class="container badgeContent">
                 <div class="row">
-                    <div class="col-md-6">Name: {{person.firstName}} {{person.lastName}}</div>
-                    <div class="col-md-6">Phone: {{person.phone}}</div>
+                    <div class="col-md-6"><span class="description">Name: </span>{{person.firstName}} {{person.lastName}}</div>
+                    <div class="col-md-6"><span class="description">Phone:</span> {{person.phone}}</div>
                 </div>
                 <div class="row">
-                    <div class="col-md-6">Place of Birth: {{ person.placeOfBirth }}</div>
-                    <div class="col-md-6">Favorite Food: {{ person.favoriteFood }} </div>
+                    <div class="col-md-6"><span class="description">Place of Birth:</span> {{ person.placeOfBirth }}</div>
+                    <div class="col-md-6"><span class="description">Favorite Food:</span> {{ person.favoriteFood }} </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-6">Email: {{person.email}} </div>
+                    <div class="col-md-6"><span class="description">Email:</span> {{person.email}} </div>
                 </div>
                 <div class=row>
                     <div class="col-md-12">{{ person.about }}</div>

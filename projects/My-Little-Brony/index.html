@@ -23,33 +23,47 @@ https://scotch.io/tutorials/angularjs-form-validation-with-ngmessages-->
     <header>
         <h1>Welcome To Brosky's Pony Page</h1></header>
 
-    
+
     <div class="intro">
         <h3>THE collection of ponies on the internet </h3>
-        <p>This is a page where I like to collect all the best ponies. Feel free to add your favorite new ponies, just make sure you leave your user name! </p>   
-        <p><button class="btn" ng-click="form.editing = !form.editing" ng-hide="form.editing">Click here to add you're favorite pony!</button></p>
+        <p>This is a page where I like to collect all the best ponies. Feel free to add your favorite new ponies, just make sure you leave your user name! </p>
+        <p>
+            <button class="btn" ng-click="form.editing = !form.editing" ng-hide="form.editing">Click here to add you're favorite pony!</button>
+        </p>
     </div>
 
     <!--    -------------FORM---------------     -->
-    <form ng-show="form.editing" ng-hide="!form.editing" >
+    <form name="userForm" ng-show="form.editing" ng-hide="!form.editing" novalidate>
         <h4>Enter A Pony</h4>
-        <label>Pony Name</label>
-        <br>
-        <input class="form-control" type="text" ng-model="pony.name" ng-minlength="3">
-        <br>
-        <label>Your Username </label>
-        <br>
-        <input class="form-control" type="text" ng-model="pony.username">
-        <br>
-        <label>Image</label>
-        <br>
-        <input class="form-control" type="text" ng-model="pony.imgUrl" placeholder="enter a url">
-        <button class="btn submit-btn" ng-click="addPony(pony)">Enter Your Favorite Pony </button>
+        <div class="form-group">
+            <label>Pony Name</label>
+            <br>
+            <input class="form-control" name="name" type="text" ng-model="pony.name" ng-minlength="3" required>
+            <p ng-show="userForm.name.$invalid && userForm.name.$touched"  class="help-block">A name for your pony is required.</p>
+        </div>
+
+        <div class="form-group">
+            <label>Your Username </label>
+            <br>
+            <input class="form-control" name="username" type="text" ng-model="pony.username" required>
+            <p ng-show="userForm.username.$invalid && userForm.username.$touched"  class="help-block">A username is required.</p>
+            
+        </div>
+
+        <div class="form-group">
+            <label>Image</label>
+            <br>
+            <input class="form-control" name="image" type="text" ng-model="pony.imgUrl" placeholder="enter a url" required>
+             <p ng-show="userForm.image.$invalid && userForm.image.$touched" class="help-block">Please enter an image url.</p>
+        </div>
+
+
+        <button type="submit" class="btn submit-btn" ng-click="addPony(pony); userform.clicked" ng-disabled="userForm.$invalid">Enter Your Favorite Pony </button>
     </form>
 
 
     <!--    ------------- Ponies ---------------     -->
-    <h3 class="show-ponies" ng-show="!show.editing" ng-hide="show.editing" >Get A Current List of Favorite Ponies <button class="btn" ng-click="showPonies(); show.editing = !show.editing">Here</button></h3>
+    <h3 class="show-ponies" ng-show="!show.editing" ng-hide="show.editing">Get A Current List of Favorite Ponies <button class="btn" ng-click="showPonies(); show.editing = !show.editing">Here</button></h3>
     <div class="container ponies">
         <div class="pony-list row col-md-6" ng-repeat="pony in favoritePonies track by $index">
             <div class="row col-md-6">

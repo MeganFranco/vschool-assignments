@@ -17,7 +17,7 @@ app.controller("MainController", ["$scope", "$localStorage", function($scope, $l
        
    };
     
-    $scope.colors = ["crimson", "blue", "green", "darkorange", "purple" ];
+    $scope.colors = ["purple", "blue", "green", "darkorange", "crimson" ];
 
 //////////////////STORE/////////////////////
 

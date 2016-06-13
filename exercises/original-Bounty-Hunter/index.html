@@ -1,46 +1,72 @@
 <!DOCTYPE html>
 
 <html ng-app="BountyHunterApp">
-    <head> 
-        <title> </title>
-        
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="styles.css"/>
-        <meta charset="=utf-8">
-    </head>
-    <body style="margin-left: 20px;" ng-controller="MainController"> 
+
+<head>
+    <title> </title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <meta charset="=utf-8">
+</head>
+
+<body style="margin-left: 20px;" ng-controller="MainController">
+
+    <div class="intro">
+        <h2>Bounty Services</h2>
+        <p>Welcome. I see you're in need of my services. Check below to see if someone else has already requested your target. If they're not on the list, please feel free to add one to the list. You can note more urgent matters when determining the price item.</p>
+    </div>
+   
+    <form>
         <h3>enter item for bounty</h3>
-        <form>
-            <label>First Name</label>
-            <input type=text ng-model="bounty.firstName"><br>
-            
-            <label>Last Name</label>
-            <input type=text ng-model="bounty.lastName"> <br>
-            
-            <label>Living?</label>
-            <input type=text placeholder="true or false" ng-model="bounty.living"> <br>
-            
-            <label>Sith or Jedi?</label>
-            <input type=text ng-model="bounty.type" placeholder="Sith or Jedi?"> <br>
-            
-            <label>Price</label>
-            <input type=number ng-model="bounty.bountyAmount"> <br>
-            
-            <button ng-click="addToBounty(bounty)">Add to Bounty List </button>
-            <button ng-click="getList()">Get List of Targets</button>
-            
-        </form>
-    
-<!--    //////////DISPLAY//////////// -->
-<!--    bounty in bountyService.bounties -->
-        <div ng-repeat="bounty in bountyService.bounties">
-            <h4>{{ bounty.firstName }} {{ bounty.lastName }}</h4>
-            <h5>{{ bounty.type }}, reward: {{ bounty.bountyAmount | currency  }}</h5>
-            <button ng-click="deleteTarget(bounty)">delete</button>
-        </div>   
-    
+        <div class="containter">
+            <div class="row">
+                <label class="col-md-2 col-md-offset-3">First Name</label>
+                <input type=text ng-model="bounty.firstName" class="col-md-2">
+                <br>
+            </div>
+
+            <div class="row">
+                <label class="col-md-2 col-md-offset-3">Last Name</label>
+                <input type=text ng-model="bounty.lastName" class="col-md-2">
+                <br>
+            </div>
+
+            <div class="row">
+                <label class="col-md-2 col-md-offset-3">Living?</label>
+                <input type=text placeholder="true or false" ng-model="bounty.living" class="col-md-2">
+                <br>
+            </div>
+
+            <div class="row">
+                <label class="col-md-2 col-md-offset-3">Sith or Jedi?</label>
+                <input type=text ng-model="bounty.type" placeholder="Sith or Jedi?" class="col-md-2">
+                <br>
+            </div>
+
+            <div class="row">
+                <label class="col-md-2 col-md-offset-3">Price</label>
+                <input type=number ng-model="bounty.bountyAmount" class="col-md-2">
+                <br>
+            </div>
+        </div>
+
+        <button ng-click="addToBounty(bounty)" class="btn">Add to Bounty List </button>
+        <button ng-click="getList()" class="btn">Get List of Targets</button>
+
+    </form>
+
+    <!--    //////////DISPLAY//////////// -->
+    <!--    bounty in bountyService.bounties -->
+    <div ng-repeat="bounty in bountyService.bounties" class="list">
+        <h4>{{ bounty.firstName }} {{ bounty.lastName }}</h4>
+        <h5>{{ bounty.type }}, reward: {{ bounty.bountyAmount | currency  }}</h5>
+        <button ng-click="deleteTarget(bounty)" clas="btn">delete</button>
+    </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
-    <script src="app.js"></script> 
-<!--    <script src="server.js"></script> -->
-    </body>
+    <script src="app.js"></script>
+    <!--    <script src="server.js"></script> -->
+</body>
+
 </html>

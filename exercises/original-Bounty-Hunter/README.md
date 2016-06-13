@@ -1,0 +1,2 @@
+##### Exercise Description: http://coursework.vschool.io/the-original-bounty-hunter/
+##### This was one of the first projects we created where we used express to create our own server. It was made slightly more difficult by the fact that I didn't create a database to store the information, so I did have to hardcode some data into the server. But writing a server has been one of my goals since I started web-developemnt, so this was a really cool project for me!

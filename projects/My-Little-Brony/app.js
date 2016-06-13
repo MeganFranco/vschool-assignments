@@ -13,9 +13,11 @@ app.controller("MainController", ["$scope", "PonyService", function ($scope, Pon
         console.log(pony);
 //        PonyService.addPony(pony);
        PonyService.addPonyToServer(pony);
-       
+        
         
         $scope.pony = {};
+        $scope.userForm.$setUntouched();
+        
     };
 ///////////////SHOW///////////////
     $scope.showPonies = function (){
