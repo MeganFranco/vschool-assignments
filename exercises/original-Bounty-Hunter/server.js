@@ -3,20 +3,19 @@
 var express = require("express");
 var app = express();
 var bodyParser = require("body-parser");
-var uuid = require("uuid");
-var cors = require("cors");
-var bountyRoutes = require("./routes/bountyRoutes") // create new router object
+var mongoose = require("mongoose");
+var port = process.envPORT || 8000
+var bountyRoutes = require("./routes/bountyRoutes"); // create new router object
+var cors = require("cors")
+
+app.use(cors())
 app.use(bodyParser.json());
-app.use(cors());
-
-
 //any time a request comes to the 'bounty' route use bountyRoutes
-app.use("/bounty", bountyRoutes)
+app.use(bountyRoutes);
 
-
-
+mongoose.connect("mongodb://localhost/bounties");
 
 
 app.listen(8000, function () {
-    console.log("App is listening")
+    console.log("App is listening on port " + port)
 })

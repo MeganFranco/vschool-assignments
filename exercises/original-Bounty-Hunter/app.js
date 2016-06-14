@@ -6,7 +6,7 @@ app.service("BountyService", ["$http", function ($http) {
     this.bounties = []
 
     this.getBounties = function () {
-        return $http.get("http://localhost:8000/bounty/")
+        return $http.get("http://localhost:8000/bounties/")
             .then(function (response) {
                 self.bounties = response.data;
                 //this.bounties would be relative to one of the child functions of the service, messing everything up... so when you use self, you get a reference to the outer 'this' and can alter the properties of the service itself
@@ -15,10 +15,11 @@ app.service("BountyService", ["$http", function ($http) {
 
     };
 
-    this.getBounties();
+//    this.getBounties();
 
     this.makeBounty = function (bounty) {
-        return $http.post("http://localhost:8000/bounty/", bounty)
+        console.log("service got info from controller")
+        return $http.post("http://localhost:8000/bounties/", bounty)
             .then(function (response) {
                 self.bounties = response.data;
                 //or if only receiving the obj, self.bounties.push(response.data)
@@ -26,12 +27,13 @@ app.service("BountyService", ["$http", function ($http) {
     };
 
     this.editBounty = function (bounty) {
-        return $http.post("http://localhost:8000/bounty/" + bounty.id, bounty)
+        return $http.post("http://localhost:8000/bounties/" + bounty.id, bounty)
     };
 
     this.deleteBounty = function (bounty) {
-        //        console.log(bounty)
-        return $http.delete("http://localhost:8000/bounty/" + bounty.id)
+//        console.log("service!")
+                console.log(bounty)
+        return $http.delete("http://localhost:8000/bounties/" + bounty.id)
     }
 
 }]);
@@ -42,20 +44,25 @@ app.controller("MainController", ["$scope", "BountyService", function ($scope, B
     //in view call bountyService.bounties
 
     $scope.addToBounty = function (bounty) {
+        console.log("controller sent info to service")
         BountyService.makeBounty(bounty);
-        //        $scope.getList();
+
         //        $scope.bountyService = BountyService;
         //        BountyService.getBounties();
+        //        console.log("here is where we list things!")
         $scope.bounty = {};
+        $scope.getList();
 
-    }
+    };
 
     $scope.getList = function () {
         BountyService.getBounties();
+        console.log("got list from controller!")
 
-    }
+    };
 
     $scope.deleteTarget = function (bounty) {
+        console.log("scope!")
         BountyService.deleteBounty(bounty)
             .then(function (response) {
                 BountyService.getBounties();
@@ -63,6 +70,6 @@ app.controller("MainController", ["$scope", "BountyService", function ($scope, B
             //        $scope.getList();
             //        $scope.bountyService = BountyService;
 
-    }
+    };
 
 }]);
