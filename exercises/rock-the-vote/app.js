@@ -1,8 +1,8 @@
 var app = angular.module("RockTheVote", [])
 
 app.service("RockVoteService", ["$http", function ($http) {
-    var self = this;
-    this.posts = []
+        var self = this;
+        this.posts = []
 
     this.getPosts = function () {
         return $http.get("http://localhost:8000/posts/")
@@ -13,7 +13,8 @@ app.service("RockVoteService", ["$http", function ($http) {
     };
 
     this.getPosts();
-
+//    console.log("line 16")
+    
     this.makePosts = function (posts) {
         return $http.post("http://localhost:8000/posts/", posts)
             .then(function (response) {
@@ -36,22 +37,26 @@ app.service("RockVoteService", ["$http", function ($http) {
 }]);
 
 app.controller("MainController", ["$scope", "RockVoteService", function ($scope, RockVoteService) {
-    
+
     $scope.rockVoteService = RockVoteService;
-    
-    $scope.getPosts = function(){
+
+    console.log($scope.rockVoteService.posts + " line 42")
+
+    $scope.getPosts = function () {
         RockVoteService.getPosts();
     }
-    
-//    $scope.getPosts
-    
-    $scope.addComment = function(post){
-//        post.comments.push($scope.comment)
+
+
+    $scope.rockVoteService.getPosts();
+    //    $scope.getPosts
+
+    $scope.addComment = function (post) {
+        //        post.comments.push($scope.comment)
         console.log($scope.comment)
         console.log(post)
-        
+
     }
-    
-    
+
+
 
 }])

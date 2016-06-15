@@ -25,33 +25,15 @@ bountyRoutes.post("/bounties", function (req, res) {
 });
 
 bountyRoutes.delete("/bounties/:id", function (req, res) {
+   
     Bounty.findByIdAndRemove(req.params.id, function (err, bounty) {
         var response = {
             message: "Bounty successfully deleted",
-//            id: bounty.id
+            id: bounty._id
         };
         res.send(response);
     });
 });
-//
-//bountyRoutes.delete("/bounties/:bountyId/", function (req, res) {
-//    for (var i = 0; i < bounties.length; i++) {
-//        if (bounties[i].id === req.params.bountyId) {
-//            bounties.splice(i, 1);
-//            return res.send("Deleted!")
-//        }
-//    }
-//    res.send("no bounty with that id found");
-//})
-//
-//bountyRoutes.put("/bounties/:bountyId/", function (req, res) {
-//    for (var i = 0; i < bounties.length; i++) {
-//        if (bounties[i].id === req.params.bountyId) {
-//            bounties[i] = req.body;
-//            return res.send(bounties[i]);
-//        }
-//    }
-//    res.send("no bounty with that id found");
-//});
+
 
 module.exports = bountyRoutes

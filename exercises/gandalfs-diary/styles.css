@@ -1,0 +1,21 @@
+body {
+  background: url('https://goodfilmbadfilm.files.wordpress.com/2012/09/gandalf-02.jpg');
+  background-size: 100% auto;
+}
+
+h1 {
+  color: black;
+  font-family: "Marck Script";
+}
+
+#diary {
+  width: 100%;
+  height: 500px;
+  border: none;
+  padding: 80px 70px;
+  font-size: 24px;
+  color: black;
+  font-family: "Marck Script";
+  background: url('http://fe867b.medialib.glogster.com/media/6a/6a6ca2fea24f0d4deb654f14ecd5f4a4415119d968a918d89f7869880fd62735/old-parchment-parchment2.jpg');
+  background-size: 100% auto;
+}

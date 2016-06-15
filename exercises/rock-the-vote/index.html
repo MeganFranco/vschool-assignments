@@ -8,15 +8,16 @@
     <link rel="stylesheet" href=""/>
         <meta charset="=utf-8">
     </head>
-    <body ng-controller="MainController">
-        <textarea ng-model="comment">
-            </textarea>
-            <button ng-click="addComment(post)">add comment</button> 
+    <body ng-controller="MainController" style="margin-left: 25px;">
+        
         <div ng-repeat="post in rockVoteService.posts">
             <h3>{{post.title}}</h3>
             <h5>{{ post.description }}</h5>
             <p>{{ post.votes}}</p>
             <p>{{ post.comments }}</p>
+            <textarea ng-model="comment">
+            </textarea>
+            <button ng-click="addComment(post)">add comment</button> 
         </div>
     
     

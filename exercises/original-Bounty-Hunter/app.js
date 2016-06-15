@@ -3,7 +3,7 @@ var app = angular.module("BountyHunterApp", [])
 app.service("BountyService", ["$http", function ($http) {
     var self = this
         //this refers to the function that's running it, and so the current 'this' is relative to the service in general...
-    this.bounties = []
+    this.bounties = [];
 
     this.getBounties = function () {
         return $http.get("http://localhost:8000/bounties/")
@@ -15,13 +15,13 @@ app.service("BountyService", ["$http", function ($http) {
 
     };
 
-//    this.getBounties();
+    //    this.getBounties();
 
     this.makeBounty = function (bounty) {
         console.log("service got info from controller")
         return $http.post("http://localhost:8000/bounties/", bounty)
             .then(function (response) {
-                self.bounties = response.data;
+                self.bounties.push(response.data);
                 //or if only receiving the obj, self.bounties.push(response.data)
             })
     };
@@ -31,9 +31,9 @@ app.service("BountyService", ["$http", function ($http) {
     };
 
     this.deleteBounty = function (bounty) {
-//        console.log("service!")
-                console.log(bounty)
-        return $http.delete("http://localhost:8000/bounties/" + bounty.id)
+        console.log("service!")
+            //                console.log(bounty)
+        return $http.delete("http://localhost:8000/bounties/" + bounty._id)
     }
 
 }]);
@@ -41,17 +41,17 @@ app.service("BountyService", ["$http", function ($http) {
 app.controller("MainController", ["$scope", "BountyService", function ($scope, BountyService) {
 
     $scope.bountyService = BountyService;
+    //    bountyService.getBounties();
     //in view call bountyService.bounties
 
     $scope.addToBounty = function (bounty) {
-        console.log("controller sent info to service")
+        //        console.log("controller sent info to service")
         BountyService.makeBounty(bounty);
-
-        //        $scope.bountyService = BountyService;
-        //        BountyService.getBounties();
+        $scope.bountyService = BountyService;
+        BountyService.getBounties();
         //        console.log("here is where we list things!")
         $scope.bounty = {};
-        $scope.getList();
+        //        $scope.getList();
 
     };
 

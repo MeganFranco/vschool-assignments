@@ -46,7 +46,7 @@
 
             <div class="row">
                 <label class="col-md-2 col-md-offset-3">Price</label>
-                <input type=number ng-model="bounty.bountyAmount" class="col-md-2">
+                <input type=number ng-model="bounty.reward" class="col-md-2">
                 <br>
             </div>
         </div>
@@ -60,7 +60,7 @@
     <!--    bounty in bountyService.bounties -->
     <div ng-repeat="bounty in bountyService.bounties" class="list">
         <h4>{{ bounty.firstName }} {{ bounty.lastName }}</h4>
-        <h5>{{ bounty.type }}, reward: {{ bounty.bountyAmount | currency  }}</h5>
+        <h5>{{ bounty.type }}, reward: {{ bounty.reward | currency  }}</h5>
         <button ng-click="deleteTarget(bounty)" clas="btn">delete</button>
     </div>
 
