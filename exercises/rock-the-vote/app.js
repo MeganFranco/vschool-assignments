@@ -39,9 +39,9 @@ app.service("RockVoteService", ["$http", function ($http) {
 app.controller("MainController", ["$scope", "RockVoteService", function ($scope, RockVoteService) {
 
     $scope.rockVoteService = RockVoteService;
-
-    console.log($scope.rockVoteService.posts + " line 42")
-
+    $scope.comments = [];
+    console.log($scope.comments)
+    
     $scope.getPosts = function () {
         RockVoteService.getPosts();
     }

@@ -1,27 +1,43 @@
 <!DOCTYPE html>
 
 <html ng-app="RockTheVote">
-    <head> 
-        <title> </title>
-        
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href=""/>
-        <meta charset="=utf-8">
-    </head>
-    <body ng-controller="MainController" style="margin-left: 25px;">
-        
-        <div ng-repeat="post in rockVoteService.posts">
-            <h3>{{post.title}}</h3>
-            <h5>{{ post.description }}</h5>
-            <p>{{ post.votes}}</p>
-            <p>{{ post.comments }}</p>
-            <textarea ng-model="comment">
-            </textarea>
-            <button ng-click="addComment(post)">add comment</button> 
+
+<head>
+    <title> </title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <script src="https://use.fontawesome.com/6f4a7d5318.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <meta charset="=utf-8">
+</head>
+
+<body ng-controller="MainController" style="margin-left: 25px;">
+    <header>
+        <h1>Rock The Vote</h1>
+    </header>
+
+    <!--    FROM THE SERVER     -->
+    <div class="news-posts" ng-repeat="post in rockVoteService.posts">
+        <h3>{{post.title}}</h3>
+        <h5>{{ post.description }}</h5>
+        <p>
+            <i class="fa fa-arrow-up" aria-hidden="true"></i>
+            <br> {{ post.votes}}
+            <br><i class="fa fa-arrow-down" aria-hidden="true"></i>
+        </p>
+        <!--            comments         -->
+        <div ng-repeat="comment in comments">
+            <p>{{ comments.comment }}</p>
         </div>
-    
-    
+        <textarea ng-model="comment">
+        </textarea>
+        <br>
+        <button class="btn btn-warning" ng-click="addComment(post)">add comment</button>
+    </div>
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
-    <script src="app.js"></script> 
-    </body>
+    <script src="app.js"></script>
+</body>
+
 </html>

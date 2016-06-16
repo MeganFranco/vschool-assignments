@@ -1,0 +1,16 @@
+header {
+    height: 95px;
+    background-color: lightgrey;
+    text-align: center;
+    padding-top: 3px;
+}
+
+.news-posts{
+    width: 55%;
+    margin: 25px auto;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-bottom: 35px;
+    
+}

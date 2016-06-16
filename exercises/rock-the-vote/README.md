@@ -1,0 +1,2 @@
+##### Project Descrtiption: http://coursework.vschool.io/rock-the-vote-with-db/
+##### This project was originally about creating a a server and connecting it to a reddit style news-page. Like with the bounty hunter app, the assignment was later modified to require a database. After the initial hurtles of setting up a database getting the comments to display correctly with ng-repeat was still one of the hardest parts of getting the app to work.
