@@ -1,35 +1,51 @@
 <!DOCTYPE html>
 
 <html ng-app="DotsShop">
-    <head> 
-        <title> </title>
-        
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href=""/>
-        <meta charset="=utf-8"name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body ng-controller="MainController">
+
+<head>
+    <title> </title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <meta charset="=utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body ng-controller="MainController">
     <div>
-       <header>
-           <h1>DOT'S SHOP</h1>
-       </header>
         <div class="Navigation">
             <ul class="navbar">
-                <a href="#/"><li class="navlink">Home</li></a>
-                <a href="#/"><li class="navlink">About</li></a>
-                <a href="#/"><li class="navlink">Projects</li></a>
-                <a href="#/"><li class="navlink">Skills</li></a>
-                
+                <a href="#/">
+                    <li class="navlink">Home</li>
+                </a>
+                <a href="#/about">
+                    <li class="navlink">About</li>
+                </a>
+                <a href="#/products">
+                    <li class="navlink">Products</li>
+                </a>
+                <!--                <a href="#/"><li class="navlink">Skills</li></a>-->
+                <h3>DOT'S SHOP</h3>    
             </ul>
+<!--
+            <header>
+                
+            </header>
+-->
         </div>
-        
-    </div> 
-    
-    
-    
+        <div ng-view>
+
+        </div>
+
+    </div>
+
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
-    <script src="app.js"></script> 
+    <script src=//ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.js></script>
+    <script src="app.js"></script>
     <script src="templates/about/about.js"></script>
     <script src="templates/products/products.js"></script>
-    </body>
+    <script src="templates/home/home.js"></script>
+</body>
+
 </html>

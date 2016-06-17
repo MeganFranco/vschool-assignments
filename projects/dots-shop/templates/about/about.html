@@ -1,1 +1,17 @@
-<h2>This is the about page</h2>
+<div class="view about" ng-app="AboutController">
+    <h2 href="#/about">Meet the Artists</h2>
+
+    <div class="about-maker">
+        <h4 ng-click="dorothydisplay = true">Dorothy</h4>
+        <p ng-show="dorothydisplay">Dorothy's always had a great ability to create wonderful works of art with her sewing machine. When she's not spending time with her two wonderful grandaughters, you can often find her at the maching sewing away!  <br><span ng-click="dorothydisplay = false">less</span></p>
+        
+    </div>
+    <div class="about-maker">
+        <h4 ng-click="bradadisplay= true">Brada</h4>
+        <p ng-show="bradadisplay">Currently living in Orange Virginia, Brada Panther began making baby blankets after the births of her great-nieces. Her other endevors include cosmetics sales, and generally bringing Good Times wherever she goes. <br><span ng-click="bradadisplay = false">less</span></p>
+    </div>
+    <div class="about-makerdisplay">
+        <h4 ng-click="sandydisplay = true">Sandy</h4>
+        <p ng-show="sandydisplay">Hailing from Dallas, Texas - this children's physical therapist makes some of the most amazing quilts you've ever seen. <br><span ng-click="dsandydisplay = false">less</span></p>
+    </div>
+</div>

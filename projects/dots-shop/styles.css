@@ -1,9 +1,7 @@
 /*-----------------NAVBAR-------------------*/
 
-.navigation {
-    width: inherit;
-    
-    
+navigation {
+    width: 100%;
 }
 
 ul.navbar {
@@ -21,7 +19,7 @@ h3 {
 }
 
 h3 {
-    margin-left: 55%;
+    margin-left: 25%;
     margin-bottom: 15px;
 }
 
@@ -31,21 +29,42 @@ li.navlink {
     margin-top: 10px;
     text-decoration: none;
     color: #252222;
-    
 }
 
-li.navlink:hover{
+li.navlink:hover {
     background-color: rgba(138, 136, 137, 0.7);
     border-radius: 2px;
-/*    text-decoration: none;*/
+    /*    text-decoration: none;*/
     text-decoration: inherit;
     text-decoration-color: #252222;
-    height:inherit;
+    height: inherit;
 }
 
-li:hover{
+li:hover {
     text-decoration: inherit;
 }
 
-/*--------------------HEADER-------------------*/
 
+/*--------------------Views-------------------*/
+
+.view {
+    width: 97%;
+    margin: 0 auto;
+}
+
+
+/*---------------About---------------*/
+
+.about {
+/*    text-align: center*/
+}
+
+.about-maker {}
+
+.about-maker > h4:hover {
+    color: green;
+}
+
+span {
+    font-style: italic;
+}
