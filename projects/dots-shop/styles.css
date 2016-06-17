@@ -1,0 +1,51 @@
+/*-----------------NAVBAR-------------------*/
+
+.navigation {
+    width: inherit;
+    
+    
+}
+
+ul.navbar {
+    list-style-type: none;
+    padding-left: none;
+    padding-top: 10px;
+    border: 1px solid black;
+    background-color: #E1DFE0;
+    /*height: 30px;*/
+}
+
+li,
+h3 {
+    display: inline;
+}
+
+h3 {
+    margin-left: 55%;
+    margin-bottom: 15px;
+}
+
+li.navlink {
+    /*    display: block;*/
+    padding: 7px;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #252222;
+    
+}
+
+li.navlink:hover{
+    background-color: rgba(138, 136, 137, 0.7);
+    border-radius: 2px;
+/*    text-decoration: none;*/
+    text-decoration: inherit;
+    text-decoration-color: #252222;
+    height:inherit;
+}
+
+li:hover{
+    text-decoration: inherit;
+}
+
+/*--------------------HEADER-------------------*/
+
