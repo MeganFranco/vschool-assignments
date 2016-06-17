@@ -24,9 +24,8 @@ var productSchema = new Schema({
 
 module.exports = mongoose.model("Product", productSchema)
 
-//EXPORT ME
 
-//Product.find({maker:"auntEdna"})//
+
 
 /*
 item:

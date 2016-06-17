@@ -68,3 +68,17 @@ li:hover {
 span {
     font-style: italic;
 }
+
+
+/*---------------Products---------------*/
+
+img {
+    height: 100px;
+    width: 100px;
+}
+
+.products-page{
+    width: 75%;
+    margin: 0px auto;
+}
+

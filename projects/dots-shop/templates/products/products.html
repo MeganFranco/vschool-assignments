@@ -1,4 +1,11 @@
-<div class="view products">
-<h2>This is the products page</h2>
-</div>
+<section class="products-page">
+    <div class="view products">
+        <h2>This is the products page</h2>
+    </div>
 
+    <div ng-repeat="product in productService.productsList">
+        <h5>{{ product.name }}</h5>
+        <img ng-src="{{ product.image }}">
+        <p>Made By: {{ product.maker }}</p>
+    </div>
+</section>
