@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html mg-app="fullStack">
+    <head> 
+        <title> </title>
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="styles.css"/>
+        <meta charset="=utf-8"name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body ng-controller="MainController"> 
+    
+    
+    <div ng-repeat="dog in dogService.dogList">
+    {{dog.name}}
+    </div>
+    
+    <input type="text" ng-model="params.breed" placeholder="Type in a breed">
+    <button ng-click="filterByBreed(params)">Filter</button>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+    <script src="app.js"></script> 
+    </body>
+</html>

@@ -1,3 +1,12 @@
+.product-image {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+
 /*-----------------NAVBAR-------------------*/
 
 navigation {
@@ -53,16 +62,32 @@ li:hover {
 }
 
 
-/*---------------About---------------*/
+/*---------------Home---------------*/
 
-.about {
-/*    text-align: center*/
+.banner {
+    width: 100%;
 }
 
-.about-maker {}
+
+/*---------------About---------------*/
+
+h2 {
+    text-align: center;
+}
+
+.about {}
+
+.container {
+    margin-top: 70px;
+}
+
+.about-maker {
+    margin-left: 70px;
+    margin-bottom: 40px;
+}
 
 .about-maker > h4:hover {
-    color: green;
+    font-weight: 600;
 }
 
 span {
@@ -72,13 +97,72 @@ span {
 
 /*---------------Products---------------*/
 
+
+/*http://inspirationalpixels.com/tutorials/creating-a-dropdown-menu-with-html-css*/
+
 img {
-    height: 100px;
-    width: 100px;
+    height: 150px;
+    width: 150px;
 }
 
-.products-page{
+.products-page {
     width: 75%;
     margin: 0px auto;
 }
 
+
+/*dropdown*/
+
+
+.product-button {
+    width: 73px;
+    border: none;
+    background-color: #f9f9f8;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+
+/* Dropdown Content (Hidden by Default) */
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+/*    min-width: 160px;*/
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Links inside the dropdown */
+
+.dropdown-content a {
+    color: black;
+    padding: 8px 12px;
+    text-decoration: none;
+    display: block;
+}
+
+
+/* Change color of dropdown links on hover */
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+
+
+/* Show the dropdown menu on hover */
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}

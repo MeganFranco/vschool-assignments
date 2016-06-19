@@ -1,4 +1,4 @@
-var app = angular.module("DotsShop", ["ngRoute"]);
+var app = angular.module("DotsShop", ["ngRoute", "ngCart"]);
 
 app.service("ShopService", ["$http", function ($http) {
 
@@ -29,3 +29,5 @@ app.config(function ($routeProvider) {
 
 
 });
+
+////////////////////////////////////////////////////////
