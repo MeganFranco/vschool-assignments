@@ -10,10 +10,10 @@ app.controller("MainController", ["$scope", "ShopService", function ($scope, Sho
 
 app.config(function ($routeProvider) {
     $routeProvider
-        .when("/", {
-            templateUrl: "templates/home/home.html",
-            controller: "HomeController",
-        })
+//        .when("/", {
+//            templateUrl: "templates/home/home.html",
+//            controller: "HomeController",
+//        })
         .when("/about", {
             templateUrl: "templates/about/about.html",
             controller: "AboutController",
