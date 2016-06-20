@@ -20,9 +20,16 @@ productRouter.post("/products", function (req, res) {
     });
 });
 
-
-module.exports = productRouter;
-
+productRouter.get("/products", function(req, res){
+    Product.find(req.query, function(err, products){
+        if(err){ res.status(500).send(err)}
+        else{
+            res.send(products)
+        }
+        console.log(req.query)
+        
+    });
+});
 
 
 ////filtering?//
@@ -37,13 +44,7 @@ module.exports = productRouter;
 //    });
 //});
 
-productRouter.get("/products", function(req, res){
-    Product.find(req.query, function(err, products){
-        if(err){ res.status(500).send(err)}
-        else{
-            res.send(products)
-        }
-        
-    });
-});
+
+
+module.exports = productRouter;
 //OR GO TO FRONT END AND USE CONFIG WITH BUTTONS WHICH WILL TAKE PARAMS --> the value of the params key will be maker:"makerName"

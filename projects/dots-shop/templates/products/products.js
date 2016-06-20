@@ -7,19 +7,32 @@ app.service("ProductsService", ["$http", function ($http) {
     this.productsList = [];
 
     //function will take params when you give the option to filter
-    this.getProducts = function (params) {
-        if (params) {
-            var config = {
-                params: params
-            };
+    this.getProducts = function (key, search) {
+        if (search) {
+            if (key === 'maker') {
+                var config = {
+                    params: {
+                        maker: search
+                    }
+                }
+            } else if (key === 'type') {
+
+                var config = {
+                    params: {
+                        type: search
+                    }
+                };
+            }
             return $http.get(baseUrl + "/products", config)
                 .then(function (response) {
                     self.productsList = response.data
+                    console.log(response.data + "service line 18")
                 });
         } else {
             return $http.get(baseUrl + "/products")
                 .then(function (response) {
                     self.productsList = response.data;
+                    console.log(response.data + "service line 24")
                 })
         }
     };
@@ -28,18 +41,18 @@ app.service("ProductsService", ["$http", function ($http) {
 
 app.controller("ProductsController", ["$scope", "ProductsService", "$location", "ngCart", function ($scope, ProductsService, $location, ngCart) {
     $scope.productService = ProductsService;
-    //    ProductsService.getProducts();
+            ProductsService.getProducts();
 
 
-    $scope.findProducts = function () {
-        ProductsService.getProducts();
-        console.log("controller line 36")
-    }
-
-    $scope.findProducts();
-    
-    $scope.filterProduct = function(name){
-        $scope.findProducts(name)   
+    //    $scope.findProducts = function () {
+    //        ProductsService.getProducts();
+    //        console.log("controller line 36")
+    //    }
+    //
+    //    
+    $scope.filterProduct = function (key, search) {
+        ProductsService.getProducts(key, search);
+        $location.url($location.path());
     }
 
 

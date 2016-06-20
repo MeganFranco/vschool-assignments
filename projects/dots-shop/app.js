@@ -12,7 +12,7 @@ app.config(function ($routeProvider) {
     $routeProvider
         .when("/", {
             templateUrl: "templates/home/home.html",
-            controller: "Home Controller",
+            controller: "HomeController",
         })
         .when("/about", {
             templateUrl: "templates/about/about.html",

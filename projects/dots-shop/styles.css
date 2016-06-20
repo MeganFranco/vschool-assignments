@@ -102,12 +102,21 @@ span {
 
 img {
     height: 150px;
-    width: 150px;
+    width: 200px;
+    padding: 5px;
 }
 
 .products-page {
     width: 75%;
     margin: 0px auto;
+}
+
+h5{
+    margin-bottom: 45px;
+}
+
+.made-by {
+    padding-top: 45px;
 }
 
 
