@@ -6,8 +6,16 @@
     transform: rotate(90deg);
 }
 
+a:link {
+    text-decoration: none;
+    color: inherit;
+}
 
 /*-----------------NAVBAR-------------------*/
+
+.container {
+    width: 100%
+}
 
 navigation {
     width: 100%;
@@ -53,6 +61,9 @@ li:hover {
     text-decoration: inherit;
 }
 
+/* --footer-- */
+
+
 
 /*--------------------Views-------------------*/
 
@@ -77,7 +88,7 @@ h2 {
 
 .about {}
 
-.container {
+.products-list {
     margin-top: 95px;
 }
 
@@ -100,10 +111,15 @@ span {
 
 /*http://inspirationalpixels.com/tutorials/creating-a-dropdown-menu-with-html-css*/
 
+.view-products {
+    display: inline-block;
+}
+
 img {
     height: 150px;
     width: 200px;
     padding: 5px;
+    border-radius: 5px;
 }
 
 .products-page {
@@ -111,7 +127,7 @@ img {
     margin: 0px auto;
 }
 
-h5{
+h5 {
     margin-bottom: 45px;
 }
 
@@ -121,7 +137,6 @@ h5{
 
 
 /*dropdown*/
-
 
 .product-button {
     width: 73px;
@@ -141,7 +156,7 @@ h5{
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-/*    min-width: 160px;*/
+    /*    min-width: 160px;*/
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 
@@ -174,4 +189,21 @@ h5{
 
 .dropdown:hover .dropbtn {
     background-color: #3e8e41;
+}
+
+.checkout {
+    margin: 40px;
+}
+
+
+/*---------------Cart---------------*/
+
+ngcart-cart {}
+
+.browse-link {
+    padding-top: 45px;
+}
+
+ngcart-summary {
+    color: black
 }

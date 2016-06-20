@@ -11,9 +11,10 @@
 </head>
 
 <body ng-controller="MainController">
-    <div>
-        <div class="Navigation">
-            <ul class="navbar">
+
+    <div class="Navigation container">
+        <ul class="navbar row">
+            <div class="col-md-3">
                 <a href="#/">
                     <li class="navlink">Home</li>
                 </a>
@@ -23,20 +24,25 @@
                 <a href="#/products">
                     <li class="navlink">Products</li>
                 </a>
-                <!--                <a href="#/"><li class="navlink">Skills</li></a>-->
-                <h3>DOT'S SHOP</h3>
-            </ul>
-            <!--
-            <header>
-                
-            </header>
--->
-        </div>
-        <div ng-view>
+            </div>
+            <div class="col-md-7">
+                <a href="#/"><h3>DOT'S SHOP </h3></a>
+            </div>
+            <div class="col-md-2">
+                <a href="#/cart"><ngcart-summary></ngcart-summary></a>
+            </div>
+        </ul>
+    </div>
 
-        </div>
+    <div ng-view>
 
     </div>
+    
+    <footer>
+        
+    </footer>
+
+
 
 
 

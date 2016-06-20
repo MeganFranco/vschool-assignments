@@ -32,7 +32,6 @@ app.service("ProductsService", ["$http", function ($http) {
             return $http.get(baseUrl + "/products")
                 .then(function (response) {
                     self.productsList = response.data;
-                    console.log(response.data + "service line 24")
                 })
         }
     };

@@ -5,38 +5,38 @@
     <!--///////////PAGE HEADER////////////-->
     <div class="view products">
         <h2>This is the products page</h2>
-    </div>
-    <!-- /////////////// DROP DOWNS ///////////////-->
-    <div class="dropdown">
-        <button class="product-button">Artists</button>
-        <div class="dropdown-content">
-            <a ng-click="filterProduct('maker', 'Brada')" ng-model="filter.name">Brada</a>
-            <a ng-click="filterProduct('maker', 'Dorothy')" ng-model="filter.name">Dorothy</a>
-            <a ng-click="filterProduct('maker', 'Sandy')" ng-model="filter.name">Sandy</a>
+
+        <!-- /////////////// DROP DOWNS ///////////////-->
+        <div class="dropdown">
+            <button class="product-button">Artists</button>
+            <div class="dropdown-content">
+                <a ng-click="filterProduct('maker', 'Brada')" ng-model="filter.name">Brada</a>
+                <a ng-click="filterProduct('maker', 'Dorothy')" ng-model="filter.name">Dorothy</a>
+                <a ng-click="filterProduct('maker', 'Sandy')" ng-model="filter.name">Sandy</a>
+            </div>
         </div>
-    </div>
-    
-    <div class="dropdown">    
-        <button class="product-button">Products</button>
-        <div class="dropdown-content">
-            <a ng-click="filterProduct('type', 'quilt')" ng-model="filter.product">quilts</a>
-            <a ng-click="filterProduct('type', 'dress')" ng-model="filter.product">dresses</a>
-            <a ng-click="filterProduct('type', 'blanket')" ng-model="filter.product">blankets</a>
+        <div class="dropdown">
+            <button class="product-button">Products</button>
+            <div class="dropdown-content">
+                <a ng-click="filterProduct('type', 'quilt')" ng-model="filter.product">quilts</a>
+                <a ng-click="filterProduct('type', 'dress')" ng-model="filter.product">dresses</a>
+                <a ng-click="filterProduct('type', 'blanket')" ng-model="filter.product">blankets</a>
+            </div>
         </div>
     </div>
 
     <!--   ////////////////    PRODUCTS    //////////////-->
-    <div class="container">
+    <div class="container products-list">
         <div class="row">
             <!--       https://docs.angularjs.org/error/filter/notarray -->
-                        <div ng-repeat="product in productService.productsList track by $index" | filter>
-<!--            <div ng-repeat="product in productService.productsList track by $index">-->
+            <div ng-repeat="product in productService.productsList track by $index" | filter>
+                <!--            <div ng-repeat="product in productService.productsList track by $index">-->
                 <div class="col-sm-4">
                     <h5>{{ product.name }}</h5>
                     <img ng-src="{{ product.image }}" class="product-image">
                     <p class="made-by">Made By: {{ product.maker }}</p>
                     <p>Price: {{ product.price | currency }}</p>
-                    <ngcart-addtocart id="{{ product.id }}" name="{{ product.name }}" price="{{ product.price }}" data="product"></ngcart-addtocart>
+                    <ngcart-addtocart id="{{ product._id }}" name="{{ product.name }}" price="{{ product.price }}" data="product">add to cart</ngcart-addtocart>
 
                     <!-- NEED TO REIVEW DIRECTIVES
                  <ngcart-addtocart id="{{ product.id }}" name="{{ product.name }}" price="{{ product.price }}" quantity="1" quantity-max="30" data="product"></ngcart-addtocart>
@@ -44,6 +44,15 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="checkout">
+        <!--       change views on ng-click to cart -->
+
+        <a href="#/cart">
+            <button class="btn btn-sm btn-primary">Go To Check Out</button>
+        </a>
+        <!--   make "checkout view + controller AND ROUTE and server endpoint?"     -->
     </div>
 </section>
 
