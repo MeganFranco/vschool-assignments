@@ -8,27 +8,36 @@
     </div>
     <!-- /////////////// DROP DOWNS ///////////////-->
     <div class="dropdown">
-        <button class="product-button">Sort by</button>
+        <button class="product-button">Artists</button>
         <div class="dropdown-content">
             <a ng-click="filterProduct(Brada)" ng-model="filter.name">Brada</a>
-            <a href="#">artist</a>
+            <a ng-click="filterProduct(Dorothy)" ng-model="filter.name">Dorothy</a>
+            <a ng-click="filterProduct(Sandy)" ng-model="filter.name">Sandy</a>
+        </div>
+        
+        <button class="product-button">Products</button>
+        <div class="dropdown-content">
+            <a ng-click="filterProduct(quilt)" ng-model="filter.product">quilt</a>
+            <a ng-click="filterProduct(dress)" ng-model="filter.product">dress</a>
+            <a ng-click="filterProduct(blanket)" ng-model="filter.product">blanket</a>
+            
         </div>
     </div>
 
-<!--   ////////////////    PRODUTS    //////////////-->
+    <!--   ////////////////    PRODUCTS    //////////////-->
     <div class="container">
         <div class="row">
-        <!--       https://docs.angularjs.org/error/filter/notarray -->
-<!--            <div ng-repeat="product in productService.productsList track by $index | toArray:false | filter:filter">-->
-               <div ng-repeat="product in productService.productsList track by $index">
+            <!--       https://docs.angularjs.org/error/filter/notarray -->
+            <!--            <div ng-repeat="product in productService.productsList track by $index | toArray:false | filter">-->
+            <div ng-repeat="product in productService.productsList track by $index">
                 <div class="col-sm-4">
                     <h5>{{ product.name }}</h5>
                     <img ng-src="{{ product.image }}" class="product-image">
                     <p>Made By: {{ product.maker }}</p>
                     <p>Price: {{ product.price | currency }}</p>
                     <ngcart-cart></ngcart-cart>
-                    
-               <!-- NEED TO REIVEW DIRECTIVES
+
+                    <!-- NEED TO REIVEW DIRECTIVES
                  <ngcart-addtocart id="{{ product.id }}" name="{{ product.name }}" price="{{ product.price }}" quantity="1" quantity-max="30" data="product"></ngcart-addtocart>
                  -->
                 </div>
