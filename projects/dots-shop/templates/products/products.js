@@ -39,7 +39,7 @@ app.controller("ProductsController", ["$scope", "ProductsService", "$location", 
     $scope.findProducts();
     
     $scope.filterProduct = function(name){
-        $scope.findProducts(Brada)   
+        $scope.findProducts(name)   
     }
 
 
