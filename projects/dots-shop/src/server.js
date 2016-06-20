@@ -6,16 +6,17 @@ var mongoose = require("mongoose");
 
 //require routes here**************
 
-var productRouter = require("./routes/productRoute")
+var productRouter = require("./routes/productRoute");
 
 app.use(bodyParser.json());
 app.use(cors());
-app.use(productRouter) 
+app.use(productRouter);
 
-app.use("/", express.static(__dirname))
+app.use("/", express.static("public"));
+app.use('/bower_components', express.static(__dirname + '/../bower_components'));
 
 mongoose.connect("mongodb://localhost/products");
 
-app.listen(8000, function(){
-    console.log("App is listening")
-})
+app.listen(8000, function () {
+    console.log("App is listening");
+});
