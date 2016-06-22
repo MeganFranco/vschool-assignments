@@ -17,6 +17,9 @@ app.use('/bower_components', express.static(__dirname + '/../bower_components'))
 
 mongoose.connect("mongodb://localhost/products");
 
+
+//NEED TO CREATE CLIENT TOKEN//
+
 app.listen(8000, function () {
     console.log("App is listening");
 });

@@ -1,9 +1,30 @@
+/****COLORS******
+original scheme: https://color.adobe.com/Green-Dark-Blue-color-theme-3854662/
+White: #FFFFFF
+Gray: #AEAEAE
+Green: #B6D051
+Pink: #E64C66
+Navy: #2D3E50
+Teal: #1BBC9B
+*/
+
+body {
+    /*    position: relative;*/
+    margin-bottom: 74px;
+}
+
 .product-image {
+    /*      rotate    */
     -webkit-transform: rotate(90deg);
     -moz-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     -o-transform: rotate(90deg);
     transform: rotate(90deg);
+    /*    size     */
+    height: 200px;
+    width: 250px;
+    padding: 5px;
+    border-radius: 5px;
 }
 
 a:link {
@@ -11,28 +32,32 @@ a:link {
     color: inherit;
 }
 
+
 /*-----------------NAVBAR-------------------*/
 
 .container {
     width: 100%
 }
 
+/*
 navigation {
     width: 100%;
 }
+*/
 
 ul.navbar {
     list-style-type: none;
     padding-left: none;
     padding-top: 10px;
     border: 1px solid black;
-    background-color: #E1DFE0;
-    /*height: 30px;*/
+    background-color: #2D3E50;
+/*    height: 30px;*/
 }
 
 li,
 h3 {
     display: inline;
+    color: #E64C66;
 }
 
 h3 {
@@ -45,7 +70,7 @@ li.navlink {
     padding: 7px;
     margin-top: 10px;
     text-decoration: none;
-    color: #252222;
+    color: #1BBC9B;
 }
 
 li.navlink:hover {
@@ -61,8 +86,47 @@ li:hover {
     text-decoration: inherit;
 }
 
+
 /* --footer-- */
 
+footer {
+/* size of footer   */ 
+/*    height: 45px;*/
+    background-color: #2D3E50;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    margin-top: 15px;
+    
+/* Font color, size, etc.   */
+    color: #1BBC9B;
+    font-size: small;
+    text-align: left
+    
+}
+
+.footer-links {
+    text-decoration: none;
+    color: #1BBC9B;
+    
+    
+}
+
+.footer-div {
+    padding: 10px 0px;
+    margin-left: 45px;
+}
+
+.footer-links:hover, .footer-links:focus {
+    color: #1BBC9B;
+    font-weight: 700;
+}
+
+
+ngcart-summary{
+    display: inline-block;
+}
 
 
 /*--------------------Views-------------------*/
@@ -70,13 +134,41 @@ li:hover {
 .view {
     width: 97%;
     margin: 0 auto;
+    color: #2D3E50;
 }
 
 
 /*---------------Home---------------*/
 
+.garden {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+    max-width: 100%;
+    max-height: 100%;
+}
+
 .banner {
     width: 100%;
+    height: 250px;
+    position:relative;
+    background:   url("http://meganfranco.com/dots_shop_images/pinkQuilt_Sandy.JPG")no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.home-links {
+    color: #1BBC9B;
+}
+
+.home-links:hover {
+    color: #E64C66;
+}
+
+.welcome-blurb {
+    margin-top: 35px;
 }
 
 
@@ -86,7 +178,13 @@ h2 {
     text-align: center;
 }
 
-.about {}
+.meet-title{
+    margin-bottom: 35px;
+}
+
+.about {
+    width: 55%;
+}
 
 .products-list {
     margin-top: 95px;
@@ -99,10 +197,23 @@ h2 {
 
 .about-maker > h4:hover {
     font-weight: 600;
+    color: #E64C66;
 }
 
 span {
     font-style: italic;
+    margin-top: 5px;
+}
+
+span:hover {
+    color: #E64C66
+}
+
+.product-display {
+    height: 450px;
+    border: 3px solid #1BBC9B;
+    background-color: rgba(138, 136, 137, 0.2);
+    border-radius: 15px;
 }
 
 
@@ -115,16 +226,12 @@ span {
     display: inline-block;
 }
 
-img {
-    height: 150px;
-    width: 200px;
-    padding: 5px;
-    border-radius: 5px;
-}
+img {}
 
 .products-page {
     width: 75%;
     margin: 0px auto;
+    color: #2D3E50
 }
 
 h5 {
@@ -141,7 +248,8 @@ h5 {
 .product-button {
     width: 73px;
     border: none;
-    background-color: #f9f9f8;
+    background-color: #2D3E50;
+    color: #1BBC9B;
 }
 
 .dropdown {
@@ -155,7 +263,7 @@ h5 {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
+    background-color: #2D3E50;
     /*    min-width: 160px;*/
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
@@ -164,8 +272,8 @@ h5 {
 /* Links inside the dropdown */
 
 .dropdown-content a {
-    color: black;
-    padding: 8px 12px;
+    color: #1BBC9B;
+    padding: 8px 10px;
     text-decoration: none;
     display: block;
 }
@@ -174,7 +282,7 @@ h5 {
 /* Change color of dropdown links on hover */
 
 .dropdown-content a:hover {
-    background-color: #f1f1f1
+    background-color: rgba(138, 136, 137, 0.7)
 }
 
 
@@ -182,6 +290,7 @@ h5 {
 
 .dropdown:hover .dropdown-content {
     display: block;
+    z-index: 3;
 }
 
 
@@ -193,6 +302,7 @@ h5 {
 
 .checkout {
     margin: 40px;
+    padding-bottom: 25px;
 }
 
 
@@ -204,6 +314,44 @@ ngcart-cart {}
     padding-top: 45px;
 }
 
+svg.icon,
 ngcart-summary {
-    color: black
+    color: #1BBC9B;
 }
+
+
+/*---------------Media Sizing---------------*/
+
+@media (max-width: 1000px) {
+    .product-image {
+        height: 150px;
+        width: 200px;
+/*        margin-top: 120px;*/
+        
+    }
+}
+
+@media (max-width: 775px) {
+    .products-list {
+        width: 45%;
+    }
+}
+
+@media (max-width: 700px) {
+    body {
+        margin-bottom: 150px;
+    }
+    .about {
+        width: 95%;
+    }
+}
+
+@media (max-width: 600px) {
+    .products-list {
+        width: 75%;
+    }
+}
+
+
+
+

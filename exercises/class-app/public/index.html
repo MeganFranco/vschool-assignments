@@ -1,0 +1,51 @@
+<!--     AUTHENTICATION http://coursework.vschool.io/authentication-basics/      -->
+
+
+<!DOCTYPE html>
+
+<html ng-app="TodoApp">
+
+<head>
+    <title> </title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="styles.css"/>
+    <meta charset="=utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body ng-controller="TodoController" class="container">
+    <form class="col-md-4 well" name="todoForm" novalidate>
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" name="title" class="form-control" ng-model="todo.title">
+        </div>
+        <div class="form-group">
+            <label for="description">Description</label>
+            <textarea class="form-control" name="description" id="description" ng-model="todo.description"></textarea>
+<!--            <input type="text" name="title" class="form-control">-->
+       <button ng-click="saveTodo(todo)" class="btn btn-primary">SAVE</button>
+        </div>
+    </form>
+    <section class="col-md-4">
+        <div class="panel panel-default" ng-repeat="todo in todoService.todos">
+            <div class="panel-body">
+<!--      https://scotch.io/tutorials/the-many-ways-to-use-ngclass         -->
+<!--      for future reference: https://vitalets.github.io/angular-xeditable/         -->
+                <h4 ng-class="{ 'completed text-muted' : todo.completed }"> {{ todo.title }}</h4>
+                <p> {{ todo.description }}</p>
+                <button> </button>
+                <div class="check-box">
+                    <input type="checkbox" ng-model="todo.completed">    
+                </div>
+                
+            </div>
+            
+        </div>
+    </section>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+var express = require("express");
+var todoRouter = express.Router();
+var Todo = require("../models/todo");
+
+
+todoRouter.route("/")
+    .get(function (req, res) {
+        Todo.find(function (err, todos) {
+            if (err) res.status(500).send(err);
+            else res.send(todos);
+        });
+    });
+todoRouter.route("/")
+    .post(function (req, res) {
+        var newTodo = new Todo(req.body);
+        /*make the user*/
+        newTodo.user = req.user._id;
+        newTodo.save(function (err, todo) {
+            if (err) res.status(500).send(err);
+            else res.status(201).send(todo);
+        });
+    });
+
+todoRouter.route("/:todoId")
+    .get(function (req, res) {
+        Todo.findByOne({
+            _id: req.params.todoId,
+            user: req.user._id
+        }, function (err, todo) {
+            if (err) res.status(500).send(err);
+            else res.send(todo);
+        });
+    })
+    .put(function (req, res) {
+        Todo.findOneAneUpdate({
+            _id: req.params.todoId,
+            user: req.user._id
+        }, req.body, {
+            new: true
+        }, function (err, todo) {
+            if (err) res.status(500).send(err);
+            else res.send(todo);
+        });
+    })
+    .delete(function (req, res) {
+        Todo.findOneAndRemove({
+            _id: req.params.todoId,
+            user: req.user._id
+        }, function (err, todo) {
+            if (err) res.status(500).send(err);
+            else res.send(todo);
+        });
+    });
+
+module.exports = todoRouter;

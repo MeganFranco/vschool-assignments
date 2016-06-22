@@ -6,9 +6,10 @@ var productSchema = new Schema({
         type: String,
         required: true,
     },
+    
     type: {
         type: String,
-//        ref: "Category",
+        //        ref: "Category",
         required: true,
     },
     maker: {
@@ -22,8 +23,12 @@ var productSchema = new Schema({
     price: {
         type: Number,
         required: true,
+    },
+    quantity: {
+        type: Number,
+        default: 1,
     }
-    
+
 });
 
 module.exports = mongoose.model("Product", productSchema)

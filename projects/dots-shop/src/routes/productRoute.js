@@ -26,7 +26,7 @@ productRouter.get("/products", function(req, res){
         else{
             res.send(products)
         }
-        console.log(req.query)
+//        console.log(req.query)
         
     });
 });

@@ -1,4 +1,23 @@
 <ngcart-cart></ngcart-cart>
-<ngcart-checkout service="log">Check Out</ngcart-checkout><br>
+<!--
+<ngcart-checkout service="log" 
+ >Check Out</ngcart-checkout><br>
+-->
+
+<ngcart-checkout service="paypal" 
+settings="
+{paypal: {business: 'francomegan-facilitator@gmail.com',
+ item_name: 'itemName'}
+ }"
+ >Check Out</ngcart-checkout><br>
 
 <a href="#/products" class="browse-link">Keep Browsing</a>
+
+
+
+
+
+
+
+
+<!--https://github.com/snapjay/ngCart-->
