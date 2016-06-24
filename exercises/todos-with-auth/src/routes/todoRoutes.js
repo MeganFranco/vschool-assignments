@@ -5,12 +5,11 @@ var Todo = require("../models/todo");
 
 todoRouter.route("/")
     .get(function (req, res) {
-        Todo.find(function (err, todos) {
+        Todo.find({user: req.user._id}, function (err, todos) {
             if (err) res.status(500).send(err);
             else res.send(todos);
         });
-    });
-todoRouter.route("/")
+    })
     .post(function (req, res) {
         var newTodo = new Todo(req.body);
         /*make the user*/
@@ -23,7 +22,7 @@ todoRouter.route("/")
 
 todoRouter.route("/:todoId")
     .get(function (req, res) {
-        Todo.findByOne({
+        Todo.findOne({
             _id: req.params.todoId,
             user: req.user._id
         }, function (err, todo) {
