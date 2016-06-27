@@ -16,7 +16,7 @@ var checkPhrases = [
     "talk more",
     "i want to keep",
     "like you",
-    "but i like you"
+    "but i like you",
 ];
 
 
@@ -96,28 +96,42 @@ var whyContextFunction = function () {
 /////////////////////CHECK FUNCTIONS////////////////////////
 
 var checkFirstWord = function (input) {
-    input.split(" ")
+    var input = input.split(" ")
+    console.log("in the FirstWordFunction")
+    console.log(input)
     for (var i = 0; i < firstWord.length; i++) {
+        console.log("in the For-loop")
         if (input[0] === firstWord[i]) {
+            console.log(input[0] + " " + firstWord[i] + " line 104")
             var triggerWord = firstWord[i]
             console.log(firstWordResponses(triggerWord))
-        } else continue;
+        }
     }
 }
 
 var checkLoserInput = function (input) {
     //    var thePhrase = "";
+    var needResponse = true;
     for (var i = 0; i < checkPhrases.length; i++) {
         if (input.indexOf(checkPhrases[i]) > -1) {
             checkPhrasesResponses(checkPhrases[i])
-            console.log("line 113")
-        } else {
-            checkFirstWord(input)
-            console.log("line 115")
-        }
+        needResponse = false
+        } else continue;
     }
+    console.log(needResponse + " 118")
+    if(needResponse){
+        console.log("line 119");
+        checkFirstWord(input)
+    }
+    
+    
+    
     //    checkPhrasesResponses(thePhrase);
 }
+
+///input
+//calculate
+//display AND send the input and output together to the backend
 
 //////////////////////WHILE LOOP/////////////////////////////
 //timeout: http://stackoverflow.com/questions/34069086/using-javascript-how-to-break-the-while-loop-after-a-set-time
@@ -134,7 +148,7 @@ var breakupBot = function () {
                 break;
             } else {
                 checkLoserInput(input);
-                console.log("line 84")
+                console.log("line 143")
             }
 
         }

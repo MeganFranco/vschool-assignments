@@ -5,7 +5,7 @@ var app = angular.module("TodoApp");
 app.controller("TodoController", ["$scope", "TodoService", "UserService", function ($scope, TodoService, UserService) {
     $scope.todo = {}
     $scope.todos = [];
-    $scop.userService = UserService 
+    $scope.userService = UserService 
 
     (function getTodos() {
         TodoService.getTodos().then(function (todos) {

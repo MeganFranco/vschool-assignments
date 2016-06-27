@@ -11,15 +11,11 @@ var todoSchema = new Schema({
         type: Boolean,
         default: false
     },
-    /*save user Id as a reference on the to-do doc*/
     user: {
-        /*when you create to-do objs, make sure the user is in there too*/
         type: Schema.Types.ObjectId,
         ref: "User",
-        required: true,
+        required: true
     }
 });
 
 module.exports = mongoose.model("Todo", todoSchema);
-
-/*A one to many relationship*/

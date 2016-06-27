@@ -1,0 +1,34 @@
+<div class="row">
+    <div class="col-md-4 col-md-offset-4">
+        <h1>Create a new user</h1>
+
+        <form>
+            <div class="control-group">
+                <label>Name</label>
+                <input type="text" class="form-control" ng-model="user.name">
+            </div>
+            <br>
+
+            <div class="control-group">
+                <label>Username</label>
+                <input type="text" class="form-control" ng-model="user.username">
+            </div>
+            <br>
+
+            <div class="control-group">
+                <label>Password</label>
+                <input type="password" class="form-control" ng-model="user.password">
+            </div>
+            <br>
+
+            <div class="control-group">
+                <label>Repeat Password</label>
+                <input type="password" class="form-control" ng-model="passwordRepeat">
+                <span class="text-danger" ng-show="passwordMessage">{{passwordMessage}}</span>
+            </div>
+
+            <br>
+            <button class="center-block btn btn-primary btn-lg" ng-click="signup(user)">Signup</button>
+        </form>
+    </div>
+</div>
