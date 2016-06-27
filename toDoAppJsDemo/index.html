@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My To-Do List</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+    <!--This div element contains an input and a button. -->
+    <!--The input and button elements have id's and other attributes-->
+    <div>
+        <input id="taskInput" type="text">
+        <button id="submitButton" onClick="addTask()">Add Task</button>
+    </div>
+
+
+    <!-- This div element is empty, but we will populate it with -->
+    <!-- to-do tasks using JavaScript -->
+    <div id="taskDisplay"></div>
+
+    <script src="https://cdn.jsdelivr.net/lodash/4.13.1/lodash.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

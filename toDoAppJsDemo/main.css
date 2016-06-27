@@ -1,0 +1,34 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url(assets/SourceSansPro-Light.otf);
+}
+
+*{
+    background-color:azure;
+}
+
+div {
+    font-family: myFirstFont;
+}
+
+input {
+    width:200px;
+    height:25px;
+    background-color: lightgray;
+    border:5px;
+    border-radius: 5%;
+}
+
+#submitButton{
+    background-color:aquamarine;
+    font-family: myFirstFont;
+    font-size: 25px;
+    border:5px;
+    border-radius:5%;
+}
+
+.removeButton{
+    background-color:aquamarine;
+    border-radius:50%;
+    border:5px;
+}

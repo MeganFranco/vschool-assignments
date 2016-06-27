@@ -9,6 +9,8 @@ var path = require("path");
 var port = process.env.PORT || 8000;
 var expressJwt = require("express-jwt");
 
+var botRoutes = require("./routes/botRoutes")
+
 mongoose.connect(config.database, function() {
     console.log("Connection to mongodb successful");
 });
@@ -21,7 +23,7 @@ app.use(express.static(path.join(__dirname, "..", "public")));
 app.use("/api", expressJwt({secret: config.secret}));
 
 app.use("/auth", require("./routes/authRoutes"));
-app.use("/api/todos", require("./routes/botRoutes"));
+app.use("/api/responses/", botRoutes);
 
 app.listen(port, function() {
     console.log("App is listening on port " + port);
