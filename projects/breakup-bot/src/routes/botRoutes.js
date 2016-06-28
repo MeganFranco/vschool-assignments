@@ -1,7 +1,12 @@
+//////Modules Etc.//////✔
 var express = require("express");
+var app = express();
+var cors = require("cors");
 var botRouter = express.Router();
-//var Response = require("../lib/botLogic.js");
+var botLogic = require("../lib/botLogic.js");
 
+///////Middleware////////
+app.use(cors());
 
 //when you have your your 
 //create the endpoint in the app.js
@@ -9,12 +14,21 @@ var botRouter = express.Router();
 //get info//
 botRouter.route("/")
     .get(function (req, res) {
-    console.log("test");
+        return req;
+        console.log("hello")
     })
     .post(function (req, res) {
-        console.log(req.body);
+        //        console.log(req.body); 
+        //        console.log("botRoutes line 22") 
+//        console.log(req.body.input + " line 23")
         var text = req.body.input;
-        Response.printSomething();
+                console.log(text + " botRotes25")
+        //        console.log(botLogic + " botLogic")
+        //        console.log(botLogic.breakupBot + " botLogic.breakupBot")
+    console.log(botLogic.breakupBot(text) + " line 28")
+        var output = botLogic.breakupBot(text);
+        console.log(output)
+        console.log("line 30")
         var response = Response.breakupBot(text);
         res.send(response);
     })

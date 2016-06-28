@@ -1,7 +1,9 @@
 var express = require("express");
+var app = express();
+var cors = require("cors");
+app.use(cors());
 
-module.exports = function(){
- var readline = require("readline-sync");
+// var readline = require("readline-sync");
 /////////////////////ARRAYS and OBJECTS/////////////////////////////
 
 //eventually put these in a database?
@@ -124,7 +126,7 @@ var checkLoserInput = function (input) {
 //timeout: http://stackoverflow.com/questions/34069086/using-javascript-how-to-break-the-while-loop-after-a-set-time
 
 var breakupBot = function (input) {
-//        return("Hey, I'm not going to be available for the forseeable future, so I think we should stop seeing each other")
+        return("Hey, I'm not going to be available for the forseeable future, so I think we should stop seeing each other")
 
         while (true) {
             ///if accepted....////
@@ -139,6 +141,7 @@ var breakupBot = function (input) {
     }
     /////////////////////////////////////////////////////////
 
-breakupBot()
+//breakupBot()
     //console.log(previousResponses)
-    }
+
+exports.breakupBot = breakupBot

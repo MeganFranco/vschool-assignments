@@ -4,8 +4,11 @@ app.service("UserService", ["$http", "$location", "TokenService", function($http
     var self = this;
     this.currentUser = {};
     
+    
+    
     this.signup = function(user) {
         return $http.post("/auth/signup", user);
+        console.log("userService lololol")
     };
     
     this.login = function(user) {

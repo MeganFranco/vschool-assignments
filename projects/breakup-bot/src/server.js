@@ -20,7 +20,7 @@ app.use(cors());
 app.use(morgan("dev"));
 app.use(express.static(path.join(__dirname, "..", "public")));
 
-app.use("/api", expressJwt({secret: config.secret}));
+//app.use("/api", expressJwt({secret: config.secret}));
 
 app.use("/auth", require("./routes/authRoutes"));
 app.use("/api/responses/", botRoutes);

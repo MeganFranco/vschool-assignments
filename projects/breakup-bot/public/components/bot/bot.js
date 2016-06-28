@@ -7,7 +7,7 @@ app.controller("BotPageController", ["$scope", "ResponseService", function($scop
             
     $scope.respondToInput = function(input){
         ResponseService.getResponse(input).then(function(response){
-//            $scope.message = response./* dig into response data */
+            $scope.message = response.data
         })
     }
      
@@ -19,10 +19,17 @@ app.service("ResponseService", ["$http", function($http){
     this.response = "Hey, I'm not going to be available for the forseeable future, so I think we should stop seeing each other."
     
     this.getResponse = function(input){
-        return http.post(baseUrl + "/api/responses/", {input: input})
+        return $http.post(baseUrl + "/api/responses/", {input: input})
             .then(function(response){
             console.log(response.data);
            return response.data
+        })
+    }
+    
+    this.getData = function(){
+        return $http.get(baseUrl)
+            .then(function(response){
+            return response.data
         })
     }
     
