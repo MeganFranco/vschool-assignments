@@ -4,7 +4,8 @@ var app = express();
 var cors = require("cors");
 var botRouter = express.Router();
 var botLogic = require("../lib/botLogic.js");
-
+var WhyResponse = require("../models/whyResponses");
+var mongoose = require("mongoose");
 ///////Middleware////////
 app.use(cors());
 
@@ -18,19 +19,33 @@ botRouter.route("/")
         console.log("hello")
     })
     .post(function (req, res) {
-        //        console.log(req.body); 
-        //        console.log("botRoutes line 22") 
-//        console.log(req.body.input + " line 23")
+//    console.log("in put function, req= " + req.body.input)
         var text = req.body.input;
-                console.log(text + " botRotes25")
-        //        console.log(botLogic + " botLogic")
-        //        console.log(botLogic.breakupBot + " botLogic.breakupBot")
-    console.log(botLogic.breakupBot(text) + " line 28")
-        var output = botLogic.breakupBot(text);
-        console.log(output)
-        console.log("line 30")
-        var response = Response.breakupBot(text);
-        res.send(response);
+        var response = botLogic.breakupBot(text);
+        //    if(if reponse is a why reponse){
+        //        mongo.wyarray.save
+        //    }
+    console.log(response.response + " botRoutes line 28")
+    console.log(typeof response + ": response")
+    //typeof response.why is undifined on this line... the if function is now running...
+//    console.log( typeof response.why + " botRoutes line 31")
+    
+        if(response.why === true){
+//            console.log(typeof response.why)
+            console.log(req.body)
+            var query = {_id: 1};
+            
+            WhyResponse.findOneAndUpdate(query, {response:response.response, _id: 1}, {upsert: true}, function(err, whyResponse){
+                console.log(whyResponse)
+                if(err)
+                    res.status(500).send(err);
+                    res.send(whyResponse);
+            })
+            
+        } else {
+                    res.send(response.response);
+        }
+            
     })
 
 module.exports = botRouter;

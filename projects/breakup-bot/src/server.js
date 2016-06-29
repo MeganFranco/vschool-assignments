@@ -28,3 +28,11 @@ app.use("/api/responses/", botRoutes);
 app.listen(port, function() {
     console.log("App is listening on port " + port);
 });
+
+
+
+/////Make DB///////
+//var MongoClient = require("mongodb").MongoClient;
+//var ObjectId = require("mongodb").ObjectId; //allows you to construct object id objects
+//var bodyParser = require("body-parser");
+//var url = "mongodb://localhost:27017/whys"

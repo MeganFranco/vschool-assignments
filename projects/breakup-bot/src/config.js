@@ -1,4 +1,4 @@
 module.exports = {
-    database: "mongodb://localhost/todosWithAuth",
+    database: "mongodb://localhost/whyArray",
     secret: "treehouse livin"
 }
