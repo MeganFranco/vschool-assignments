@@ -26,16 +26,16 @@ botRouter.route("/")
         //        mongo.wyarray.save
         //    }
     console.log(response.response + " botRoutes line 28")
-    console.log(typeof response + ": response")
+//    console.log(typeof response + ": response")
     //typeof response.why is undifined on this line... the if function is now running...
 //    console.log( typeof response.why + " botRoutes line 31")
     
         if(response.why === true){
 //            console.log(typeof response.why)
             console.log(req.body)
-            var query = {_id: 1};
+//            var query = {_id: 1};
             
-            WhyResponse.findOneAndUpdate(query, {response:response.response, _id: 1}, {upsert: true}, function(err, whyResponse){
+            WhyResponse.findOneAndUpdate( {response:response.response, _id: 1, }, {upsert: true}, function(err, whyResponse){
                 console.log(whyResponse)
                 if(err)
                     res.status(500).send(err);
