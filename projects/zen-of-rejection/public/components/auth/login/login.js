@@ -1,4 +1,4 @@
-var app = angular.module("BreakupbotApp.Auth");
+var app = angular.module("RejectionApp.Auth");
 
 app.controller("LoginController", ["$scope", "$location", "UserService", function ($scope, $location, UserService) {
     $scope.login = function (user) {

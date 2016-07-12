@@ -28,7 +28,7 @@ authRouter.post("/login", function(req, res) {
 authRouter.post("/signup", function (req, res) {
     User.findOne({username: req.body.username}, function(err, existingUser) {
         if (err) res.status(500).send(err);
-        if (existingUser) res.status(418).send({success: false, message: "That username is already taken."});
+        if (existingUser) res.status(418).send({success: false, message: "That username is already taken. And I'm a teapot."});
         else {
             var newUser = new User(req.body);
             newUser.save(function(err, user) {

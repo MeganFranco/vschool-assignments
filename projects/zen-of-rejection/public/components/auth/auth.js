@@ -1,4 +1,4 @@
-var app = angular.module("BreakupbotApp.Auth", ["ngStorage"]);
+var app = angular.module("RejectionApp.Auth", ['ngStorage']);
 
 app.service("UserService", ["$http", "$location", "TokenService", function($http, $location, TokenService) {
     var self = this;
@@ -7,11 +7,11 @@ app.service("UserService", ["$http", "$location", "TokenService", function($http
 
 
     this.signup = function(user) {
-        return $http.post("/auth/signup", user);
+        return $http.post("http://localhost:5000/auth/signup", user);
     };
 
     this.login = function(user) {
-        return $http.post("/auth/login", user).then(function(response) {
+        return $http.post("http://localhost:5000/auth/login", user).then(function(response) {
             TokenService.setToken(response.data.token);
             self.currentUser = response.data.user;
             return response;
@@ -46,7 +46,7 @@ app.service("TokenService", ["$localStorage", function($localStorage) {
 
 app.factory("AuthInterceptor", ["$location", "$q", "TokenService", function($location, $q, TokenService) {
     return {
-        request: function (config) {
+        request: function(config) {
             var token = TokenService.getToken();
             if (token) {
                 config.headers = config.headers || {};
@@ -54,7 +54,7 @@ app.factory("AuthInterceptor", ["$location", "$q", "TokenService", function($loc
             }
             return config;
         },
-        responseError: function (response) {
+        responseError: function(response) {
             if (response.status === 401) {
                 TokenService.removeToken();
                 $location.path("/login");
@@ -62,9 +62,4 @@ app.factory("AuthInterceptor", ["$location", "$q", "TokenService", function($loc
             return $q.reject(response);
         }
     }
-}]);
-
-
-app.config(["$httpProvider", function($httpProvider) {
-    $httpProvider.interceptors.push("AuthInterceptor");
 }]);

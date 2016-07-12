@@ -1,18 +1,20 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="BreakupbotApp">
+
+<html ng-app='RejectionApp'>
 
 <head>
-    <meta charset="UTF-8">
-    <title>Breakup-Bot</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Rejection's Zen</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <meta charset="=utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
+
     <navbar></navbar>
-    <div class="container">
-        <div ng-view> </div>
-    </div>
+    
+    <ng-view></ng-view>
 
     <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
@@ -20,17 +22,17 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.6/ngStorage.min.js"></script>
 
-    <!-- Main App -->
+    <!-- Main App   -->
     <script src="app.js"></script>
-    <script src="components/bot/bot.js"></script>
 
+    <!--Authentication    -->
 
-    <!-- Authentication -->
     <script src="components/auth/auth.js"></script>
     <script src="components/auth/signup/signup.js"></script>
     <script src="components/auth/login/login.js"></script>
     <script src="components/auth/logout/logout.js"></script>
     <script src="components/navbar/navbar.js"></script>
+    <script src=""></script>
 </body>
 
 </html>

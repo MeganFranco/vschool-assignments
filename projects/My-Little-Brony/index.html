@@ -19,7 +19,7 @@ https://scotch.io/tutorials/angularjs-form-validation-with-ngmessages-->
 
 <body ng-controller="MainController">
 
-    <!-- ----------------TOP------------------ -->
+    <!--//////////////TOP////////////// -->
     <header>
         <h1>Welcome To Brosky's Pony Page</h1></header>
 
@@ -32,7 +32,7 @@ https://scotch.io/tutorials/angularjs-form-validation-with-ngmessages-->
         </p>
     </div>
 
-    <!--    -------------FORM---------------     -->
+    <!-- //////////////FORM//////////////    -->
     <form name="userForm" ng-show="form.editing" ng-hide="!form.editing" novalidate>
         <h4>Enter A Pony</h4>
         <div class="form-group">
@@ -62,7 +62,7 @@ https://scotch.io/tutorials/angularjs-form-validation-with-ngmessages-->
     </form>
 
 
-    <!--    ------------- Ponies ---------------     -->
+    <!-- //////////////Ponies //////////////-->
     <h3 class="show-ponies" ng-show="!show.editing" ng-hide="show.editing">Get A Current List of Favorite Ponies <button class="btn" ng-click="showPonies(); show.editing = !show.editing">Here</button></h3>
     <div class="container ponies">
         <div class="pony-list row col-md-6" ng-repeat="pony in favoritePonies track by $index">
