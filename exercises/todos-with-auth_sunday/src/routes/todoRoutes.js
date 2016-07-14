@@ -12,7 +12,7 @@ todoRouter.route("/")
     .post(function (req, res) {
         var newTodo = new Todo(req.body);
         newTodo.user = req.user._id;
-    
+
         newTodo.save(function (err, todo) {
             if (err) res.status(500).send(err);
             else res.status(201).send(todo);

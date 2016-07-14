@@ -9,7 +9,7 @@ var mongoose = require("mongoose");
 ///////Middleware////////
 app.use(cors());
 
-//when you have your your 
+//when you have your your
 //create the endpoint in the app.js
 
 //get info//
@@ -29,23 +29,23 @@ botRouter.route("/")
 //    console.log(typeof response + ": response")
     //typeof response.why is undifined on this line... the if function is now running...
 //    console.log( typeof response.why + " botRoutes line 31")
-    
+
         if(response.why === true){
 //            console.log(typeof response.why)
             console.log(req.body)
 //            var query = {_id: 1};
-            
+
             WhyResponse.findOneAndUpdate( {response:response.response, _id: 1, }, {upsert: true}, function(err, whyResponse){
                 console.log(whyResponse)
                 if(err)
                     res.status(500).send(err);
                     res.send(whyResponse);
             })
-            
+
         } else {
                     res.send(response.response);
         }
-            
+
     })
 
 module.exports = botRouter;
@@ -60,7 +60,7 @@ module.exports = botRouter;
 //    .post(function (req, res) {
 //        var newTodo = new Todo(req.body);
 //        newTodo.user = req.user._id;
-//    
+//
 //        newTodo.save(function (err, todo) {
 //            if (err) res.status(500).send(err);
 //            else res.status(201).send(todo);
