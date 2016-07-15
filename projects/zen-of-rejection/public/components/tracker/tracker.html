@@ -1,0 +1,25 @@
+<div class="tracker">
+    <h2>Fail Tracker</h2>
+    <!--  Add   -->
+    <div class="fail-form">
+        <form class="well container" name="detailsForm" novalidate>
+            <h3>Add A New Failure</h3>
+            <div class="col-md-8 col-md-offset-2 form-group">
+                <label class="labels" for="title">Failure:</label>
+                <input type="text" class="form-control" name="failure" ng-model="" required>
+            </div>
+            <div class="col-md-8 col-md-offset-2 form-group">
+                <label class="labels" for="description">Details:</label>
+                <input type="text" class="form-control" name="description" ng-model="" required>
+            </div>
+            <button>Submit</button>
+        </form>
+    </div>
+    <!--  List  -->
+    <div class="failList">
+        <h3>Failures</h3>
+        <div ng-repeat="">
+            
+        </div>
+    </div>
+</div>

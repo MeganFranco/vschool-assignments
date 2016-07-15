@@ -4,7 +4,7 @@ app.config(function ($routeProvider) {
     $routeProvider
         .when("/", {
             templateUrl: "components/welcome/welcome.html",
-            controller: "WelcomeController",
+//            controller: "WelcomeController",
         }).when("/tracker", {
             templateUrl: "components/tracker/tracker.html",
             controller: "TrackController"

@@ -4,8 +4,6 @@ app.service("UserService", ["$http", "$location", "TokenService", function($http
     var self = this;
     this.currentUser = {};
 
-
-
     this.signup = function(user) {
         return $http.post("http://localhost:5000/auth/signup", user);
     };
