@@ -62,3 +62,8 @@ app.factory("AuthInterceptor", ["$location", "$q", "TokenService", function($loc
         }
     }
 }]);
+
+
+app.config(['$httpProvider', function ($httpProvider) {
+  $httpProvider.interceptors.push("AuthInterceptor");
+}]);

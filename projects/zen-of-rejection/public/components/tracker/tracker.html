@@ -12,14 +12,18 @@
                 <label class="labels" for="description">Details:</label>
                 <input type="text" class="form-control" name="description" ng-model="fail.description" required>
             </div>
-            <button>Submit</button>
+            <button ng-click="addFailure()">Submit</button>
         </form>
     </div>
     <!--  List  -->
     <div class="failList">
         <h3>Failures</h3>
-        <div ng-repeat="">
-            
+        <div ng-repeat="fail in failures">
+            <div>
+                <p>{{ fail.title }}</p>
+                <p>{{ fail.description }} </p>
+                <p> {{ fail.date }}</p>
+            </div>
         </div>
     </div>
 </div>
