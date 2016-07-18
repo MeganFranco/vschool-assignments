@@ -1,0 +1,70 @@
+body {
+/*    background-color: #2A3050;*/
+}
+
+div.item {
+    height: 400px;
+/*    margin-bottom: 200px;*/
+/*    margin-top: -200px;*/
+}
+
+.page {
+    margin: 0px auto;
+    width: 98%;
+    color: #474747
+}
+
+h2 {
+    text-align: center;
+}
+
+/*------NAV BAR-------*/
+/*COLOR SCHEMES: Grey: #474747 Navy: #2A3050 Mauve: #A23B56 Yellow: #FAAE21 LBlue: #87D0C6 */
+
+nav.navbar.navbar-default{
+    background-color: #2A3050
+}
+
+ul.nav-navbar-nav {
+    background-color: #2A3050;
+}
+
+.navRight:hover {
+    
+}
+
+.navbar-default .navbar-nav>li>a,
+a.navbar-brand.calCount,
+a.navbar-brand.calCount:visited,
+li.active {
+    
+}
+
+.navbar-default .navbar-nav>li>a:visited,
+a.navbar-brand.calCount:visited,
+a.navbar-brand.calCount:visited,
+li.active:visited {
+    
+}
+
+.navbar-default .navbar-nav>li>a:hover,
+a.navbar-brand.calCount:hover,
+li.active:hover,
+.nav>li:hover,
+a.navRight:hover {
+    
+}
+
+/*---------WELCOME PAGE----------*/
+/*  Grey: #474747 Navy: #2A3050 Mauve: #A23B56 Yellow: #FAAE21 LBlue: #87D0C6  */
+.welcome {
+    color: 
+}
+
+/*---------TRACKER----------*/
+/*--------ZEN ROOM----------*/
+.carousel {
+    position: absolute;
+    right: 0;
+    left: 0;
+}

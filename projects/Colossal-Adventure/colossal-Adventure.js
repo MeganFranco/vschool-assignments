@@ -1,6 +1,6 @@
 ///////////////VARIABLES////////////////////
 var readline = require("readline-sync");
-//var response = readline.question("Enter a number: ") 
+//var response = readline.question("Enter a number: ")
 
 var inventory = ["slingshot ", " bag of blue marbles"];
 var HP = 0;
@@ -113,8 +113,8 @@ var moveForward = function () {
         walking();
 
     readlineResponse = readline.question(" ");
-        
-        if(HP >= 50){ 
+
+        if(HP >= 50){
             youWin();
         }else{
             moveForward();
@@ -138,9 +138,9 @@ function theGame() {
 
             console.log("Okay " + userName + ", You glance at your trusty old Jansport backpack. If you would like to check inside it, enter 'Print' and we will list your name, HP, and inventory, or enter 'continue' then 'enter' to keep moving ");
             moveForwardFirst();
-            
+
             console.log("You walk over to the creature and inspect it. You poke it with your toe, and realize that this is a carebear. Even though you're twenty-five and care-bears were both before and after your time, 'this is most definitely a carebear,' you decide. The bear disolves and and a vial of healing elixer appears in it's place. Enter 'w' to start exploring.");
-            
+
             console.log("You walk over to the creature and inspect it. You poke it with your toe, and realize that this is a carebear. Even though you're twenty-five and care-bears were both before and after your time, 'this is most definitely a carebear,' you decide. The bear disolves and and a vial of healing elixer appears in it's place. Enter 'w' to start exploring.");
 
             inventory.push(" healing elixer");
@@ -161,7 +161,7 @@ theGame();
 
 
 //var readline = require("readline-sync");
-////var response = readline.question("Enter a number: ") 
+////var response = readline.question("Enter a number: ")
 //
 //var inventory = ["slingshot ", " bag of blue marbles"];
 //var HP = 0;
@@ -189,11 +189,11 @@ theGame();
 //}
 //
 //function enemyAppears() {
-//    var randomEnemy = enemies[Math.floor(Math.random() * 3 )]; 
-//    
+//    var randomEnemy = enemies[Math.floor(Math.random() * 3 )];
+//
 //    function attackEnemy() {
 //        var userAttackPoints = Math.floor(Math.random()*((15-4)+1)+4);
-//        
+//
 //        function enemyAttacksBack() {
 //            var enemyAttackStrength = Math.floor(Math.random()*((14-4)+1)+4)
 //            if(enemyAttackStrength >= 7){
@@ -202,13 +202,13 @@ theGame();
 //            } else {
 //                console.log("It looks like you escaped! " + randomEnemy + " hit you with " +enemyAttackStrength + " attack points. You might be a little scratched up, but you live to fight another day!");
 //                HP = HP - enemyAttackStrength;
-//                
+//
 //            }
 //        }
-//        
+//
 ////        var userAttackPoints = Math.floor(Math.random()*((15-4)+1)+4);
 //        console.log("You attack " + randomEnemy + " and they lose " + userAttackPoints + " hit points")
-//        
+//
 //        if(userAttackPoints < 8){
 //            console.log("It looks like your attack wasn't strong enough " + randomEnemy + " continues with their assault of unconditional love");
 //            enemyAttacksBack();
@@ -221,7 +221,7 @@ theGame();
 //    }
 //
 //    var fightFlight = readline.question("Oh no! " + randomEnemy + " has appeared. Their arms outstreched, ready to inflict a fatal hug. Do you want to run or attack? ");
-//    
+//
 //    if(fightFlight == "run") {
 //        var runChances = Math.floor(Math.random() * 2) + 1
 //        if(runChances == 1){
@@ -231,7 +231,7 @@ theGame();
 //            console.log("Unfortunately " + randomEnemy + " caught up with you, and it looks like you'll have to attack");
 //            attackEnemy();
 //        }
-//        
+//
 //    } else if(fightFlight == "attack") {
 //        attackEnemy();
 //    } else {
@@ -247,16 +247,16 @@ theGame();
 //        console.log("So far so good, but things are quiet... too quiet. Let's keep going.");
 //        readlineResponse = readline.question(" ");
 //        moveForward();
-//            } 
+//            }
 //}
 //
 //var moveForward = function(){
 //    if(readlineResponse == 'Print') {
 //       console.log("Name: " + userName + " HP: " + HP + " Inventory: " + inventory);
-//       
+//
 //    } else if(readlineResponse == 'w')
 //        walking();
-//    
+//
 //    readlineResponse = readline.question(" ");
 //    moveForward();
 //}

@@ -27,8 +27,8 @@ app.service("TrackerService", ["$http", "UserService", function ($http, UserServ
     };
 
     ////Deletes failures from DB//// 
-    this.deleteFail = function (failID) {
-        return $http.post(baseURl + 'failure', failID)
+    this.deleteFail = function (failId) {
+        return $http.delete(baseUrl + 'failure/' + failId)
     }
 
 }]);

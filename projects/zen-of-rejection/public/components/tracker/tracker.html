@@ -1,8 +1,8 @@
-<div class="tracker">
+<div class="tracker page">
     <h2>Fail Tracker</h2>
     <!--  Add   -->
     <div class="fail-form">
-        <form class="well container" name="detailsForm" novalidate>
+        <form class="well container" name="detailsForm">
             <h3>Add A New Failure</h3>
             <div class="col-md-8 col-md-offset-2 form-group">
                 <label class="labels" for="title">Failure:</label>
@@ -18,11 +18,12 @@
     <!--  List  -->
     <div class="failList">
         <h3>Failures</h3>
-        <div ng-repeat="fail in failures">
+        <div ng-repeat="fail in failures track by $index">
             <div>
-                <p>{{ fail.title }}</p>
-                <p>{{ fail.description }} </p>
-                <p> {{ fail.date }}</p>
+                <p>Failure: {{ fail.title }}</p>
+                <p> {{ fail.description }} </p>
+<!--                <p> {{ fail.date }}</p>-->
+               <button ng-click="deleteFail(fail._id, $index)">delete</button>
             </div>
         </div>
     </div>
