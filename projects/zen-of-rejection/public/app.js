@@ -1,4 +1,4 @@
-var app = angular.module("RejectionApp", ['ngRoute', 'RejectionApp.Auth'])
+var app = angular.module("RejectionApp", ['ngRoute', 'RejectionApp.Auth', 'ngAudio']);
 
 app.config(function ($routeProvider) {
     $routeProvider
@@ -10,7 +10,7 @@ app.config(function ($routeProvider) {
             controller: "TrackController"
         }).when("/zenRoom", {
             templateUrl: "components/zen-room/zen-room.html",
-//            controller: "ZenController",
+            controller: "ZenController",
         }).when("/login", {
             templateUrl: "components/auth/login/login.html",
             controller: "LoginController"

@@ -1,30 +1,91 @@
 <div class="tracker page">
     <h2>Fail Tracker</h2>
-    <!--  Add   -->
-    <div class="fail-form">
-        <form class="well container" name="detailsForm">
-            <h3>Add A New Failure</h3>
-            <div class="col-md-8 col-md-offset-2 form-group">
-                <label class="labels" for="title">Failure:</label>
-                <input type="text" class="form-control" name="failure" ng-model="fail.title" required>
-            </div>
-            <div class="col-md-8 col-md-offset-2 form-group">
-                <label class="labels" for="description">Details:</label>
-                <input type="text" class="form-control" name="description" ng-model="fail.description" required>
-            </div>
-            <button ng-click="addFailure()">Submit</button>
-        </form>
+
+    <!--   SCOREBOARD -->
+    <div id="scoreboard">
+        <div class="center-score">
+            <h2>My Scoreboard</h2>
+            <p class="score">{{ totalScore }}</p>
+        </div>
     </div>
-    <!--  List  -->
-    <div class="failList">
-        <h3>Failures</h3>
-        <div ng-repeat="fail in failures track by $index">
-            <div>
-                <p>Failure: {{ fail.title }}</p>
-                <p> {{ fail.description }} </p>
-<!--                <p> {{ fail.date }}</p>-->
-               <button ng-click="deleteFail(fail._id, $index)">delete</button>
+    <!--  Add   -->
+    <div class="container">
+        <div class="addButtons row">
+            <div class="addButtons col-md-4 col-md-offset-5">
+                <button class="addItem" ng-click="type='fail'">add fail</button>
+                <button class="addItem" ng-click="type='win'">add win</button>
             </div>
         </div>
     </div>
-</div>
+    <div class="fail-form container">
+        <div class="row">
+            <div ng-if="type==='fail'" class="well col-md-6 col-md-offset-3">
+                <form class="form" name="detailsForm">
+                    <h3>Add A New Failure</h3>
+                    <div class="col-md-8 col-md-offset-2 form-group">
+                        <label class="labels" for="title">Failure:</label>
+                        <input type="text" class="form-control" name="failure" ng-model="entry.title" required>
+                    </div>
+                    <div class="col-md-8 col-md-offset-2 form-group">
+                        <label class="labels" for="description">Details:</label>
+                        <input type="text" class="form-control" name="description" ng-model="entry.description" required>
+                        <button class="submit-button" ng-click="addEntry()">Submit</button>
+                    </div>
+
+                </form>
+            </div>
+            <div ng-if="type === 'win'" class="well col-md-6 col-md-offset-3">
+                <form class="form" name="detailsForm">
+                    <h3>Add A New Win</h3>
+                    <div class="col-md-8 col-md-offset-2 form-group">
+                        <label class="labels" for="title">Win:</label>
+                        <input type="text" class="form-control" name="win" ng-model="entry.title" required>
+                    </div>
+                    <div class="col-md-8 col-md-offset-2 form-group">
+                        <label class="labels" for="description">Details:</label>
+                        <input type="text" class="form-control" name="description" ng-model="entry.description" required>
+                        <button class="submit-button" ng-click="addEntry()">Submit</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!--  List  -->
+    <div class="list container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3 class="list-header">Failures</h3>
+                <div class="list-item">
+                    <div ng-repeat="item in failures track by $index">
+                        <div ng-if="item.type ==='fail'">
+                            <p class="accomplishment">Failure: {{ item.title }}</p>
+                            <p> {{ item.description }} </p>
+                            <p>{{ item.type }}</p>
+                            <p ng-if="item.type === 'fail'">points: 10</p>
+                            <p ng-if="item.type === 'win'">points: 1</p>
+                            <!--                <p> {{ item.date }}</p>-->
+                            <button class="delete" ng-click="deleteFail(item._id, $index)">delete</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h3 class="list-header">Wins</h3>
+                <div class="list-item">
+                        <div ng-repeat="item in failures track by $index">
+                            <div ng-if="item.type === 'win'">
+                                <p class="accomplishment">Win: {{ item.title }}</p>
+                                <p> {{ item.description }} </p>
+                                <p>{{ item.type }}</p>
+                                <p ng-if="item.type === 'fail'">points: 10</p>
+                                <p ng-if="item.type === 'win'">points: 1</p>
+                                <!--                <p> {{ fail.date }}</p>-->
+                                <button class="delete" ng-click="deleteFail(item._id, $index)">delete</button>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>

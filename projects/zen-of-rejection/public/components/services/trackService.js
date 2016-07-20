@@ -11,7 +11,7 @@ app.service("TrackerService", ["$http", "UserService", function ($http, UserServ
         console.log("Service line 11")
         return $http.get(baseUrl + 'failure')
             .then(function (response) {
-            console.log('response ',response.data);
+//            console.log('response ',response.data);
                 return response.data;
                     //                self.failures = response.data;
             })
