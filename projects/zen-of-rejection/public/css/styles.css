@@ -263,7 +263,7 @@ element.style {
 #meditations {
     /*IMAGES MANGEMENT*/
     background-image: url(https://pixabay.com/static/uploads/photo/2016/07/08/12/19/mountain-1504197_960_720.jpg);
-    height: 750px;
+    height: 850px;
     margin-top: -20px;
     background-attachment: fixed;
     /*fixes the div to this position*/
@@ -273,7 +273,10 @@ element.style {
     /*Stylings*/
     text-align: center;
 }
+
+
 /*Stylings*/
+
 .section-content {
     padding-top: 45px;
 }
@@ -290,7 +293,6 @@ element.style {
     background-color: rgba(42, 48, 80, 0.7);
     border-radius: 5px;
     color: #FAAE21;
-        
 }
 
 .metta-list {
@@ -301,10 +303,9 @@ a.med-links {
     color: white;
 }
 
-a.med-links:hover{
+a.med-links:hover {
     font-weight: 700;
     text-decoration: none;
-    
 }
 
 a.med-links:visited {
@@ -316,7 +317,7 @@ a.med-links:visited {
 }
 
 #care {
-/*IMAGES MANAGEMENT*/
+    /*IMAGES MANAGEMENT*/
     background-image: url(https://pixabay.com/static/uploads/photo/2016/05/04/19/39/stones-1372677_960_720.jpg);
     height: 550px;
     background-attachment: fixed;
@@ -324,10 +325,8 @@ a.med-links:visited {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-/*    margin-bottom: 70px;*/
-    
+    /*    margin-bottom: 70px;*/
 }
-
 
 #care-content {
     text-align: center;
@@ -336,13 +335,12 @@ a.med-links:visited {
     border: 3px solid #2A3050;
     font-weight: 600;
     padding-left: 50px;
-    padding-right:50px;
+    padding-right: 50px;
     padding-bottom: 25px;
     background-color: rgba(42, 48, 80, 0.7);
     border-radius: 5px;
     color: #FAAE21;
     position: relative;
-        
 }
 
 .bottom {
@@ -355,3 +353,87 @@ a.med-links:visited {
     background-size: cover;
 }
 
+
+/* ADD RESPONSIVENESS */
+
+@media (max-width: 1000px) {
+    #meditations {
+        /*IMAGES MANGEMENT*/
+        background-image: url(https://pixabay.com/static/uploads/photo/2016/07/08/12/19/mountain-1504197_960_720.jpg);
+        height: 800px;
+        margin-top: -20px;
+        background-attachment: fixed;
+        /*fixes the div to this position*/
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        /*Stylings*/
+        text-align: center;
+    }
+    .content-content {
+        width: 75%;
+        margin-left: 15%;
+    }
+}
+
+@media (max-width: 700px) {
+    #meditations {
+        /*IMAGES MANGEMENT*/
+        background-image: url(https://pixabay.com/static/uploads/photo/2016/07/08/12/19/mountain-1504197_960_720.jpg);
+        /*        height: 85@media (max-width: 1000px) {
+    #meditations {
+        /*IMAGES MANGEMENT*/
+        background-image: url(https://pixabay.com/static/uploads/photo/2016/07/08/12/19/mountain-1504197_960_720.jpg);
+        height: 950px;
+        margin-top: -20px;
+        background-attachment: fixed;
+        /*fixes the div to this position*/
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        /*Stylings*/
+        text-align: center;
+    }
+    .content-content {
+        width: 75%;
+        margin-left: 15%;
+    }
+}
+
+@media (max-width: 600px) {
+    #carousel-example-generic {
+        display: none;
+    }
+    
+    div#playDiv{
+        padding-left: 10px;
+    }
+    
+    #meditations {
+        /*IMAGES MANGEMENT*/
+        background-image: url(https://pixabay.com/static/uploads/photo/2016/07/08/12/19/mountain-1504197_960_720.jpg);
+        /*        height: 85@media (max-width: 1000px) {
+    #meditations {
+        /*IMAGES MANGEMENT*/
+        background-image: url(https://pixabay.com/static/uploads/photo/2016/07/08/12/19/mountain-1504197_960_720.jpg);
+        height: 950px;
+        margin-top: -20px;
+        background-attachment: fixed;
+        /*fixes the div to this position*/
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        /*Stylings*/
+        text-align: center;
+    }
+    .content-content {
+        width: 85%;
+        margin-left: 10%;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    #care-content {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
